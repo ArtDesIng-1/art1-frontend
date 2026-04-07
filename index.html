@@ -1,219 +1,2150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Líderes en Comunicación Visual Martínez | Art1</title>
-    <link rel="canonical" href="https://www.art1.com.ar/" />
-    <!-- Meta SEO -->
-    <meta name="author" content="Art1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ART1 | Branding, Diseño Gráfico, Cartelería y Diseño Digital</title>
     <meta
       name="description"
-      content="Somos una empresa de comunicación visual con mas de 25 años de trayectoria. Hacemos Diseño e instalacion de gráfica on site. Impresiones sobre cualquier superficie. Letras corporeas en 3D en cualquier material. Diseño y Branding, veni con tu idea y lo realizamos en vinilo."
+      content="ART1 crea identidades visuales memorables con foco en branding, diseño gráfico, cartelería y diseño digital."
     />
     <meta
       name="keywords"
-      content="art1, gráfica martinez, gráfica zona norte, empresa de comunicación, comunicación visual, impresiones sobre cualquier superficie, ploteos, gigantografias, estudio web, diseño web, sitios web, websites, branding, brands, social media, redes sociales, gráfica, gráfica veleros, gráfica naval, gráfica automotor, gráfica autos, seo, diseño gráfico, diseño, proyectos, html, css, javascript, facebook, instagram, twitter, youtube, martinez, buenos aires, argentina, zona norte"
+      content="branding, diseño gráfico, cartelería, diseño digital, identidad visual, agencia creativa, ART1"
     />
-
-    <!-- Meta FB -->
+    <meta name="theme-color" content="#134f84" />
+    <meta name="robots" content="index,follow" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="ART1 | Empresa de comunicación visual" />
+    <meta
+      property="og:title"
+      content="ART1 | Identidad visual que transforma marcas"
+    />
     <meta
       property="og:description"
-      content="Somos una empresa de comunicación visual con mas de 25 años de trayectoria. Hacemos Diseño e instalacion de grafica on site. Impresiones sobre cualquier superficie. Letras corporeas en 3D en cualquier material. Diseño y Branding, veni con tu idea y lo realizamos en vinilo."
+      content="Cartelería, branding y diseño gráfico que transforma ideas en experiencias visuales memorables."
     />
-    <meta
-      property="og:site_name"
-      content="ART1 | Empresa de comunicación visual"
-    />
-    <meta
-      property="og:image"
-      content="https://www.art1.com.ar/assets/img/logo_grey.png"
-    />
-    <meta property="og:url" content="http://www.art1.com.ar/" />
-
-    <!-- Meta TW -->
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="assets/img/og/art1-home.jpg" />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="ART1 | Empresa de comunicación visual"
+      content="ART1 | Branding, Diseño Gráfico y Cartelería"
     />
     <meta
       name="twitter:description"
-      content="Somos una empresa de comunicación visual con mas de 25 años de trayectoria. Hacemos Diseño e instalacion de grafica on site. Impresiones sobre cualquier superficie. Letras corporeas en 3D en cualquier material. Diseño y Branding, veni con tu idea y lo realizamos en vinilo."
+      content="Diseñamos tu identidad visual con soluciones creativas integrales para marcas y negocios."
     />
-
-    <meta
-      http-equiv="Cache-Control"
-      content="public, max-age=31536000, immutable"
-    />
-    <!-- Favicons -->
-    <link href="assets/img/logo_grey.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Vendor CSS Files -->
     <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <!-- Template Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      :root {
+        --bg-light: #f4f5f7;
+        --surface: #ffffff;
+        --text: #121b2f;
+        --text-strong: #0f172a;
+        --muted: #5b6678;
+        --muted-soft: #748097;
+        --white: #ffffff;
+        --primary: #1b62ff;
+        --primary-2: #12c7de;
+        --primary-3: #00d6ff;
+        --navy: #071227;
+        --navy-2: #091732;
+        --hero-start: #2142a0;
+        --hero-mid: #16557f;
+        --hero-end: #09665b;
+        --line: rgba(255, 255, 255, 0.14);
+        --line-dark: rgba(16, 24, 40, 0.08);
+        --shadow-soft: 0 12px 28px rgba(16, 24, 40, 0.08);
+        --shadow-card: 0 14px 34px rgba(20, 27, 43, 0.09);
+        --radius-xl: 28px;
+        --radius-lg: 22px;
+        --radius-md: 18px;
+        --radius-sm: 12px;
+        --container: 1240px;
+        --header-h: 78px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background: var(--bg-light);
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(27, 98, 255, 0.35);
+        outline-offset: 3px;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 16px;
+        top: -64px;
+        z-index: 1000;
+        padding: 12px 16px;
+        border-radius: 12px;
+        background: #fff;
+        color: #111827;
+        box-shadow: var(--shadow-soft);
+        transition: top 0.2s ease;
+      }
+
+      .skip-link:focus {
+        top: 16px;
+      }
+
+      .container {
+        width: min(calc(100% - 40px), var(--container));
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 104px 0;
+      }
+
+      .section--light {
+        background: var(--bg-light);
+      }
+
+      .section-label {
+        margin: 0 0 16px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--primary);
+      }
+
+      .section-title {
+        margin: 0;
+        font-size: clamp(2.3rem, 4.8vw, 4rem);
+        line-height: 1.06;
+        letter-spacing: -0.045em;
+        color: #111a2e;
+      }
+
+      .section-subtitle {
+        max-width: 760px;
+        margin: 18px auto 0;
+        font-size: 1.06rem;
+        line-height: 1.65;
+        color: var(--muted);
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 80;
+        background: rgba(8, 20, 41, 0.76);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .topbar__inner {
+        min-height: var(--header-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        color: #00d8ff;
+      }
+
+      .brand::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0cd5ff 0%, #2f7cff 100%);
+        box-shadow: 0 0 18px rgba(12, 213, 255, 0.45);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav a {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+        transition: opacity 0.25s ease;
+      }
+
+      .nav a:hover {
+        opacity: 0.78;
+      }
+
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 22px;
+        border-radius: 999px;
+        background: linear-gradient(
+          90deg,
+          var(--primary) 0%,
+          var(--primary-2) 100%
+        );
+        color: var(--white);
+        font-weight: 700;
+        box-shadow: 0 10px 24px rgba(27, 98, 255, 0.22);
+      }
+
+      .nav-toggle {
+        display: none;
+        width: 46px;
+        height: 46px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        color: #fff;
+      }
+
+      .mobile-nav {
+        display: none;
+        padding: 0 0 20px;
+      }
+
+      .mobile-nav__panel {
+        display: grid;
+        gap: 12px;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .mobile-nav__panel a {
+        color: rgba(255, 255, 255, 0.92);
+        font-weight: 600;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: calc(100vh - var(--header-h));
+        display: flex;
+        align-items: center;
+        background:
+          radial-gradient(
+            circle at 18% 14%,
+            rgba(97, 153, 255, 0.08),
+            transparent 24%
+          ),
+          linear-gradient(
+            110deg,
+            var(--hero-start) 0%,
+            var(--hero-mid) 52%,
+            var(--hero-end) 100%
+          );
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.05),
+          rgba(0, 0, 0, 0.05)
+        );
+        pointer-events: none;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto auto 34% 68%;
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #4e9dff 0%, #12cfd8 100%);
+        box-shadow: 0 18px 35px rgba(6, 34, 74, 0.2);
+        animation: floatOrb 7s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      .hero__inner {
+        position: relative;
+        z-index: 1;
+        padding: 130px 0 90px;
+        text-align: center;
+      }
+
+      .hero__eyebrow {
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 34px;
+        color: #10dcff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        animation: floatEyebrow 5.5s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      .hero__eyebrow svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .hero__title-wrap {
+        position: relative;
+        display: inline-block;
+      }
+
+      .hero__square {
+        position: absolute;
+        left: -68px;
+        top: 12px;
+        width: 78px;
+        height: 78px;
+        border-radius: 12px;
+        transform: rotate(4deg);
+        background: linear-gradient(135deg, #13d6ff 0%, #2d7eff 100%);
+        box-shadow: 0 20px 35px rgba(7, 28, 70, 0.18);
+        animation: floatSquare 6s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      .hero__title {
+        margin: 0;
+        font-size: clamp(3rem, 7vw, 6.4rem);
+        font-weight: 800;
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+        color: var(--white);
+      }
+
+      .hero__title span {
+        display: block;
+        margin-top: 8px;
+        background: linear-gradient(
+          90deg,
+          #00d2ff 0%,
+          #5ba8ff 44%,
+          #12d5d5 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero__text {
+        max-width: 770px;
+        margin: 26px auto 0;
+        font-size: 1.1rem;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .hero__actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 48px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 58px;
+        padding: 0 30px;
+        border-radius: 999px;
+        border: 2px solid transparent;
+        font-weight: 700;
+        transition:
+          transform 0.25s ease,
+          opacity 0.25s ease,
+          filter 0.25s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.02);
+      }
+
+      .btn--white {
+        background: #f7f7f8;
+        color: #2445a4;
+      }
+
+      .btn--outline {
+        background: transparent;
+        color: var(--white);
+        border-color: rgba(255, 255, 255, 0.8);
+      }
+
+      .btn--gradient {
+        background: linear-gradient(90deg, var(--primary) 0%, #119bc9 100%);
+        color: #fff;
+        box-shadow: 0 12px 28px rgba(27, 98, 255, 0.2);
+      }
+
+      .hero__scroll {
+        display: inline-flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 28px;
+        height: 40px;
+        margin-top: 92px;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        border-radius: 40px;
+        padding-top: 7px;
+      }
+
+      .hero__scroll span {
+        width: 4px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--white);
+        animation: wheel 1.8s infinite;
+      }
+
+      @keyframes wheel {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        60% {
+          transform: translateY(11px);
+          opacity: 0.35;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes floatEyebrow {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, -8px, 0);
+        }
+      }
+
+      @keyframes floatSquare {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) rotate(4deg);
+        }
+        50% {
+          transform: translate3d(-4px, -12px, 0) rotate(6deg);
+        }
+      }
+
+      @keyframes floatOrb {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, -14px, 0);
+        }
+
+        60% {
+          transform: translateY(11px);
+          opacity: 0.35;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .services__grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 30px;
+        margin-top: 70px;
+      }
+
+      .service-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 32px 32px 28px;
+        box-shadow: var(--shadow-card);
+        border: 1px solid rgba(16, 24, 40, 0.03);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 38px rgba(20, 27, 43, 0.12);
+      }
+
+      .service-card__icon {
+        width: 64px;
+        height: 64px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #1490f0 0%, #10c7ca 100%);
+        box-shadow: 0 14px 28px rgba(27, 98, 255, 0.18);
+      }
+
+      .service-card__icon svg {
+        width: 30px;
+        height: 30px;
+        stroke: #fff;
+      }
+
+      .service-card h3 {
+        margin: 26px 0 16px;
+        font-size: 2rem;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        color: #141d31;
+      }
+
+      .service-card p {
+        margin: 0;
+        font-size: 1.02rem;
+        line-height: 1.75;
+        color: #586375;
+      }
+
+      .portfolio__grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 62px;
+      }
+
+      .portfolio-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 18px;
+        min-height: 370px;
+        background: #d8dce3;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .portfolio-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+      }
+
+      .portfolio-card:hover img {
+        transform: scale(1.04);
+      }
+
+      .portfolio__cta {
+        margin-top: 40px;
+      }
+
+      .instagram {
+        position: relative;
+      }
+
+      .instagram__icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 auto 24px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          #7c2cff 0%,
+          #ff1276 50%,
+          #ff7b1a 100%
+        );
+        color: #fff;
+        box-shadow: 0 18px 28px rgba(172, 54, 136, 0.16);
+      }
+
+      .instagram__follow {
+        margin-top: 28px;
+      }
+
+      .instagram__follow .btn {
+        background: linear-gradient(
+          90deg,
+          #8427ff 0%,
+          #ff1477 50%,
+          #ff8a1f 100%
+        );
+        color: #fff;
+        min-height: 54px;
+      }
+
+      .reels-wrap {
+        position: relative;
+        margin-top: 58px;
+      }
+
+      .reels-viewport {
+        overflow: hidden;
+      }
+
+      .reels-track {
+        display: flex;
+        gap: 22px;
+        transition: transform 0.5s ease;
+        will-change: transform;
+      }
+
+      .reel-slide {
+        flex: 0 0 calc((100% - 66px) / 4);
+      }
+
+      .reels-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+        width: 46px;
+        height: 46px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: 0 8px 18px rgba(13, 24, 40, 0.12);
+        color: #3b5fe1;
+      }
+
+      .reels-nav[disabled] {
+        opacity: 0.45;
+        cursor: default;
+      }
+
+      .reels-nav--prev {
+        left: -22px;
+      }
+
+      .reels-nav--next {
+        right: -22px;
+      }
+
+      .reel-card {
+        position: relative;
+        min-height: 470px;
+        overflow: hidden;
+        border-radius: 18px;
+        background: #cfd5de;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .reel-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(9, 17, 29, 0.02),
+          rgba(9, 17, 29, 0.72)
+        );
+      }
+
+      .reel-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .reel-card__badge {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: linear-gradient(
+          135deg,
+          #832cff 0%,
+          #ff1278 55%,
+          #ff7e1c 100%
+        );
+        color: #fff;
+      }
+
+      .reel-card__play {
+        position: absolute;
+        left: 50%;
+        bottom: 66px;
+        z-index: 2;
+        transform: translateX(-50%);
+        width: 58px;
+        height: 58px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        color: #2f5eff;
+        box-shadow: 0 14px 24px rgba(7, 17, 34, 0.18);
+      }
+
+      .reel-card__content {
+        position: absolute;
+        right: 18px;
+        left: 18px;
+        bottom: 14px;
+        z-index: 2;
+        color: #fff;
+      }
+
+      .reel-card__content h3 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+        letter-spacing: -0.03em;
+      }
+
+      .reel-card__meta {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        font-size: 0.95rem;
+      }
+
+      .reel-card__meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .reels-dots {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 26px;
+      }
+
+      .reels-dots button {
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #b9c8f4;
+      }
+
+      .reels-dots button.is-active {
+        background: #4bb5ca;
+      }
+
+      .results {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(
+          125deg,
+          #051023 0%,
+          #091632 45%,
+          #071731 100%
+        );
+        color: #fff;
+      }
+
+      .results::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 54px;
+        background: linear-gradient(
+          90deg,
+          var(--hero-start) 0%,
+          var(--hero-mid) 48%,
+          var(--hero-end) 100%
+        );
+      }
+
+      .results .section-title,
+      .results .section-subtitle {
+        color: #fff;
+      }
+
+      .results .section-subtitle {
+        color: rgba(255, 255, 255, 0.58);
+      }
+
+      .stats-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 38px;
+        margin-top: 74px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-item strong {
+        display: block;
+        margin-bottom: 16px;
+        font-size: clamp(2.8rem, 5vw, 4.6rem);
+        line-height: 1;
+        letter-spacing: -0.05em;
+        color: #3dacff;
+      }
+
+      .stat-item span {
+        font-size: 1.12rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .contact {
+        background: linear-gradient(
+          110deg,
+          var(--hero-start) 0%,
+          var(--hero-mid) 54%,
+          var(--hero-end) 100%
+        );
+        color: #fff;
+      }
+
+      .contact__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: start;
+      }
+
+      .contact .section-title,
+      .contact .section-subtitle {
+        color: #fff;
+      }
+
+      .contact .section-subtitle {
+        margin-left: 0;
+        max-width: 630px;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .contact-list {
+        margin-top: 44px;
+        display: grid;
+        gap: 26px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .contact-item__icon {
+        flex: 0 0 50px;
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #0bc3da 0%, #2b83ff 100%);
+      }
+
+      .contact-item small {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.56);
+      }
+
+      .contact-item strong {
+        font-size: 1.08rem;
+        letter-spacing: -0.02em;
+      }
+
+      .contact-card {
+        background: rgba(255, 255, 255, 0.11);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 34px 32px;
+        box-shadow: 0 20px 42px rgba(6, 18, 34, 0.16);
+      }
+
+      .form-group {
+        margin-bottom: 22px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 0.98rem;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.96);
+      }
+
+      .field,
+      .field-select,
+      .field-textarea {
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        padding: 16px 16px;
+        outline: none;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease;
+      }
+
+      .field:focus,
+      .field-select:focus,
+      .field-textarea:focus {
+        border-color: rgba(255, 255, 255, 0.44);
+        background: rgba(255, 255, 255, 0.13);
+      }
+
+      .field::placeholder,
+      .field-textarea::placeholder {
+        color: rgba(255, 255, 255, 0.48);
+      }
+
+      .field-select {
+        appearance: none;
+        background-image:
+          linear-gradient(45deg, transparent 50%, #fff 50%),
+          linear-gradient(135deg, #fff 50%, transparent 50%);
+        background-position:
+          calc(100% - 18px) calc(50% - 3px),
+          calc(100% - 12px) calc(50% - 3px);
+        background-size:
+          6px 6px,
+          6px 6px;
+        background-repeat: no-repeat;
+      }
+
+      .field-select option {
+        color: #0f172a;
+      }
+
+      .field-textarea {
+        min-height: 124px;
+        resize: vertical;
+      }
+
+      .form-error {
+        display: none;
+        margin-top: 6px;
+        color: #ffd7d7;
+        font-size: 0.92rem;
+      }
+
+      .is-invalid + .form-error,
+      .field-textarea.is-invalid + .form-error,
+      .field-select.is-invalid + .form-error {
+        display: block;
+      }
+
+      .is-invalid {
+        border-color: rgba(255, 125, 125, 0.9);
+      }
+
+      .form-status {
+        margin-top: 16px;
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .footer {
+        background: linear-gradient(
+          100deg,
+          #041126 0%,
+          #081530 52%,
+          #061126 100%
+        );
+        color: rgba(255, 255, 255, 0.74);
+        border-top: 2px solid rgba(10, 215, 255, 0.5);
+      }
+
+      .footer__main {
+        padding: 66px 0 34px;
+        display: grid;
+        grid-template-columns: 1.5fr 0.7fr 0.7fr;
+        gap: 72px;
+      }
+
+      .footer__brand h3 {
+        margin: 0 0 18px;
+        font-size: 2rem;
+        letter-spacing: -0.04em;
+        color: #00d8ff;
+      }
+
+      .footer__brand p {
+        max-width: 560px;
+        margin: 0;
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+
+      .socials {
+        display: flex;
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .socials a {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .footer h4 {
+        margin: 0 0 18px;
+        color: #fff;
+        font-size: 1.6rem;
+        letter-spacing: -0.04em;
+      }
+
+      .footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .footer li a {
+        font-size: 1.02rem;
+      }
+
+      .footer__bottom {
+        padding: 32px 0 38px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(34px);
+        transition:
+          opacity 0.85s ease,
+          transform 0.85s ease;
+      }
+
+      [data-reveal].is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+
+        [data-reveal] {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      @media (max-width: 1180px) {
+        .services__grid,
+        .portfolio__grid,
+        .stats-grid,
+        .footer__main,
+        .contact__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .reel-slide {
+          flex-basis: calc((100% - 22px) / 2);
+        }
+      }
+
+      @media (max-width: 860px) {
+        :root {
+          --header-h: 72px;
+        }
+
+        .nav,
+        .nav-cta {
+          display: none;
+        }
+
+        .nav-toggle,
+        .mobile-nav.is-open {
+          display: block;
+        }
+
+        .section {
+          padding: 80px 0;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero__inner {
+          padding: 108px 0 64px;
+        }
+
+        .hero__square {
+          position: static;
+          margin: 0 auto 22px;
+          display: block;
+        }
+
+        .hero__title-wrap {
+          display: block;
+        }
+
+        .hero::after {
+          right: 12%;
+          left: auto;
+          bottom: 31%;
+          width: 72px;
+          height: 72px;
+        }
+
+        .services__grid,
+        .portfolio__grid,
+        .stats-grid,
+        .footer__main,
+        .contact__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .reels-nav {
+          display: none;
+        }
+
+        .reel-slide {
+          flex-basis: 100%;
+        }
+
+        .footer__bottom {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .container {
+          width: min(calc(100% - 28px), var(--container));
+        }
+
+        .hero__text,
+        .section-subtitle,
+        .footer__brand p {
+          font-size: 1rem;
+        }
+
+        .hero__actions {
+          flex-direction: column;
+        }
+
+        .btn,
+        .hero__actions .btn,
+        .instagram__follow .btn {
+          width: 100%;
+        }
+
+        .service-card {
+          padding: 24px;
+        }
+
+        .service-card h3 {
+          font-size: 1.7rem;
+        }
+
+        .reel-card,
+        .portfolio-card {
+          min-height: 340px;
+        }
+
+        .contact-card {
+          padding: 24px 20px;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ART1",
+        "url": "https://www.art1.com.ar/",
+        "logo": "https://www.art1.com.ar/assets/img/logo.png",
+        "description": "Estudio creativo especializado en branding, diseño gráfico, cartelería y diseño digital.",
+        "sameAs": [
+          "https://www.instagram.com/",
+          "https://www.facebook.com/",
+          "https://www.linkedin.com/"
+        ]
+      }
+    </script>
   </head>
-
   <body>
-    <div class="wasap" style="animation-name: tada">
-      <a
-        href="https://api.whatsapp.com/send?l=es&amp;text=Hola! Quiero consultarles por un presupuesto&amp;phone=5491157405000"
-        target="_blank"
-        ><img src="https://art1.com.ar/assets/img/logo-wapp-01.svg" alt="whatsapp"
-      /></a>
-    </div>
-    <!-- <div class="video-container"> -->
-    <video playsinline autoplay muted loop auto preload id="myVideo">
-      <source src="https://art1.com.ar/assets/img/compressed.mp4" />
-    </video>
-    <!-- </div> -->
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-    <!-- <audio src="./assets/img/audio/El Padrino.mp3" autoplay></audio> -->
-
-    <!-- ======= Header ======= -->
-    <header
-      id="header"
-      class="header d-flex align-items-center fixed-top"
-      style="background-color: transparent"
-    >
-      <div
-        class="container-fluid d-flex align-items-center justify-content-between"
-      >
-        <a
-          href="https://www.art1.com.ar/"
-          class="logo d-flex align-items-center me-auto me-lg-0"
-          aria-label="Home"
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de ART1"
+          >ART1</a
         >
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img
-            src="https://art1.com.ar/assets/img/logo_grey.png"
-            alt="art1"
-            srcset="assets/img/logo_grey178.png 178w"
-            sizes="89px"
-          />
-          <!-- <i class="bi bi-camera"></i> -->
-        </a>
 
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a href="https://art1.com.ar/sobre-nosotros.html">Nosotros</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Trabajos</span>
-                <i
-                  class="bi bi-chevron-down dropdown-indicator"
-                  style="color: black"
-                ></i
-              ></a>
-              <ul>
-                <li>
-                  <a href="https://art1.com.ar/grafica-naval-vehicular-vidrieras.html">Gráfica</a>
-                </li>
-                <li><a href="https://art1.com.ar/letras-corporeas.html">Letras Corpóreas</a></li>
-                <li>
-                  <a href="https://art1.com.ar/impresiones-sobre-todas-las-superficies.html"
-                    >Impresiónes</a
-                  >
-                </li>
-                <li><a href="https://art1.com.ar/diseno-y-branding.html">Diseño Branding</a></li>
-              </ul>
-            </li>
-            <li><a href="https://art1.com.ar/servicios.html">Servicios</a></li>
-            <li><a href="https://art1.com.ar/contacto.html">Contacto</a></li>
-          </ul>
+        <nav class="nav" aria-label="Principal">
+          <a href="#servicios">Servicios</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#reels">Reels</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#contacto">Contacto</a>
         </nav>
-        <!-- .navbar -->
 
-        <div class="header-social-links">
-          <a
-            href="https://www.facebook.com/art1.com.ar"
-            target="_blank"
-            class="facebook"
-            aria-label="Facebook page"
-            ><i class="bi bi-facebook" style="color: black"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/art1.com.ar/"
-            target="_blank"
-            class="instagram"
-            aria-label="Instagram profile"
-            ><i class="bi bi-instagram" style="color: black"></i
-          ></a>
+        <a href="#contacto" class="nav-cta">Contactar</a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
+      </div>
+
+      <div class="container mobile-nav" id="mobile-nav">
+        <div class="mobile-nav__panel">
+          <a href="#servicios">Servicios</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#reels">Reels</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#contacto">Contacto</a>
         </div>
-        <i
-          class="mobile-nav-toggle mobile-nav-show bi bi-list"
-          style="color: black"
-        ></i>
-        <i
-          class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"
-          style="color: white"
-        ></i>
       </div>
     </header>
-    <!-- End Header -->
 
-    <!-- <div class="content">
-      <h1>ART1</h1>
-     
-    </div> -->
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="container hero__inner">
+          <div class="hero__eyebrow">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"
+              ></path>
+            </svg>
+            <span>Creatividad sin límites</span>
+          </div>
 
-    <main
-      id="main"
-      data-aos="fade"
-      data-aos-delay="1500"
-      style="margin-top: 100px"
-    >
-    <h1 style="color: transparent;">Gráfica en Martínez: Diseño Naval, Vidrieras, Autos y más</h1>
-  </main>
+          <div class="hero__title-wrap">
+            <span class="hero__square" aria-hidden="true"></span>
+            <h1 class="hero__title">
+              Diseñamos tu
+              <span>Identidad Visual</span>
+            </h1>
+          </div>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-      <div class="container">
-        <div class="credits">
-          <a href="https://www.raven3.com.ar">by <strong>Raven3</strong></a>
+          <p class="hero__text">
+            Cartelería, branding y diseño gráfico que transforma ideas en
+            experiencias visuales memorables.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#portfolio" class="btn btn--white">
+              Ver Proyectos
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14"></path>
+                <path d="M13 5l7 7-7 7"></path>
+              </svg>
+            </a>
+            <a href="#contacto" class="btn btn--outline">Contactar</a>
+          </div>
+
+          <div class="hero__scroll" aria-hidden="true"><span></span></div>
+        </div>
+      </section>
+
+      <section class="section section--light" id="servicios">
+        <div class="container center">
+          <p class="section-label" data-reveal>Nuestros Servicios</p>
+          <h2 class="section-title" data-reveal>Lo que hacemos mejor</h2>
+          <p class="section-subtitle" data-reveal>
+            Soluciones creativas integrales para potenciar tu marca y comunicar
+            tu mensaje.
+          </p>
+
+          <div class="services__grid">
+            <article class="service-card" data-reveal>
+              <div class="service-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="13.5" cy="6.5" r="2.5"></circle>
+                  <circle cx="7" cy="12" r="2"></circle>
+                  <circle cx="15.5" cy="15.5" r="2"></circle>
+                  <path
+                    d="M9 18c.5 1.3 2 2 3.5 2 2.8 0 5-1.8 5-4.3 0-1.1-.5-1.9-1.4-2.6"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Branding</h3>
+              <p>
+                Creamos identidades de marca únicas que conectan con tu
+                audiencia y destacan en el mercado.
+              </p>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <div class="service-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 20h9"></path>
+                  <path
+                    d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Diseño Gráfico</h3>
+              <p>
+                Diseños creativos y profesionales para todos tus materiales
+                visuales y comunicaciones.
+              </p>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <div class="service-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                  <path d="M3.3 7l8.7 5 8.7-5"></path>
+                  <path d="M12 22V12"></path>
+                </svg>
+              </div>
+              <h3>Cartelería</h3>
+              <p>
+                Impresiones de alta calidad en diferentes formatos y materiales
+                para campañas, locales y eventos.
+              </p>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <div class="service-card__icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"
+                  ></path>
+                </svg>
+              </div>
+              <h3>Diseño Digital</h3>
+              <p>
+                Gráficas optimizadas para web, redes sociales, campañas y
+                cualquier plataforma digital.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--light" id="portfolio">
+        <div class="container center">
+          <p class="section-label" data-reveal>Portfolio</p>
+          <h2 class="section-title" data-reveal>Trabajos Recientes</h2>
+          <p class="section-subtitle" data-reveal>
+            Explora algunos de nuestros proyectos más destacados y descubre cómo
+            podemos ayudarte.
+          </p>
+
+          <div class="portfolio__grid">
+            <article class="portfolio-card" data-reveal>
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto de branding con modelo y lookbook"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+            <article class="portfolio-card" data-reveal>
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto tipográfico e impresión editorial"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+            <article class="portfolio-card" data-reveal>
+              <img
+                src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto creativo con letras 3D coloridas"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+            <article class="portfolio-card" data-reveal>
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+                alt="Proyecto de packaging minimalista"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+            <article class="portfolio-card" data-reveal>
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
+                alt="Equipo creativo trabajando en diseño"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+            <article class="portfolio-card" data-reveal>
+              <img
+                src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=900&q=80"
+                alt="Arte abstracto con mezcla intensa de colores"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+          </div>
+
+          <div class="portfolio__cta" data-reveal>
+            <a href="#contacto" class="btn btn--gradient"
+              >Ver Todos los Proyectos</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--light instagram" id="reels">
+        <div class="container center">
+          <div class="instagram__icon" data-reveal>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M17.5 6.5h.01"></path>
+            </svg>
+          </div>
+          <p class="section-label" data-reveal>Síguenos en Instagram</p>
+          <h2 class="section-title" data-reveal>Nuestros Reels</h2>
+          <p class="section-subtitle" data-reveal>
+            Descubre el proceso creativo detrás de nuestros proyectos y las
+            últimas tendencias en diseño.
+          </p>
+
+          <div class="instagram__follow" data-reveal>
+            <a href="#" class="btn" aria-label="Seguir a ART1 en Instagram">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M17.5 6.5h.01"></path>
+              </svg>
+              Seguir en Instagram
+            </a>
+          </div>
+
+          <div class="reels-wrap" data-reveal>
+            <button
+              class="reels-nav reels-nav--prev"
+              type="button"
+              aria-label="Anterior"
+            >
+              ‹
+            </button>
+            <button
+              class="reels-nav reels-nav--next"
+              type="button"
+              aria-label="Siguiente"
+            >
+              ›
+            </button>
+
+            <div class="reels-viewport">
+              <div class="reels-track" aria-live="polite">
+                <div class="reel-slide">
+                  <article class="reel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=800&q=80"
+                      alt="Reel sobre creatividad diaria"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="reel-card__badge" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M17.5 6.5h.01"></path>
+                      </svg>
+                    </div>
+                    <div class="reel-card__play" aria-hidden="true">▶</div>
+                    <div class="reel-card__content">
+                      <h3>Creatividad Diaria</h3>
+                      <div class="reel-card__meta">
+                        <span>♡ 2.9k</span>
+                        <span>◔ 174</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="reel-slide">
+                  <article class="reel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+                      alt="Reel sobre proceso de branding"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="reel-card__badge" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M17.5 6.5h.01"></path>
+                      </svg>
+                    </div>
+                    <div class="reel-card__play" aria-hidden="true">▶</div>
+                    <div class="reel-card__content">
+                      <h3>Proceso de Branding</h3>
+                      <div class="reel-card__meta">
+                        <span>♡ 2.5k</span>
+                        <span>◔ 156</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="reel-slide">
+                  <article class="reel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                      alt="Reel sobre diseño en acción"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="reel-card__badge" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M17.5 6.5h.01"></path>
+                      </svg>
+                    </div>
+                    <div class="reel-card__play" aria-hidden="true">▶</div>
+                    <div class="reel-card__content">
+                      <h3>Diseño en Acción</h3>
+                      <div class="reel-card__meta">
+                        <span>♡ 3.2k</span>
+                        <span>◔ 203</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="reel-slide">
+                  <article class="reel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80"
+                      alt="Reel sobre cartelería premium"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="reel-card__badge" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M17.5 6.5h.01"></path>
+                      </svg>
+                    </div>
+                    <div class="reel-card__play" aria-hidden="true">▶</div>
+                    <div class="reel-card__content">
+                      <h3>Cartelería Premium</h3>
+                      <div class="reel-card__meta">
+                        <span>♡ 1.8k</span>
+                        <span>◔ 98</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+
+                <div class="reel-slide">
+                  <article class="reel-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+                      alt="Reel sobre trabajo en estudio creativo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <div class="reel-card__badge" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M17.5 6.5h.01"></path>
+                      </svg>
+                    </div>
+                    <div class="reel-card__play" aria-hidden="true">▶</div>
+                    <div class="reel-card__content">
+                      <h3>Estudio Creativo</h3>
+                      <div class="reel-card__meta">
+                        <span>♡ 2.1k</span>
+                        <span>◔ 121</span>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="reels-dots" aria-label="Paginación slider"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section results" id="resultados">
+        <div class="container center">
+          <h2 class="section-title" data-reveal>Resultados que Hablan</h2>
+          <p class="section-subtitle" data-reveal>
+            Nuestra trayectoria nos respalda.
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-item" data-reveal>
+              <strong data-count="341">0+</strong>
+              <span>Proyectos Completados</span>
+            </div>
+            <div class="stat-item" data-reveal>
+              <strong data-count="102">0+</strong>
+              <span>Clientes Satisfechos</span>
+            </div>
+            <div class="stat-item" data-reveal>
+              <strong data-count="6">0+</strong>
+              <span>Años de Experiencia</span>
+            </div>
+            <div class="stat-item" data-reveal>
+              <strong data-count="66" data-suffix="%">0%</strong>
+              <span>Satisfacción del Cliente</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacto">
+        <div class="container contact__grid">
+          <div data-reveal>
+            <p class="section-label" style="color: #12dcff">Contacto</p>
+            <h2 class="section-title">¿Listo para crear algo increíble?</h2>
+            <p class="section-subtitle">
+              Conversemos sobre tu proyecto y hagamos realidad tus ideas.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">✉</div>
+                <div>
+                  <small>Email</small>
+                  <strong>info@art1.com.ar</strong>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">✆</div>
+                <div>
+                  <small>Teléfono</small>
+                  <strong>+54 11 1234-5678</strong>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item__icon" aria-hidden="true">⌖</div>
+                <div>
+                  <small>Ubicación</small>
+                  <strong>Buenos Aires, Argentina</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card" data-reveal>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                  class="field"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Tu nombre"
+                  required
+                />
+                <div class="form-error">Ingresá tu nombre.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  class="field"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="tu@email.com"
+                  required
+                />
+                <div class="form-error">Ingresá un email válido.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="project">Tipo de Proyecto</label>
+                <select
+                  class="field-select"
+                  id="project"
+                  name="project"
+                  required
+                >
+                  <option value="">Selecciona una opción</option>
+                  <option>Branding</option>
+                  <option>Diseño Gráfico</option>
+                  <option>Cartelería</option>
+                  <option>Diseño Digital</option>
+                </select>
+                <div class="form-error">Seleccioná un tipo de proyecto.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  class="field-textarea"
+                  id="message"
+                  name="message"
+                  placeholder="Cuéntanos sobre tu proyecto..."
+                  required
+                ></textarea>
+                <div class="form-error">
+                  Contanos un poco sobre tu proyecto.
+                </div>
+              </div>
+
+              <button class="btn btn--gradient" type="submit">
+                Enviar Mensaje
+                <span aria-hidden="true">✈</span>
+              </button>
+              <div
+                class="form-status"
+                id="form-status"
+                aria-live="polite"
+              ></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__main">
+        <div class="footer__brand">
+          <h3>ART1</h3>
+          <p>
+            Transformamos ideas en experiencias visuales memorables.
+            Especialistas en branding, diseño gráfico y cartelería.
+          </p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Branding</a></li>
+            <li><a href="#servicios">Diseño Gráfico</a></li>
+            <li><a href="#servicios">Cartelería</a></li>
+            <li><a href="#servicios">Diseño Digital</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#inicio">Nosotros</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#reels">Reels</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
         </div>
       </div>
+
+      <div class="container footer__bottom">
+        <div>© 2026 ART1. Todos los derechos reservados.</div>
+        <div>Hecho con 💙 para nuestros clientes</div>
+      </div>
     </footer>
-    <!-- End Footer -->
 
-    <a
-      href="#"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      aria-label="Scroll to Top"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <script>
+      (() => {
+        const prefersReducedMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
 
-    <div id="preloader">
-      <div class="line"></div>
-    </div>
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18 },
+        );
 
-    <!-- Vendor JS Files -->
-    <script src="https://art1.com.ar/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://art1.com.ar/assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="https://art1.com.ar/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="https://art1.com.ar/assets/vendor/aos/aos.js"></script>
-    <script src="https://art1.com.ar/assets/vendor/php-email-form/validate.js"></script>
+        document
+          .querySelectorAll("[data-reveal]")
+          .forEach((el) => observer.observe(el));
 
-    <!-- Template Main JS File -->
-    <script src="https://art1.com.ar/assets/js/main.js"></script>
+        const counters = document.querySelectorAll("[data-count]");
+        const counterObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+
+              const el = entry.target;
+              const target = Number(el.dataset.count || 0);
+              const suffix = el.dataset.suffix || "+";
+              let current = 0;
+              const duration = prefersReducedMotion ? 0 : 1000;
+              const start = performance.now();
+
+              const render = (value) => {
+                el.textContent = `${Math.round(value)}${suffix}`;
+              };
+
+              if (!duration) {
+                render(target);
+                counterObserver.unobserve(el);
+                return;
+              }
+
+              const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                current = target * eased;
+                render(current);
+                if (progress < 1) {
+                  requestAnimationFrame(step);
+                } else {
+                  render(target);
+                }
+              };
+
+              requestAnimationFrame(step);
+              counterObserver.unobserve(el);
+            });
+          },
+          { threshold: 0.35 },
+        );
+
+        counters.forEach((counter) => counterObserver.observe(counter));
+
+        const navToggle = document.querySelector(".nav-toggle");
+        const mobileNav = document.querySelector(".mobile-nav");
+        if (navToggle && mobileNav) {
+          navToggle.addEventListener("click", () => {
+            const expanded = navToggle.getAttribute("aria-expanded") === "true";
+            navToggle.setAttribute("aria-expanded", String(!expanded));
+            mobileNav.classList.toggle("is-open");
+          });
+
+          mobileNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              navToggle.setAttribute("aria-expanded", "false");
+              mobileNav.classList.remove("is-open");
+            });
+          });
+        }
+
+        const reelsWrap = document.querySelector(".reels-wrap");
+        if (reelsWrap) {
+          const track = reelsWrap.querySelector(".reels-track");
+          const slides = Array.from(reelsWrap.querySelectorAll(".reel-slide"));
+          const prev = reelsWrap.querySelector(".reels-nav--prev");
+          const next = reelsWrap.querySelector(".reels-nav--next");
+          const dotsWrap = reelsWrap.querySelector(".reels-dots");
+          let currentIndex = 0;
+          let perView =
+            window.innerWidth <= 860 ? 1 : window.innerWidth <= 1180 ? 2 : 4;
+          let maxIndex = Math.max(0, slides.length - perView);
+          let autoTimer = null;
+
+          const buildDots = () => {
+            dotsWrap.innerHTML = "";
+            const count = maxIndex + 1;
+            for (let i = 0; i < count; i += 1) {
+              const dot = document.createElement("button");
+              dot.type = "button";
+              dot.setAttribute("aria-label", `Ir al slide ${i + 1}`);
+              if (i === currentIndex) dot.classList.add("is-active");
+              dot.addEventListener("click", () => {
+                currentIndex = i;
+                updateSlider();
+                restartAutoplay();
+              });
+              dotsWrap.appendChild(dot);
+            }
+          };
+
+          const updateSlider = () => {
+            const slideWidth = slides[0]?.getBoundingClientRect().width || 0;
+            const gap = 22;
+            track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
+            [...dotsWrap.children].forEach((dot, index) => {
+              dot.classList.toggle("is-active", index === currentIndex);
+            });
+            if (prev) prev.disabled = currentIndex === 0;
+            if (next) next.disabled = currentIndex === maxIndex;
+          };
+
+          const recalc = () => {
+            perView =
+              window.innerWidth <= 860 ? 1 : window.innerWidth <= 1180 ? 2 : 4;
+            maxIndex = Math.max(0, slides.length - perView);
+            currentIndex = Math.min(currentIndex, maxIndex);
+            buildDots();
+            updateSlider();
+          };
+
+          const autoplay = () => {
+            if (prefersReducedMotion || maxIndex === 0) return;
+            autoTimer = window.setInterval(() => {
+              currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+              updateSlider();
+            }, 3500);
+          };
+
+          const restartAutoplay = () => {
+            if (autoTimer) window.clearInterval(autoTimer);
+            autoplay();
+          };
+
+          prev?.addEventListener("click", () => {
+            currentIndex = Math.max(0, currentIndex - 1);
+            updateSlider();
+            restartAutoplay();
+          });
+
+          next?.addEventListener("click", () => {
+            currentIndex = Math.min(maxIndex, currentIndex + 1);
+            updateSlider();
+            restartAutoplay();
+          });
+
+          window.addEventListener("resize", recalc);
+          recalc();
+          autoplay();
+        }
+
+        const form = document.getElementById("contact-form");
+        const formStatus = document.getElementById("form-status");
+        if (form) {
+          const fields = Array.from(
+            form.querySelectorAll("input, select, textarea"),
+          );
+
+          const validators = {
+            name: (value) => value.trim().length > 1,
+            email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
+            project: (value) => value.trim() !== "",
+            message: (value) => value.trim().length > 8,
+          };
+
+          const validateField = (field) => {
+            const key = field.name;
+            const valid = validators[key] ? validators[key](field.value) : true;
+            field.classList.toggle("is-invalid", !valid);
+            return valid;
+          };
+
+          fields.forEach((field) => {
+            field.addEventListener("input", () => validateField(field));
+            field.addEventListener("blur", () => validateField(field));
+          });
+
+          form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const allValid = fields.every((field) => validateField(field));
+            if (!allValid) {
+              formStatus.textContent =
+                "Revisá los campos marcados antes de enviar.";
+              return;
+            }
+
+            formStatus.textContent =
+              "Formulario listo. Conectá este form a Formspree, Web3Forms o tu backend para enviarlo en producción.";
+            form.reset();
+            fields.forEach((field) => field.classList.remove("is-invalid"));
+          });
+        }
+      })();
+    </script>
   </body>
 </html>
