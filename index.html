@@ -1,49 +1,40 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>ART1 | Branding, Diseño Gráfico, Cartelería y Diseño Digital</title>
+    <title>ART1 | 30 años comunicando marcas con gráfica, diseño e impresión</title>
     <meta
       name="description"
-      content="ART1 crea identidades visuales memorables con foco en branding, diseño gráfico, cartelería y diseño digital."
+      content="ART1 acompaña necesidades gráficas con diseño, impresión, cartelería, ambientaciones, letras corpóreas, corte láser e instalaciones profesionales en Zona Norte."
     />
     <meta
       name="keywords"
-      content="branding, diseño gráfico, cartelería, diseño digital, identidad visual, agencia creativa, ART1"
+      content="gráfica, cartelería, impresión UV, impresión eco solvente, letras corpóreas, diseño gráfico, branding, corte láser, gráfica vehicular, gráfica en vidrieras, Zona Norte"
     />
     <meta name="theme-color" content="#134f84" />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="ART1 | Identidad visual que transforma marcas"
-    />
+    <meta property="og:title" content="ART1 | 30 años comunicando" />
     <meta
       property="og:description"
-      content="Cartelería, branding y diseño gráfico que transforma ideas en experiencias visuales memorables."
+      content="Diseño, producción e instalación gráfica con materiales de primera calidad y terminaciones duraderas."
     />
     <meta property="og:image" content="assets/img/og/art1-home.jpg" />
     <meta property="og:locale" content="es_AR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="ART1 | Branding, Diseño Gráfico y Cartelería"
-    />
-    <meta
-      name="twitter:description"
-      content="Diseñamos tu identidad visual con soluciones creativas integrales para marcas y negocios."
-    />
+
     <link href="assets/img/logo_grey.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
     <link rel="stylesheet" href="assets/css/header.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
     <style>
       :root {
         --bg-light: #f4f5f7;
@@ -63,6 +54,7 @@
         --hero-mid: #16557f;
         --hero-end: #09665b;
 
+        --line-dark: rgba(16, 24, 40, 0.08);
         --shadow-soft: 0 12px 28px rgba(16, 24, 40, 0.08);
         --shadow-card: 0 14px 34px rgba(20, 27, 43, 0.09);
 
@@ -143,52 +135,81 @@
       }
 
       .section {
-        padding: 104px 0;
+        padding: 96px 0;
       }
 
       .section--light {
         background: var(--bg-light);
       }
 
-      .section-label {
-        margin: 0 0 16px;
-        font-size: 0.92rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: var(--primary);
-      }
-
-      .section-title {
-        margin: 0;
-        font-size: clamp(2.3rem, 4.8vw, 4rem);
-        line-height: 1.06;
-        letter-spacing: -0.045em;
-        color: #111a2e;
-      }
-
-      .section-subtitle {
-        max-width: 760px;
-        margin: 18px auto 0;
-        font-size: 1.06rem;
-        line-height: 1.65;
-        color: var(--muted);
+      .section--white {
+        background: #fff;
       }
 
       .center {
         text-align: center;
       }
 
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
+      .section-label {
+        margin: 0 0 14px;
+        color: var(--primary);
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.055em;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        margin: 0;
+        color: #111a2e;
+        font-size: clamp(2.2rem, 4.8vw, 4rem);
+        line-height: 1.06;
+        letter-spacing: -0.05em;
+      }
+
+      .section-subtitle {
+        max-width: 800px;
+        margin: 18px auto 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 56px;
+        padding: 0 28px;
+        border: 2px solid transparent;
+        border-radius: 999px;
+        font-weight: 800;
+        transition:
+          transform 0.24s ease,
+          filter 0.24s ease,
+          background 0.24s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.04);
+      }
+
+      .btn--white {
+        background: #fff;
+        color: #2445a4;
+      }
+
+      .btn--outline {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.78);
+      }
+
+      .btn--gradient {
+        background: linear-gradient(90deg, var(--primary), var(--primary-2));
+        color: #fff;
+        box-shadow: 0 12px 28px rgba(27, 98, 255, 0.2);
       }
 
       .hero {
@@ -197,252 +218,217 @@
         min-height: calc(100vh - var(--header-h));
         display: flex;
         align-items: center;
+        color: #fff;
         background:
-          radial-gradient(
-            circle at 18% 14%,
-            rgba(97, 153, 255, 0.08),
-            transparent 24%
-          ),
-          linear-gradient(
-            110deg,
-            var(--hero-start) 0%,
-            var(--hero-mid) 52%,
-            var(--hero-end) 100%
-          );
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.05),
-          rgba(0, 0, 0, 0.05)
-        );
-        pointer-events: none;
+          radial-gradient(circle at 18% 14%, rgba(97, 153, 255, 0.12), transparent 24%),
+          radial-gradient(circle at 80% 72%, rgba(18, 199, 222, 0.16), transparent 24%),
+          linear-gradient(110deg, var(--hero-start) 0%, var(--hero-mid) 52%, var(--hero-end) 100%);
       }
 
       .hero::after {
         content: "";
         position: absolute;
-        inset: auto auto 34% 68%;
-        width: 86px;
-        height: 86px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #4e9dff 0%, #12cfd8 100%);
-        box-shadow: 0 18px 35px rgba(6, 34, 74, 0.2);
-        animation: floatOrb 7s ease-in-out infinite;
-        will-change: transform;
+        right: 14%;
+        bottom: 20%;
+        width: 110px;
+        height: 110px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #13d6ff, #2d7eff);
+        opacity: 0.85;
+        transform: rotate(8deg);
+        box-shadow: 0 24px 45px rgba(7, 28, 70, 0.18);
+        animation: floatSquare 6s ease-in-out infinite;
       }
 
       .hero__inner {
         position: relative;
         z-index: 1;
-        padding: 130px 0 90px;
-        text-align: center;
+        max-width: 980px;
+        padding: 128px 0 96px;
       }
 
       .hero__eyebrow {
+        display: inline-flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 34px;
+        margin-bottom: 28px;
         color: #10dcff;
         font-size: 0.95rem;
-        font-weight: 500;
-        animation: floatEyebrow 5.5s ease-in-out infinite;
-        will-change: transform;
-      }
-
-      .hero__eyebrow svg {
-        width: 18px;
-        height: 18px;
-      }
-
-      .hero__title-wrap {
-        position: relative;
-        display: inline-block;
-      }
-
-      .hero__square {
-        position: absolute;
-        left: -68px;
-        top: 12px;
-        width: 78px;
-        height: 78px;
-        border-radius: 12px;
-        transform: rotate(4deg);
-        background: linear-gradient(135deg, #13d6ff 0%, #2d7eff 100%);
-        box-shadow: 0 20px 35px rgba(7, 28, 70, 0.18);
-        animation: floatSquare 6s ease-in-out infinite;
-        will-change: transform;
+        font-weight: 800;
+        letter-spacing: 0.055em;
+        text-transform: uppercase;
       }
 
       .hero__title {
         margin: 0;
-        font-size: clamp(3rem, 7vw, 6.4rem);
-        font-weight: 800;
-        line-height: 0.98;
-        letter-spacing: -0.06em;
-        color: var(--white);
+        font-size: clamp(3.2rem, 8vw, 7.2rem);
+        font-weight: 900;
+        line-height: 0.95;
+        letter-spacing: -0.075em;
       }
 
       .hero__title span {
         display: block;
         margin-top: 8px;
-        background: linear-gradient(
-          90deg,
-          #00d2ff 0%,
-          #5ba8ff 44%,
-          #12d5d5 100%
-        );
+        background: linear-gradient(90deg, #00d2ff 0%, #5ba8ff 44%, #12d5d5 100%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
       }
 
       .hero__text {
-        max-width: 770px;
-        margin: 26px auto 0;
-        font-size: 1.1rem;
-        line-height: 1.55;
-        color: rgba(255, 255, 255, 0.82);
+        max-width: 760px;
+        margin: 28px 0 0;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 1.16rem;
+        line-height: 1.68;
       }
 
       .hero__actions {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 42px;
+      }
+
+      .hero__stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 18px;
-        margin-top: 48px;
+        max-width: 740px;
+        margin-top: 56px;
       }
 
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        min-height: 58px;
-        padding: 0 30px;
-        border-radius: 999px;
-        border: 2px solid transparent;
-        font-weight: 700;
-        transition:
-          transform 0.25s ease,
-          opacity 0.25s ease,
-          filter 0.25s ease;
+      .hero-stat {
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(12px);
       }
 
-      .btn:hover {
-        transform: translateY(-2px);
-        filter: brightness(1.02);
-      }
-
-      .btn--white {
-        background: #f7f7f8;
-        color: #2445a4;
-      }
-
-      .btn--outline {
-        background: transparent;
-        color: var(--white);
-        border-color: rgba(255, 255, 255, 0.8);
-      }
-
-      .btn--gradient {
-        background: linear-gradient(90deg, var(--primary) 0%, #119bc9 100%);
+      .hero-stat strong {
+        display: block;
+        margin-bottom: 6px;
         color: #fff;
-        box-shadow: 0 12px 28px rgba(27, 98, 255, 0.2);
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        line-height: 1;
+        letter-spacing: -0.05em;
       }
 
-      .hero__scroll {
-        display: inline-flex;
-        justify-content: center;
-        align-items: flex-start;
-        width: 28px;
-        height: 40px;
-        margin-top: 92px;
-        border: 2px solid rgba(255, 255, 255, 0.9);
-        border-radius: 40px;
-        padding-top: 7px;
+      .hero-stat span {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.96rem;
+        line-height: 1.45;
       }
 
-      .hero__scroll span {
-        width: 4px;
-        height: 8px;
-        border-radius: 999px;
-        background: var(--white);
-        animation: wheel 1.8s infinite;
+      .about-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 52px;
+        align-items: start;
+        margin-top: 58px;
       }
 
-      @keyframes wheel {
-        0% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        60% {
-          transform: translateY(11px);
-          opacity: 0.35;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      .about-card {
+        position: sticky;
+        top: calc(var(--header-h) + 28px);
+        padding: 36px;
+        border-radius: 28px;
+        color: #fff;
+        background: linear-gradient(135deg, var(--hero-start), var(--hero-mid) 56%, var(--hero-end));
+        box-shadow: 0 20px 42px rgba(6, 18, 34, 0.16);
       }
 
-      @keyframes floatEyebrow {
-        0%,
-        100% {
-          transform: translate3d(0, 0, 0);
-        }
-        50% {
-          transform: translate3d(0, -8px, 0);
-        }
+      .about-card strong {
+        display: block;
+        margin-bottom: 16px;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
       }
 
-      @keyframes floatSquare {
-        0%,
-        100% {
-          transform: translate3d(0, 0, 0) rotate(4deg);
-        }
-        50% {
-          transform: translate3d(-4px, -12px, 0) rotate(6deg);
-        }
+      .about-card p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 1.05rem;
+        line-height: 1.7;
       }
 
-      @keyframes floatOrb {
-        0%,
-        100% {
-          transform: translate3d(0, 0, 0);
-        }
-        50% {
-          transform: translate3d(0, -14px, 0);
-        }
+      .about-copy {
+        display: grid;
+        gap: 22px;
+      }
 
-        60% {
-          transform: translateY(11px);
-          opacity: 0.35;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
+      .about-copy p {
+        margin: 0;
+        color: #4f5c70;
+        font-size: 1.08rem;
+        line-height: 1.8;
+      }
+
+      .difference-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+        margin-top: 54px;
+      }
+
+      .difference-card,
+      .service-card,
+      .work-card {
+        background: #fff;
+        border: 1px solid rgba(16, 24, 40, 0.04);
+        border-radius: 22px;
+        box-shadow: var(--shadow-card);
+      }
+
+      .difference-card {
+        padding: 30px;
+      }
+
+      .difference-card__num {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 22px;
+        border-radius: 15px;
+        color: #fff;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        box-shadow: 0 12px 24px rgba(27, 98, 255, 0.16);
+      }
+
+      .difference-card h3,
+      .service-card h3,
+      .work-card h3 {
+        margin: 0 0 14px;
+        color: #141d31;
+        font-size: 1.45rem;
+        line-height: 1.14;
+        letter-spacing: -0.04em;
+      }
+
+      .difference-card p,
+      .service-card p,
+      .work-card p {
+        margin: 0;
+        color: #586375;
+        font-size: 1rem;
+        line-height: 1.7;
       }
 
       .services__grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 30px;
-        margin-top: 70px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 62px;
       }
 
       .service-card {
-        background: #fff;
-        border-radius: 18px;
-        padding: 32px 32px 28px;
-        box-shadow: var(--shadow-card);
-        border: 1px solid rgba(16, 24, 40, 0.03);
+        min-height: 100%;
+        padding: 30px;
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease;
@@ -454,11 +440,12 @@
       }
 
       .service-card__icon {
-        width: 64px;
-        height: 64px;
         display: grid;
         place-items: center;
-        border-radius: 16px;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 24px;
+        border-radius: 18px;
         background: linear-gradient(135deg, #1490f0 0%, #10c7ca 100%);
         box-shadow: 0 14px 28px rgba(27, 98, 255, 0.18);
       }
@@ -469,270 +456,80 @@
         stroke: #fff;
       }
 
-      .service-card h3 {
-        margin: 26px 0 16px;
-        font-size: 2rem;
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        color: #141d31;
-        text-align: left;
-      }
-
-      .service-card p {
-        margin: 0;
-        font-size: 1.02rem;
-        line-height: 1.75;
-        color: #586375;
-        text-align: left;
-      }
-
-      .portfolio__grid {
+      .works-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 28px;
         margin-top: 62px;
       }
 
-      .portfolio-card {
-        position: relative;
+      .work-card {
         overflow: hidden;
-        border-radius: 18px;
-        min-height: 370px;
-        background: #d8dce3;
-        box-shadow: var(--shadow-soft);
       }
 
-      .portfolio-card img {
+      .work-card__media {
+        position: relative;
+        min-height: 280px;
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(27, 98, 255, 0.24), rgba(18, 199, 222, 0.18)),
+          #d8dce3;
+      }
+
+      .work-card__media img {
         width: 100%;
         height: 100%;
+        min-height: 280px;
         object-fit: cover;
         transition: transform 0.45s ease;
       }
 
-      .portfolio-card:hover img {
+      .work-card:hover .work-card__media img {
         transform: scale(1.04);
       }
 
-      .portfolio__cta {
-        margin-top: 40px;
-      }
-
-      .instagram {
-        position: relative;
-      }
-
-      .instagram__icon {
-        width: 48px;
-        height: 48px;
-        margin: 0 auto 24px;
-        display: grid;
-        place-items: center;
-        border-radius: 14px;
-        background: linear-gradient(
-          135deg,
-          #7c2cff 0%,
-          #ff1276 50%,
-          #ff7b1a 100%
-        );
-        color: #fff;
-        box-shadow: 0 18px 28px rgba(172, 54, 136, 0.16);
-      }
-
-      .instagram__follow {
-        margin-top: 28px;
-      }
-
-      .instagram__follow .btn {
-        background: linear-gradient(
-          90deg,
-          #8427ff 0%,
-          #ff1477 50%,
-          #ff8a1f 100%
-        );
-        color: #fff;
-        min-height: 54px;
-      }
-
-      .reels-wrap {
-        position: relative;
-        margin-top: 58px;
-      }
-
-      .reels-viewport {
-        overflow: hidden;
-      }
-
-      .reels-track {
-        display: flex;
-        gap: 22px;
-        transition: transform 0.5s ease;
-        will-change: transform;
-      }
-
-      .reel-slide {
-        flex: 0 0 calc((100% - 66px) / 4);
-      }
-
-      .reels-nav {
+      .work-card__badge {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 3;
-        width: 46px;
-        height: 46px;
-        border: 0;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.92);
-        box-shadow: 0 8px 18px rgba(13, 24, 40, 0.12);
-        color: #3b5fe1;
-      }
-
-      .reels-nav[disabled] {
-        opacity: 0.45;
-        cursor: default;
-      }
-
-      .reels-nav--prev {
-        left: -22px;
-      }
-
-      .reels-nav--next {
-        right: -22px;
-      }
-
-      .reel-card {
-        position: relative;
-        min-height: 470px;
-        overflow: hidden;
-        border-radius: 18px;
-        background: #cfd5de;
-        box-shadow: var(--shadow-soft);
-      }
-
-      .reel-card::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(9, 17, 29, 0.02),
-          rgba(9, 17, 29, 0.72)
-        );
-      }
-
-      .reel-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .reel-card__badge {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        z-index: 2;
-        width: 38px;
-        height: 38px;
-        display: grid;
-        place-items: center;
-        border-radius: 12px;
-        background: linear-gradient(
-          135deg,
-          #832cff 0%,
-          #ff1278 55%,
-          #ff7e1c 100%
-        );
-        color: #fff;
-      }
-
-      .reel-card__play {
-        position: absolute;
-        left: 50%;
-        bottom: 66px;
-        z-index: 2;
-        transform: translateX(-50%);
-        width: 58px;
-        height: 58px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.95);
-        color: #2f5eff;
-        box-shadow: 0 14px 24px rgba(7, 17, 34, 0.18);
-      }
-
-      .reel-card__content {
-        position: absolute;
-        right: 18px;
         left: 18px;
-        bottom: 14px;
-        z-index: 2;
+        top: 18px;
+        z-index: 1;
+        padding: 9px 13px;
+        border-radius: 999px;
         color: #fff;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        background: rgba(4, 17, 38, 0.72);
+        backdrop-filter: blur(12px);
       }
 
-      .reel-card__content h3 {
-        margin: 0 0 10px;
-        font-size: 1.2rem;
-        letter-spacing: -0.03em;
+      .work-card__content {
+        padding: 28px;
       }
 
-      .reel-card__meta {
+      .work-card__list {
         display: flex;
-        align-items: center;
-        gap: 18px;
-        font-size: 0.95rem;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 20px;
       }
 
-      .reel-card__meta span {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-      }
-
-      .reels-dots {
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        margin-top: 26px;
-      }
-
-      .reels-dots button {
-        width: 9px;
-        height: 9px;
-        padding: 0;
-        border: 0;
-        border-radius: 50%;
-        background: #b9c8f4;
-      }
-
-      .reels-dots button.is-active {
-        background: #4bb5ca;
+      .work-card__list span {
+        padding: 8px 11px;
+        border-radius: 999px;
+        color: #386072;
+        font-size: 0.86rem;
+        font-weight: 700;
+        background: rgba(18, 199, 222, 0.11);
       }
 
       .results {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(
-          125deg,
-          #051023 0%,
-          #091632 45%,
-          #071731 100%
-        );
         color: #fff;
+        background: linear-gradient(125deg, #051023 0%, #091632 45%, #071731 100%);
       }
-
-      /* .results::after {
-        content: "";
-        position: absolute;
-        inset: auto 0 0 0;
-        height: 54px;
-        background: linear-gradient(
-          90deg,
-          var(--hero-start) 0%,
-          var(--hero-mid) 48%,
-          var(--hero-end) 100%
-        );
-      } */
 
       .results .section-title,
       .results .section-subtitle {
@@ -740,7 +537,7 @@
       }
 
       .results .section-subtitle {
-        color: rgba(255, 255, 255, 0.58);
+        color: rgba(255, 255, 255, 0.62);
       }
 
       .stats-grid {
@@ -748,8 +545,8 @@
         z-index: 1;
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 38px;
-        margin-top: 74px;
+        gap: 30px;
+        margin-top: 64px;
       }
 
       .stat-item {
@@ -758,26 +555,21 @@
 
       .stat-item strong {
         display: block;
-        margin-bottom: 16px;
-        font-size: clamp(2.8rem, 5vw, 4.6rem);
+        margin-bottom: 14px;
+        color: #3dacff;
+        font-size: clamp(2.6rem, 5vw, 4.4rem);
         line-height: 1;
         letter-spacing: -0.05em;
-        color: #3dacff;
       }
 
       .stat-item span {
-        font-size: 1.12rem;
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 1.05rem;
       }
 
       .contact {
-        background: linear-gradient(
-          110deg,
-          var(--hero-start) 0%,
-          var(--hero-mid) 54%,
-          var(--hero-end) 100%
-        );
         color: #fff;
+        background: linear-gradient(110deg, var(--hero-start) 0%, var(--hero-mid) 54%, var(--hero-end) 100%);
       }
 
       .contact__grid {
@@ -793,15 +585,15 @@
       }
 
       .contact .section-subtitle {
-        margin-left: 0;
         max-width: 630px;
+        margin-left: 0;
         color: rgba(255, 255, 255, 0.82);
       }
 
       .contact-list {
-        margin-top: 44px;
         display: grid;
         gap: 26px;
+        margin-top: 44px;
       }
 
       .contact-item {
@@ -812,19 +604,19 @@
 
       .contact-item__icon {
         flex: 0 0 50px;
-        width: 50px;
-        height: 50px;
         display: grid;
         place-items: center;
-        border-radius: 12px;
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
         background: linear-gradient(135deg, #0bc3da 0%, #2b83ff 100%);
       }
 
       .contact-item small {
         display: block;
         margin-bottom: 4px;
-        font-size: 0.95rem;
         color: rgba(255, 255, 255, 0.56);
+        font-size: 0.95rem;
       }
 
       .contact-item strong {
@@ -833,11 +625,11 @@
       }
 
       .contact-card {
-        background: rgba(255, 255, 255, 0.11);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        backdrop-filter: blur(8px);
-        border-radius: 20px;
         padding: 34px 32px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(8px);
         box-shadow: 0 20px 42px rgba(6, 18, 34, 0.16);
       }
 
@@ -848,21 +640,21 @@
       .form-group label {
         display: block;
         margin-bottom: 10px;
+        color: rgba(255, 255, 255, 0.96);
         font-size: 0.98rem;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.96);
       }
 
       .field,
       .field-select,
       .field-textarea {
         width: 100%;
+        padding: 16px;
         border: 1px solid rgba(255, 255, 255, 0.16);
         border-radius: 12px;
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        padding: 16px 16px;
         outline: none;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
         transition:
           border-color 0.2s ease,
           background 0.2s ease;
@@ -888,10 +680,8 @@
         background-position:
           calc(100% - 18px) calc(50% - 3px),
           calc(100% - 12px) calc(50% - 3px);
-        background-size:
-          6px 6px,
-          6px 6px;
         background-repeat: no-repeat;
+        background-size: 6px 6px, 6px 6px;
       }
 
       .field-select option {
@@ -922,38 +712,26 @@
 
       .form-status {
         margin-top: 16px;
-        font-size: 0.95rem;
         color: rgba(255, 255, 255, 0.88);
+        font-size: 0.95rem;
       }
 
       .footer {
-        background: linear-gradient(
-          100deg,
-          #041126 0%,
-          #081530 52%,
-          #061126 100%
-        );
         color: rgba(255, 255, 255, 0.74);
         border-top: 2px solid rgba(10, 215, 255, 0.5);
+        background: linear-gradient(100deg, #041126 0%, #081530 52%, #061126 100%);
       }
 
       .footer__main {
-        padding: 66px 0 34px;
         display: grid;
         grid-template-columns: 1.5fr 0.7fr 0.7fr;
         gap: 72px;
-      }
-
-      .footer__brand h3 {
-        margin: 0 0 18px;
-        font-size: 2rem;
-        letter-spacing: -0.04em;
-        color: #00d8ff;
+        padding: 66px 0 34px;
       }
 
       .footer__brand p {
         max-width: 560px;
-        margin: 0;
+        margin: 22px 0 0;
         font-size: 1.08rem;
         line-height: 1.7;
       }
@@ -965,10 +743,10 @@
       }
 
       .socials a {
-        width: 42px;
-        height: 42px;
         display: grid;
         place-items: center;
+        width: 42px;
+        height: 42px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.08);
       }
@@ -976,16 +754,16 @@
       .footer h4 {
         margin: 0 0 18px;
         color: #fff;
-        font-size: 1.6rem;
+        font-size: 1.55rem;
         letter-spacing: -0.04em;
       }
 
       .footer ul {
+        display: grid;
+        gap: 14px;
         list-style: none;
         margin: 0;
         padding: 0;
-        display: grid;
-        gap: 14px;
       }
 
       .footer li a {
@@ -993,10 +771,10 @@
       }
 
       .footer__bottom {
-        padding: 32px 0 38px;
         display: flex;
         justify-content: space-between;
         gap: 20px;
+        padding: 32px 0 38px;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
       }
 
@@ -1011,6 +789,16 @@
       [data-reveal].is-visible {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      @keyframes floatSquare {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) rotate(8deg);
+        }
+        50% {
+          transform: translate3d(-4px, -12px, 0) rotate(11deg);
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -1033,15 +821,19 @@
 
       @media (max-width: 1180px) {
         .services__grid,
-        .portfolio__grid,
+        .difference-grid,
         .stats-grid,
         .footer__main,
         .contact__grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        .reel-slide {
-          flex-basis: calc((100% - 22px) / 2);
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-card {
+          position: static;
         }
       }
 
@@ -1061,7 +853,7 @@
         }
 
         .section {
-          padding: 80px 0;
+          padding: 78px 0;
         }
 
         .hero {
@@ -1069,41 +861,24 @@
         }
 
         .hero__inner {
-          padding: 108px 0 64px;
-        }
-
-        .hero__square {
-          position: static;
-          margin: 0 auto 22px;
-          display: block;
-        }
-
-        .hero__title-wrap {
-          display: block;
+          padding: 96px 0 72px;
         }
 
         .hero::after {
-          right: 12%;
-          left: auto;
-          bottom: 31%;
-          width: 72px;
-          height: 72px;
+          right: 8%;
+          bottom: 18%;
+          width: 74px;
+          height: 74px;
         }
 
+        .hero__stats,
         .services__grid,
-        .portfolio__grid,
+        .difference-grid,
+        .works-grid,
         .stats-grid,
         .footer__main,
         .contact__grid {
           grid-template-columns: 1fr;
-        }
-
-        .reels-nav {
-          display: none;
-        }
-
-        .reel-slide {
-          flex-basis: 100%;
         }
 
         .footer__bottom {
@@ -1114,6 +889,10 @@
       @media (max-width: 560px) {
         .container {
           width: min(calc(100% - 28px), var(--container));
+        }
+
+        .hero__title {
+          font-size: clamp(3rem, 18vw, 4.4rem);
         }
 
         .hero__text,
@@ -1127,29 +906,24 @@
         }
 
         .btn,
-        .hero__actions .btn,
-        .instagram__follow .btn {
+        .hero__actions .btn {
           width: 100%;
         }
 
-        .service-card {
+        .difference-card,
+        .service-card,
+        .work-card__content,
+        .contact-card {
           padding: 24px;
         }
 
-        .service-card h3 {
-          font-size: 1.7rem;
-        }
-
-        .reel-card,
-        .portfolio-card {
-          min-height: 340px;
-        }
-
-        .contact-card {
-          padding: 24px 20px;
+        .work-card__media,
+        .work-card__media img {
+          min-height: 230px;
         }
       }
     </style>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1157,7 +931,8 @@
         "name": "ART1",
         "url": "https://www.art1.com.ar/",
         "logo": "https://www.art1.com.ar/assets/img/logo.png",
-        "description": "Estudio creativo especializado en branding, diseño gráfico, cartelería y diseño digital.",
+        "description": "Estudio gráfico especializado en diseño, impresión, cartelería, ambientaciones, letras corpóreas y corte láser.",
+        "areaServed": "Zona Norte, Buenos Aires, Argentina",
         "sameAs": [
           "https://www.instagram.com/",
           "https://www.facebook.com/",
@@ -1166,6 +941,7 @@
       }
     </script>
   </head>
+
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
@@ -1178,9 +954,9 @@
         >
           <img
             src="https://art1.com.ar/assets/img/logo_azul.png"
-            alt="art1"
-            height="60px"
-            width="100%"
+            alt="ART1"
+            height="60"
+            width="160"
           />
         </a>
 
@@ -1196,9 +972,9 @@
               <a href="corte-laser.html">Corte y grabado láser</a>
             </div>
           </div>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#reels">Reels</a>
-          <a href="#resultados">Resultados</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#portfolio">Trabajos</a>
+          <a href="#resultados">Trayectoria</a>
           <a href="#contacto">Contacto</a>
         </nav>
 
@@ -1220,22 +996,14 @@
           <a href="#servicios">Servicios</a>
           <a class="mobile-nav__sub" href="grafica.html">Gráfica</a>
           <a class="mobile-nav__sub" href="impresiones.html">Impresiones</a>
-          <a class="mobile-nav__sub" href="ambientaciones.html"
-            >Ambientaciones</a
-          >
-          <a class="mobile-nav__sub" href="letras-corporeas.html"
-            >Letras corpóreas</a
-          >
-          <a class="mobile-nav__sub" href="diseno-branding.html"
-            >Diseño y branding</a
-          >
-          <a class="mobile-nav__sub" href="corte-laser.html"
-            >Corte y grabado láser</a
-          >
+          <a class="mobile-nav__sub" href="ambientaciones.html">Ambientaciones</a>
+          <a class="mobile-nav__sub" href="letras-corporeas.html">Letras corpóreas</a>
+          <a class="mobile-nav__sub" href="diseno-branding.html">Diseño y branding</a>
+          <a class="mobile-nav__sub" href="corte-laser.html">Corte y grabado láser</a>
           <span class="mobile-nav__label">Secciones</span>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#reels">Reels</a>
-          <a href="#resultados">Resultados</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#portfolio">Trabajos</a>
+          <a href="#resultados">Trayectoria</a>
           <a href="#contacto">Contacto</a>
         </div>
       </div>
@@ -1244,72 +1012,140 @@
     <main id="contenido">
       <section class="hero" id="inicio">
         <div class="container hero__inner">
-          <div class="hero__eyebrow">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"
-              ></path>
-            </svg>
-            <span>Creatividad sin límites</span>
+          <div class="hero__eyebrow" data-reveal>
+            <span>Estudio gráfico · Zona Norte</span>
           </div>
 
-          <div class="hero__title-wrap">
-            <span class="hero__square" aria-hidden="true"></span>
-            <h1 class="hero__title">
-              Diseñamos tu
-              <span>Identidad Visual</span>
-            </h1>
-          </div>
+          <h1 class="hero__title" data-reveal>
+            30 años
+            <span>comunicando</span>
+          </h1>
 
-          <p class="hero__text">
-            Cartelería, branding y diseño gráfico que transforma ideas en
-            experiencias visuales memorables.
+          <p class="hero__text" data-reveal>
+            Acompañamos tus necesidades gráficas utilizando recursos de primera
+            calidad y materiales duraderos para sumar valor agregado desde el
+            diseño.
           </p>
 
-          <div class="hero__actions">
-            <a href="#portfolio" class="btn btn--white">
-              Ver Proyectos
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-                <path d="M5 12h14"></path>
-                <path d="M13 5l7 7-7 7"></path>
-              </svg>
-            </a>
-            <a href="#contacto" class="btn btn--outline">Contactar</a>
+          <div class="hero__actions" data-reveal>
+            <a href="#portfolio" class="btn btn--white">Ver trabajos recientes</a>
+            <a href="#contacto" class="btn btn--outline">Cotizar proyecto</a>
           </div>
 
-          <div class="hero__scroll" aria-hidden="true"><span></span></div>
+          <div class="hero__stats" data-reveal>
+            <div class="hero-stat">
+              <strong>30+</strong>
+              <span>Años de experiencia gráfica</span>
+            </div>
+            <div class="hero-stat">
+              <strong>360°</strong>
+              <span>Diseño, producción e instalación</span>
+            </div>
+            <div class="hero-stat">
+              <strong>ZN</strong>
+              <span>Especialistas en Zona Norte</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section section--light" id="servicios">
-        <div class="container center">
-          <p class="section-label" data-reveal>Servicios</p>
-
+      <section class="section section--white" id="nosotros">
+        <div class="container">
+          <p class="section-label" data-reveal>Nosotros</p>
           <h2 class="section-title" data-reveal>
-            Soluciones que transforman tu marca
+            No solo imprimimos o fabricamos: pensamos con vos cómo comunicar mejor.
           </h2>
 
+          <div class="about-grid">
+            <aside class="about-card" data-reveal>
+              <strong>Calidad que permanece</strong>
+              <p>
+                Cada área de producción y cada canal especializado están
+                pensados para lograr piezas impecables, resistentes y alineadas
+                a la identidad de cada marca.
+              </p>
+            </aside>
+
+            <div class="about-copy" data-reveal>
+              <p>
+                En ART1, nuestra misión es simple: acompañar cada necesidad
+                gráfica de nuestros clientes aportando un valor agregado desde
+                el diseño. No trabajamos como una línea de producción anónima:
+                escuchamos, proponemos y resolvemos.
+              </p>
+              <p>
+                Nacimos y crecimos con un enfoque racional, lo que nos permitió
+                atravesar distintos contextos con la solidez necesaria para
+                estar hoy acá, con la misma energía del primer día.
+              </p>
+              <p>
+                Creemos que la clave de nuestra permanencia es la calidad:
+                materiales correctos, producción cuidada, instalación
+                profesional y una mirada de diseño aplicada a cada decisión.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--light" id="diferenciales">
+        <div class="container center">
+          <p class="section-label" data-reveal>Lo que nos diferencia</p>
+          <h2 class="section-title" data-reveal>
+            Cercanía, oficio y respuesta real
+          </h2>
           <p class="section-subtitle" data-reveal>
-            Desde la idea hasta la implementación. Diseño, producción y
-            ejecución para que tu marca se vea, se entienda y se destaque.
+            Te acompañamos desde la idea hasta la implementación, con trato
+            directo, criterio técnico y capacidad para resolver trabajos
+            urgentes o complejos.
+          </p>
+
+          <div class="difference-grid">
+            <article class="difference-card" data-reveal>
+              <div class="difference-card__num">01</div>
+              <h3>Trato directo y personal</h3>
+              <p>
+                Acá no sos un número de pedido. Te atendemos nosotros e incluso
+                podés participar de sesiones de diseño en máquina de forma
+                presencial para que el resultado sea exacto al que imaginaste.
+              </p>
+            </article>
+
+            <article class="difference-card" data-reveal>
+              <div class="difference-card__num">02</div>
+              <h3>Logística y eficacia</h3>
+              <p>
+                Resolvemos instalaciones complejas, ya sea en altura o en
+                horarios especiales. Nos movemos con rapidez porque sabemos que
+                tu tiempo vale.
+              </p>
+            </article>
+
+            <article class="difference-card" data-reveal>
+              <div class="difference-card__num">03</div>
+              <h3>Especialistas en Zona Norte</h3>
+              <p>
+                Atendemos requerimientos urgentes de cartelería para
+                inspecciones en GBA Norte, respondiendo con la velocidad que la
+                situación exige.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="servicios">
+        <div class="container center">
+          <p class="section-label" data-reveal>Servicios</p>
+          <h2 class="section-title" data-reveal>
+            Soluciones gráficas para marcas, locales y empresas
+          </h2>
+          <p class="section-subtitle" data-reveal>
+            Diseño, producción e instalación con materiales adecuados para cada
+            superficie, uso y necesidad visual.
           </p>
 
           <div class="services__grid">
-            <!-- GRÁFICA -->
             <article class="service-card" data-reveal>
               <a href="grafica.html">
                 <div class="service-card__icon" aria-hidden="true">
@@ -1320,14 +1156,10 @@
                   </svg>
                 </div>
                 <h3>Gráfica</h3>
-                <p>
-                  Diseño, corte e instalación de gráfica para vidrieras,
-                  vehículos y espacios comerciales.
-                </p>
+                <p>Diseño, corte e instalación de gráfica para vidrieras, vehículos, embarcaciones y espacios comerciales.</p>
               </a>
             </article>
 
-            <!-- IMPRESIONES -->
             <article class="service-card" data-reveal>
               <a href="impresiones.html">
                 <div class="service-card__icon" aria-hidden="true">
@@ -1338,14 +1170,10 @@
                   </svg>
                 </div>
                 <h3>Impresiones</h3>
-                <p>
-                  Impresión en eco solvente y UV para máxima durabilidad en
-                  interior y exterior.
-                </p>
+                <p>Impresión en eco solvente y UVJET para piezas de interior y exterior con alta durabilidad.</p>
               </a>
             </article>
 
-            <!-- AMBIENTACIONES -->
             <article class="service-card" data-reveal>
               <a href="ambientaciones.html">
                 <div class="service-card__icon" aria-hidden="true">
@@ -1355,14 +1183,10 @@
                   </svg>
                 </div>
                 <h3>Ambientaciones</h3>
-                <p>
-                  Creamos atmósferas visuales que potencian espacios
-                  comerciales, eventos y experiencias de marca.
-                </p>
+                <p>Creamos atmósferas visuales para espacios comerciales, eventos, stands y experiencias de marca.</p>
               </a>
             </article>
 
-            <!-- LETRAS CORPÓREAS -->
             <article class="service-card" data-reveal>
               <a href="letras-corporeas.html">
                 <div class="service-card__icon" aria-hidden="true">
@@ -1372,14 +1196,10 @@
                   </svg>
                 </div>
                 <h3>Letras corpóreas</h3>
-                <p>
-                  Letras 3D con o sin iluminación para fachadas, interiores y
-                  señalética.
-                </p>
+                <p>Letras 3D con o sin iluminación para fachadas, interiores, señalética y presencia de marca.</p>
               </a>
             </article>
 
-            <!-- DISEÑO Y BRANDING -->
             <article class="service-card" data-reveal>
               <a href="diseno-branding.html">
                 <div class="service-card__icon" aria-hidden="true">
@@ -1388,14 +1208,10 @@
                   </svg>
                 </div>
                 <h3>Diseño y branding</h3>
-                <p>
-                  Desarrollo de identidad visual, marca y sistema gráfico
-                  coherente en todos los puntos de contacto.
-                </p>
+                <p>Desarrollamos tu marca, identidad visual y sistema gráfico para comunicar de forma coherente.</p>
               </a>
             </article>
 
-            <!-- CORTE Y GRABADO -->
             <article class="service-card" data-reveal>
               <a href="corte-laser.html">
                 <div class="service-card__icon" aria-hidden="true">
@@ -1404,11 +1220,8 @@
                     <path d="M21 3L3 21"></path>
                   </svg>
                 </div>
-                <h3>Corte y grabado láser</h3>
-                <p>
-                  Corte y grabado láser CO2 en múltiples materiales con
-                  precisión y terminaciones profesionales.
-                </p>
+                <h3>Corte y grabado</h3>
+                <p>Corte y grabado láser CO2 en múltiples superficies con precisión y terminación profesional.</p>
               </a>
             </article>
           </div>
@@ -1417,328 +1230,160 @@
 
       <section class="section section--light" id="portfolio">
         <div class="container center">
-          <p class="section-label" data-reveal>Portfolio</p>
-          <h2 class="section-title" data-reveal>Trabajos Recientes</h2>
+          <p class="section-label" data-reveal>Trabajos recientes</p>
+          <h2 class="section-title" data-reveal>
+            Proyectos que muestran cómo trabajamos
+          </h2>
           <p class="section-subtitle" data-reveal>
-            Explora algunos de nuestros proyectos más destacados y descubre cómo
-            podemos ayudarte.
+            Explorá algunas categorías destacadas de gráfica aplicada,
+            impresión, instalación y producción visual.
           </p>
 
-          <div class="portfolio__grid">
-            <article class="portfolio-card" data-reveal>
-              <img
-                src="assets/img/gallery/a.jpeg"
-                alt="Proyecto de branding con modelo y lookbook"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-            <article class="portfolio-card" data-reveal>
-              <img
-                src="assets/img/gallery/s.jpeg"
-                alt="Proyecto tipográfico e impresión editorial"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-            <article class="portfolio-card" data-reveal>
-              <img
-                src="assets/img/gallery/a.jpeg"
-                alt="Proyecto creativo con letras 3D coloridas"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-            <article class="portfolio-card" data-reveal>
-              <img
-                src="assets/img/gallery/s.jpeg"
-                alt="Proyecto de packaging minimalista"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-            <article class="portfolio-card" data-reveal>
-              <img
-                src="assets/img/gallery/a.jpeg"
-                alt="Equipo creativo trabajando en diseño"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-            <article class="portfolio-card" data-reveal>
-              <img
-                src="assets/img/gallery/s.jpeg"
-                alt="Arte abstracto con mezcla intensa de colores"
-                loading="lazy"
-                decoding="async"
-              />
-            </article>
-          </div>
-
-          <div class="portfolio__cta" data-reveal>
-            <a href="#contacto" class="btn btn--gradient"
-              >Ver Todos los Proyectos</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--light instagram" id="reels">
-        <div class="container center">
-          <div class="instagram__icon" data-reveal>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <path d="M17.5 6.5h.01"></path>
-            </svg>
-          </div>
-          <p class="section-label" data-reveal>Síguenos en Instagram</p>
-          <h2 class="section-title" data-reveal>Nuestros Reels</h2>
-          <p class="section-subtitle" data-reveal>
-            Descubre el proceso creativo detrás de nuestros proyectos y las
-            últimas tendencias en diseño.
-          </p>
-
-          <div class="instagram__follow" data-reveal>
-            <a href="#" class="btn" aria-label="Seguir a ART1 en Instagram">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M17.5 6.5h.01"></path>
-              </svg>
-              Seguir en Instagram
-            </a>
-          </div>
-
-          <div class="reels-wrap" data-reveal>
-            <button
-              class="reels-nav reels-nav--prev"
-              type="button"
-              aria-label="Anterior"
-            >
-              ‹
-            </button>
-            <button
-              class="reels-nav reels-nav--next"
-              type="button"
-              aria-label="Siguiente"
-            >
-              ›
-            </button>
-
-            <div class="reels-viewport">
-              <div class="reels-track" aria-live="polite">
-                <div class="reel-slide">
-                  <article class="reel-card">
-                    <img
-                      src="assets/img/zontes_reel.jpg"
-                      alt="Reel sobre creatividad diaria"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="reel-card__badge" aria-hidden="true">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M17.5 6.5h.01"></path>
-                      </svg>
-                    </div>
-                    <div class="reel-card__play" aria-hidden="true">▶</div>
-                    <div class="reel-card__content">
-                      <h3>Creatividad Diaria</h3>
-                      <div class="reel-card__meta">
-                        <span>♡ 2.9k</span>
-                        <span>◔ 174</span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="reel-slide">
-                  <article class="reel-card">
-                    <img
-                      src="assets/img/madmax_reel.jpg"
-                      alt="Reel sobre proceso de branding"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="reel-card__badge" aria-hidden="true">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M17.5 6.5h.01"></path>
-                      </svg>
-                    </div>
-                    <div class="reel-card__play" aria-hidden="true">▶</div>
-                    <div class="reel-card__content">
-                      <h3>Proceso de Branding</h3>
-                      <div class="reel-card__meta">
-                        <span>♡ 2.5k</span>
-                        <span>◔ 156</span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="reel-slide">
-                  <article class="reel-card">
-                    <img
-                      src="assets/img/ploteo_reel.jpg"
-                      alt="Reel sobre diseño en acción"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="reel-card__badge" aria-hidden="true">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M17.5 6.5h.01"></path>
-                      </svg>
-                    </div>
-                    <div class="reel-card__play" aria-hidden="true">▶</div>
-                    <div class="reel-card__content">
-                      <h3>Diseño en Acción</h3>
-                      <div class="reel-card__meta">
-                        <span>♡ 3.2k</span>
-                        <span>◔ 203</span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="reel-slide">
-                  <article class="reel-card">
-                    <img
-                      src="assets/img/paulita_reel.jpg"
-                      alt="Reel sobre cartelería premium"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="reel-card__badge" aria-hidden="true">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M17.5 6.5h.01"></path>
-                      </svg>
-                    </div>
-                    <div class="reel-card__play" aria-hidden="true">▶</div>
-                    <div class="reel-card__content">
-                      <h3>Cartelería Premium</h3>
-                      <div class="reel-card__meta">
-                        <span>♡ 1.8k</span>
-                        <span>◔ 98</span>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-
-                <div class="reel-slide">
-                  <article class="reel-card">
-                    <img
-                      src="assets/img/carenado_reel.jpg"
-                      alt="Reel sobre trabajo en estudio creativo"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div class="reel-card__badge" aria-hidden="true">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                        <circle cx="12" cy="12" r="4"></circle>
-                        <path d="M17.5 6.5h.01"></path>
-                      </svg>
-                    </div>
-                    <div class="reel-card__play" aria-hidden="true">▶</div>
-                    <div class="reel-card__content">
-                      <h3>Estudio Creativo</h3>
-                      <div class="reel-card__meta">
-                        <span>♡ 2.1k</span>
-                        <span>◔ 121</span>
-                      </div>
-                    </div>
-                  </article>
+          <div class="works-grid">
+            <article class="work-card" data-reveal>
+              <div class="work-card__media">
+                <span class="work-card__badge">Vehículos</span>
+                <img src="assets/img/gallery/vehiculos.jpg" alt="Gráfica aplicada en vehículos comerciales" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-card__content">
+                <h3>Gráfica en vehículos</h3>
+                <p>
+                  Dale a tu vehículo la comunicación visual de tu empresa o
+                  tunealo a tu gusto con diseño, ploteo e instalación.
+                </p>
+                <div class="work-card__list">
+                  <span>ASIC Seguridad</span>
+                  <span>Yamaha FX</span>
+                  <span>Avon</span>
+                  <span>Smart</span>
+                  <span>Aerowise</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="reels-dots" aria-label="Paginación slider"></div>
+            <article class="work-card" data-reveal>
+              <div class="work-card__media">
+                <span class="work-card__badge">Embarcaciones</span>
+                <img src="assets/img/gallery/barcos.jpg" alt="Gráfica instalada en barcos y embarcaciones" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-card__content">
+                <h3>Gráfica en barcos</h3>
+                <p>
+                  Diseñamos e instalamos gráfica náutica para darle identidad,
+                  presencia y personalidad a cada embarcación.
+                </p>
+                <div class="work-card__list">
+                  <span>Mad Max</span>
+                  <span>Taita</span>
+                  <span>Cosette</span>
+                  <span>Butterfly</span>
+                  <span>Blue Monster</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-reveal>
+              <div class="work-card__media">
+                <span class="work-card__badge">Vidrieras</span>
+                <img src="assets/img/gallery/vidrieras.jpg" alt="Gráfica en vidrieras de locales comerciales" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-card__content">
+                <h3>Gráfica en vidrieras</h3>
+                <p>
+                  Si querés que tu local se comunique con tus clientes,
+                  diseñamos vidrieras con impacto e impronta original.
+                </p>
+                <div class="work-card__list">
+                  <span>Photiers</span>
+                  <span>Tryme</span>
+                  <span>Flying Paw</span>
+                  <span>Filippo</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-reveal>
+              <div class="work-card__media">
+                <span class="work-card__badge">Privacidad</span>
+                <img src="assets/img/gallery/esmerilados.jpg" alt="Esmerilados para vidrios y oficinas" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-card__content">
+                <h3>Esmerilados</h3>
+                <p>
+                  Si necesitás privacidad o querés darle un toque original a
+                  los vidrios, el material esmerilado es una solución prolija y
+                  elegante.
+                </p>
+              </div>
+            </article>
+
+            <article class="work-card" data-reveal>
+              <div class="work-card__media">
+                <span class="work-card__badge">Señalética</span>
+                <img src="assets/img/gallery/pvc-espumado.jpg" alt="Cartelería y señalética sobre PVC espumado" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-card__content">
+                <h3>Ploteo sobre PVC espumado</h3>
+                <p>
+                  Para crear señalética de empresa, carteles informativos o
+                  piezas resistentes, recomendamos ploteo sobre PVC espumado.
+                </p>
+                <div class="work-card__list">
+                  <span>Cartel sin TACC</span>
+                  <span>Señalética</span>
+                  <span>Cartelería institucional</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="work-card" data-reveal>
+              <div class="work-card__media">
+                <span class="work-card__badge">Láser CO2</span>
+                <img src="assets/img/gallery/corte-grabado.jpg" alt="Corte y grabado láser CO2 en señalética, llaveros y premios" loading="lazy" decoding="async" />
+              </div>
+              <div class="work-card__content">
+                <h3>Corte y grabado</h3>
+                <p>
+                  Corte y grabado láser CO2 en múltiples superficies para
+                  señalética, llaveros, premios, piezas especiales y detalles
+                  personalizados.
+                </p>
+                <div class="work-card__list">
+                  <span>Señalética grabada</span>
+                  <span>Llaveros</span>
+                  <span>Premios</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section results" id="resultados">
         <div class="container center">
-          <h2 class="section-title" data-reveal>Resultados que Hablan</h2>
+          <p class="section-label" style="color: #12dcff" data-reveal>Trayectoria</p>
+          <h2 class="section-title" data-reveal>Una estructura preparada para resolver</h2>
           <p class="section-subtitle" data-reveal>
-            Nuestra trayectoria nos respalda.
+            Tres décadas acompañando marcas, comercios y empresas con soluciones
+            gráficas duraderas, funcionales y bien ejecutadas.
           </p>
 
           <div class="stats-grid">
             <div class="stat-item" data-reveal>
-              <strong data-count="341">0+</strong>
-              <span>Proyectos Completados</span>
-            </div>
-            <div class="stat-item" data-reveal>
-              <strong data-count="102">0+</strong>
-              <span>Clientes Satisfechos</span>
+              <strong data-count="30">0+</strong>
+              <span>Años comunicando marcas</span>
             </div>
             <div class="stat-item" data-reveal>
               <strong data-count="6">0+</strong>
-              <span>Años de Experiencia</span>
+              <span>Áreas de servicio gráfico</span>
             </div>
             <div class="stat-item" data-reveal>
-              <strong data-count="66" data-suffix="%">0%</strong>
-              <span>Satisfacción del Cliente</span>
+              <strong data-count="24">0+</strong>
+              <span>Soluciones para locales y empresas</span>
+            </div>
+            <div class="stat-item" data-reveal>
+              <strong data-count="100" data-suffix="%">0%</strong>
+              <span>Foco en calidad y durabilidad</span>
             </div>
           </div>
         </div>
@@ -1748,9 +1393,10 @@
         <div class="container contact__grid">
           <div data-reveal>
             <p class="section-label" style="color: #12dcff">Contacto</p>
-            <h2 class="section-title">¿Listo para crear algo increíble?</h2>
+            <h2 class="section-title">¿Necesitás resolver una pieza gráfica?</h2>
             <p class="section-subtitle">
-              Conversemos sobre tu proyecto y hagamos realidad tus ideas.
+              Contanos qué necesitás comunicar, dónde se va a aplicar y en qué
+              tiempos lo necesitás. Te ayudamos a definir la mejor solución.
             </p>
 
             <div class="contact-list">
@@ -1771,8 +1417,8 @@
               <div class="contact-item">
                 <div class="contact-item__icon" aria-hidden="true">⌖</div>
                 <div>
-                  <small>Ubicación</small>
-                  <strong>Buenos Aires, Argentina</strong>
+                  <small>Zona de trabajo</small>
+                  <strong>Zona Norte · GBA · Buenos Aires</strong>
                 </div>
               </div>
             </div>
@@ -1782,45 +1428,29 @@
             <form id="contact-form" novalidate>
               <div class="form-group">
                 <label for="name">Nombre</label>
-                <input
-                  class="field"
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Tu nombre"
-                  required
-                />
+                <input class="field" id="name" name="name" type="text" placeholder="Tu nombre" required />
                 <div class="form-error">Ingresá tu nombre.</div>
               </div>
 
               <div class="form-group">
                 <label for="email">Email</label>
-                <input
-                  class="field"
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="tu@email.com"
-                  required
-                />
+                <input class="field" id="email" name="email" type="email" placeholder="tu@email.com" required />
                 <div class="form-error">Ingresá un email válido.</div>
               </div>
 
               <div class="form-group">
-                <label for="project">Tipo de Proyecto</label>
-                <select
-                  class="field-select"
-                  id="project"
-                  name="project"
-                  required
-                >
-                  <option value="">Selecciona una opción</option>
-                  <option>Branding</option>
-                  <option>Diseño Gráfico</option>
-                  <option>Cartelería</option>
-                  <option>Diseño Digital</option>
+                <label for="project">Servicio de interés</label>
+                <select class="field-select" id="project" name="project" required>
+                  <option value="">Seleccioná una opción</option>
+                  <option>Gráfica</option>
+                  <option>Impresiones eco solvente / UVJET</option>
+                  <option>Ambientaciones</option>
+                  <option>Letras corpóreas</option>
+                  <option>Diseño y branding</option>
+                  <option>Corte y grabado láser CO2</option>
+                  <option>Cartelería urgente / inspección</option>
                 </select>
-                <div class="form-error">Seleccioná un tipo de proyecto.</div>
+                <div class="form-error">Seleccioná un servicio.</div>
               </div>
 
               <div class="form-group">
@@ -1829,23 +1459,17 @@
                   class="field-textarea"
                   id="message"
                   name="message"
-                  placeholder="Cuéntanos sobre tu proyecto..."
+                  placeholder="Contanos qué necesitás, medidas aproximadas, ubicación y fecha estimada..."
                   required
                 ></textarea>
-                <div class="form-error">
-                  Contanos un poco sobre tu proyecto.
-                </div>
+                <div class="form-error">Contanos un poco sobre tu proyecto.</div>
               </div>
 
               <button class="btn btn--gradient" type="submit">
-                Enviar Mensaje
-                <span aria-hidden="true">✈</span>
+                Enviar consulta
+                <span aria-hidden="true">→</span>
               </button>
-              <div
-                class="form-status"
-                id="form-status"
-                aria-live="polite"
-              ></div>
+              <div class="form-status" id="form-status" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -1855,26 +1479,23 @@
     <footer class="footer">
       <div class="container footer__main">
         <div class="footer__brand">
-          <a
-            href="https://www.art1.com.ar/"
-            class="logo d-flex align-items-center me-auto me-lg-0"
-            aria-label="Home"
-          >
+          <a href="index.html" class="logo" aria-label="Home">
             <img
-              src="assets/img/logo_azul.png"
-              alt="art1"
-              height="60px"
-              width="100%"
+              src="https://art1.com.ar/assets/img/logo_grey.png"
+              alt="ART1"
+              width="178"
+              height="60"
+              loading="lazy"
+              decoding="async"
             />
           </a>
           <p>
-            Transformamos ideas en experiencias visuales memorables.
-            Especialistas en branding, diseño gráfico y cartelería.
+            30 años comunicando marcas con diseño, impresión, cartelería,
+            ambientaciones y soluciones gráficas duraderas.
           </p>
           <div class="socials">
             <a href="#" aria-label="Instagram">◎</a>
             <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Twitter">𝕏</a>
             <a href="#" aria-label="LinkedIn">in</a>
           </div>
         </div>
@@ -1894,9 +1515,9 @@
         <div>
           <h4>Empresa</h4>
           <ul>
-            <li><a href="#inicio">Nosotros</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#reels">Reels</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#portfolio">Trabajos recientes</a></li>
+            <li><a href="#resultados">Trayectoria</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
@@ -1904,7 +1525,7 @@
 
       <div class="container footer__bottom">
         <div>© 2026 ART1. Todos los derechos reservados.</div>
-        <div>Hecho con 💙 para nuestros clientes</div>
+        <div>Diseño, producción e instalación gráfica.</div>
       </div>
     </footer>
 
@@ -1914,68 +1535,75 @@
           "(prefers-reduced-motion: reduce)",
         ).matches;
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.18 },
-        );
+        const revealEls = document.querySelectorAll("[data-reveal]");
 
-        document
-          .querySelectorAll("[data-reveal]")
-          .forEach((el) => observer.observe(el));
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.16 },
+          );
+
+          revealEls.forEach((el) => observer.observe(el));
+        } else {
+          revealEls.forEach((el) => el.classList.add("is-visible"));
+        }
 
         const counters = document.querySelectorAll("[data-count]");
-        const counterObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (!entry.isIntersecting) return;
 
-              const el = entry.target;
-              const target = Number(el.dataset.count || 0);
-              const suffix = el.dataset.suffix || "+";
-              let current = 0;
-              const duration = prefersReducedMotion ? 0 : 1000;
-              const start = performance.now();
+        if ("IntersectionObserver" in window) {
+          const counterObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
 
-              const render = (value) => {
-                el.textContent = `${Math.round(value)}${suffix}`;
-              };
+                const el = entry.target;
+                const target = Number(el.dataset.count || 0);
+                const suffix = el.dataset.suffix || "+";
+                const duration = prefersReducedMotion ? 0 : 1000;
+                const start = performance.now();
 
-              if (!duration) {
-                render(target);
-                counterObserver.unobserve(el);
-                return;
-              }
+                const render = (value) => {
+                  el.textContent = `${Math.round(value)}${suffix}`;
+                };
 
-              const step = (now) => {
-                const progress = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                current = target * eased;
-                render(current);
-                if (progress < 1) {
-                  requestAnimationFrame(step);
-                } else {
+                if (!duration) {
                   render(target);
+                  counterObserver.unobserve(el);
+                  return;
                 }
-              };
 
-              requestAnimationFrame(step);
-              counterObserver.unobserve(el);
-            });
-          },
-          { threshold: 0.35 },
-        );
+                const step = (now) => {
+                  const progress = Math.min((now - start) / duration, 1);
+                  const eased = 1 - Math.pow(1 - progress, 3);
+                  render(target * eased);
 
-        counters.forEach((counter) => counterObserver.observe(counter));
+                  if (progress < 1) {
+                    requestAnimationFrame(step);
+                  } else {
+                    render(target);
+                  }
+                };
+
+                requestAnimationFrame(step);
+                counterObserver.unobserve(el);
+              });
+            },
+            { threshold: 0.35 },
+          );
+
+          counters.forEach((counter) => counterObserver.observe(counter));
+        }
 
         const navToggle = document.querySelector(".nav-toggle");
         const mobileNav = document.querySelector(".mobile-nav");
+
         if (navToggle && mobileNav) {
           navToggle.addEventListener("click", () => {
             const expanded = navToggle.getAttribute("aria-expanded") === "true";
@@ -1991,92 +1619,11 @@
           });
         }
 
-        const reelsWrap = document.querySelector(".reels-wrap");
-        if (reelsWrap) {
-          const track = reelsWrap.querySelector(".reels-track");
-          const slides = Array.from(reelsWrap.querySelectorAll(".reel-slide"));
-          const prev = reelsWrap.querySelector(".reels-nav--prev");
-          const next = reelsWrap.querySelector(".reels-nav--next");
-          const dotsWrap = reelsWrap.querySelector(".reels-dots");
-          let currentIndex = 0;
-          let perView =
-            window.innerWidth <= 860 ? 1 : window.innerWidth <= 1180 ? 2 : 4;
-          let maxIndex = Math.max(0, slides.length - perView);
-          let autoTimer = null;
-
-          const buildDots = () => {
-            dotsWrap.innerHTML = "";
-            const count = maxIndex + 1;
-            for (let i = 0; i < count; i += 1) {
-              const dot = document.createElement("button");
-              dot.type = "button";
-              dot.setAttribute("aria-label", `Ir al slide ${i + 1}`);
-              if (i === currentIndex) dot.classList.add("is-active");
-              dot.addEventListener("click", () => {
-                currentIndex = i;
-                updateSlider();
-                restartAutoplay();
-              });
-              dotsWrap.appendChild(dot);
-            }
-          };
-
-          const updateSlider = () => {
-            const slideWidth = slides[0]?.getBoundingClientRect().width || 0;
-            const gap = 22;
-            track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
-            [...dotsWrap.children].forEach((dot, index) => {
-              dot.classList.toggle("is-active", index === currentIndex);
-            });
-            if (prev) prev.disabled = currentIndex === 0;
-            if (next) next.disabled = currentIndex === maxIndex;
-          };
-
-          const recalc = () => {
-            perView =
-              window.innerWidth <= 860 ? 1 : window.innerWidth <= 1180 ? 2 : 4;
-            maxIndex = Math.max(0, slides.length - perView);
-            currentIndex = Math.min(currentIndex, maxIndex);
-            buildDots();
-            updateSlider();
-          };
-
-          const autoplay = () => {
-            if (prefersReducedMotion || maxIndex === 0) return;
-            autoTimer = window.setInterval(() => {
-              currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
-              updateSlider();
-            }, 3500);
-          };
-
-          const restartAutoplay = () => {
-            if (autoTimer) window.clearInterval(autoTimer);
-            autoplay();
-          };
-
-          prev?.addEventListener("click", () => {
-            currentIndex = Math.max(0, currentIndex - 1);
-            updateSlider();
-            restartAutoplay();
-          });
-
-          next?.addEventListener("click", () => {
-            currentIndex = Math.min(maxIndex, currentIndex + 1);
-            updateSlider();
-            restartAutoplay();
-          });
-
-          window.addEventListener("resize", recalc);
-          recalc();
-          autoplay();
-        }
-
         const form = document.getElementById("contact-form");
         const formStatus = document.getElementById("form-status");
+
         if (form) {
-          const fields = Array.from(
-            form.querySelectorAll("input, select, textarea"),
-          );
+          const fields = Array.from(form.querySelectorAll("input, select, textarea"));
 
           const validators = {
             name: (value) => value.trim().length > 1,
@@ -2086,8 +1633,7 @@
           };
 
           const validateField = (field) => {
-            const key = field.name;
-            const valid = validators[key] ? validators[key](field.value) : true;
+            const valid = validators[field.name] ? validators[field.name](field.value) : true;
             field.classList.toggle("is-invalid", !valid);
             return valid;
           };
@@ -2099,15 +1645,17 @@
 
           form.addEventListener("submit", (event) => {
             event.preventDefault();
+
             const allValid = fields.every((field) => validateField(field));
+
             if (!allValid) {
-              formStatus.textContent =
-                "Revisá los campos marcados antes de enviar.";
+              formStatus.textContent = "Revisá los campos marcados antes de enviar.";
               return;
             }
 
             formStatus.textContent =
               "Formulario listo. Conectá este form a Formspree, Web3Forms o tu backend para enviarlo en producción.";
+
             form.reset();
             fields.forEach((field) => field.classList.remove("is-invalid"));
           });
