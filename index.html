@@ -242,13 +242,100 @@
         gap: 28px;
       }
 
-      .nav a {
+      .nav a,
+      .nav__trigger {
         color: rgba(255, 255, 255, 0.85);
         font-weight: 500;
-        transition: opacity 0.25s ease;
+        transition:
+          opacity 0.25s ease,
+          color 0.25s ease;
       }
 
-      .nav a:hover {
+      .nav a:hover,
+      .nav__trigger:hover {
+        color: #fff;
+        opacity: 0.86;
+      }
+
+      .nav__item {
+        position: relative;
+      }
+
+      .nav__trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .nav__trigger::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: translateY(-2px) rotate(45deg);
+        opacity: 0.72;
+      }
+
+      .nav__dropdown {
+        position: absolute;
+        top: calc(100% + 18px);
+        left: 50%;
+        width: 260px;
+        padding: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        background: rgba(5, 16, 36, 0.96);
+        box-shadow: 0 22px 50px rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(18px);
+        transform: translate(-50%, 10px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+          opacity 0.22s ease,
+          transform 0.22s ease,
+          visibility 0.22s ease;
+      }
+
+      .nav__dropdown::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -20px;
+        height: 20px;
+      }
+
+      .nav__item:hover .nav__dropdown,
+      .nav__item:focus-within .nav__dropdown {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%, 0);
+      }
+
+      .nav__dropdown a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 13px;
+        border-radius: 14px;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 0.94rem;
+        font-weight: 650;
+      }
+
+      .nav__dropdown a:hover {
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.07);
+        color: #fff;
+      }
+
+      .nav__dropdown a::after {
+        content: "→";
+        color: var(--primary-3);
         opacity: 0.78;
       }
 
@@ -296,6 +383,24 @@
       .mobile-nav__panel a {
         color: rgba(255, 255, 255, 0.92);
         font-weight: 600;
+      }
+
+      .mobile-nav__label {
+        margin: 8px 0 0;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--primary-3);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .mobile-nav__sub {
+        padding-left: 14px;
+        color: rgba(255, 255, 255, 0.78) !important;
+        font-size: 0.94rem;
+        font-weight: 550 !important;
       }
 
       .hero {
@@ -1279,7 +1384,7 @@
     <header class="topbar">
       <div class="container topbar__inner">
         <a
-          href="https://www.art1.com.ar/"
+          href="index.html"
           class="logo d-flex align-items-center me-auto me-lg-0"
           aria-label="Home"
         >
@@ -1292,7 +1397,17 @@
         </a>
 
         <nav class="nav" aria-label="Principal">
-          <a href="#servicios">Servicios</a>
+          <div class="nav__item">
+            <a class="nav__trigger" href="#servicios">Servicios</a>
+            <div class="nav__dropdown" aria-label="Servicios ART1">
+              <a href="grafica.html">Gráfica</a>
+              <a href="impresiones.html">Impresiones</a>
+              <a href="ambientaciones.html">Ambientaciones</a>
+              <a href="letras-corporeas.html">Letras corpóreas</a>
+              <a href="diseno-branding.html">Diseño y branding</a>
+              <a href="corte-laser.html">Corte y grabado láser</a>
+            </div>
+          </div>
           <a href="#portfolio">Portfolio</a>
           <a href="#reels">Reels</a>
           <a href="#resultados">Resultados</a>
@@ -1315,6 +1430,13 @@
       <div class="container mobile-nav" id="mobile-nav">
         <div class="mobile-nav__panel">
           <a href="#servicios">Servicios</a>
+          <a class="mobile-nav__sub" href="grafica.html">Gráfica</a>
+          <a class="mobile-nav__sub" href="impresiones.html">Impresiones</a>
+          <a class="mobile-nav__sub" href="ambientaciones.html">Ambientaciones</a>
+          <a class="mobile-nav__sub" href="letras-corporeas.html">Letras corpóreas</a>
+          <a class="mobile-nav__sub" href="diseno-branding.html">Diseño y branding</a>
+          <a class="mobile-nav__sub" href="corte-laser.html">Corte y grabado láser</a>
+          <span class="mobile-nav__label">Secciones</span>
           <a href="#portfolio">Portfolio</a>
           <a href="#reels">Reels</a>
           <a href="#resultados">Resultados</a>
@@ -1629,7 +1751,7 @@
                 <div class="reel-slide">
                   <article class="reel-card">
                     <img
-                      src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=800&q=80"
+                      src="assets/img/zontes_reel.jpg"
                       alt="Reel sobre creatividad diaria"
                       loading="lazy"
                       decoding="async"
@@ -1662,7 +1784,7 @@
                 <div class="reel-slide">
                   <article class="reel-card">
                     <img
-                      src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80"
+                      src="assets/img/madmax_reel.jpg"
                       alt="Reel sobre proceso de branding"
                       loading="lazy"
                       decoding="async"
@@ -1695,7 +1817,7 @@
                 <div class="reel-slide">
                   <article class="reel-card">
                     <img
-                      src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                      src="assets/img/ploteo_reel.jpg"
                       alt="Reel sobre diseño en acción"
                       loading="lazy"
                       decoding="async"
@@ -1728,7 +1850,7 @@
                 <div class="reel-slide">
                   <article class="reel-card">
                     <img
-                      src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80"
+                      src="assets/img/paulita_reel.jpg"
                       alt="Reel sobre cartelería premium"
                       loading="lazy"
                       decoding="async"
@@ -1761,7 +1883,7 @@
                 <div class="reel-slide">
                   <article class="reel-card">
                     <img
-                      src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80"
+                      src="assets/img/carenado_reel.jpg"
                       alt="Reel sobre trabajo en estudio creativo"
                       loading="lazy"
                       decoding="async"
@@ -1964,10 +2086,12 @@
         <div>
           <h4>Servicios</h4>
           <ul>
-            <li><a href="#servicios">Branding</a></li>
-            <li><a href="#servicios">Diseño Gráfico</a></li>
-            <li><a href="#servicios">Cartelería</a></li>
-            <li><a href="#servicios">Diseño Digital</a></li>
+            <li><a href="grafica.html">Gráfica</a></li>
+            <li><a href="impresiones.html">Impresiones</a></li>
+            <li><a href="ambientaciones.html">Ambientaciones</a></li>
+            <li><a href="letras-corporeas.html">Letras corpóreas</a></li>
+            <li><a href="diseno-branding.html">Diseño y branding</a></li>
+            <li><a href="corte-laser.html">Corte y grabado láser</a></li>
           </ul>
         </div>
 
