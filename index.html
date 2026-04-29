@@ -87,7 +87,17 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(4, 17, 38, 0.86);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
       img {
         display: block;
         max-width: 100%;
@@ -992,6 +1002,8 @@
         .container {
           width: min(calc(100% - 28px), var(--container));
         }
+
+        
 
         .hero__title {
           font-size: clamp(3rem, 18vw, 4.4rem);
