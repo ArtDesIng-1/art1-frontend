@@ -373,31 +373,7 @@
         color: #647084;
         line-height: 1.55;
       }
-      .footer {
-        background: linear-gradient(
-          100deg,
-          #041126 0%,
-          #081530 52%,
-          #061126 100%
-        );
-        color: rgba(255, 255, 255, 0.74);
-        border-top: 2px solid rgba(10, 215, 255, 0.5);
-      }
-      .footer__inner {
-        padding: 42px 0;
-        display: flex;
-        justify-content: space-between;
-        gap: 24px;
-        flex-wrap: wrap;
-      }
-      .footer strong {
-        color: #00d8ff;
-        font-size: 1.4rem;
-      }
-      .footer a {
-        color: #fff;
-        font-weight: 700;
-      }
+ 
       @media (max-width: 980px) {
         .nav {
           display: none;
@@ -970,7 +946,7 @@
         </div>
       </section> -->
 
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <div class="cta-band">
             <h2>¿Querés avanzar con gráfica?</h2>
@@ -984,9 +960,9 @@
             >
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <section class="section" style="padding-top: 0">
+      <!-- <section class="section" style="padding-top: 0">
         <div class="container">
           <p class="section-label">También hacemos</p>
           <h2 class="section-title">Otros servicios ART1</h2>
@@ -1014,19 +990,59 @@
             </a>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div>
-          <strong>ART1</strong>
-          <p>Branding, diseño gráfico, cartelería y producción visual.</p>
+       <footer class="footer">
+      <div class="container footer__main">
+        <div class="footer__brand">
+          <a href="index.html" class="logo" aria-label="Home">
+            <img
+              src="https://art1.com.ar/assets/img/logo_azul.png"
+              alt="ART1"
+              width="178"
+              height="60"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <p>
+            30 años comunicando marcas con diseño, impresión, cartelería,
+            ambientaciones y soluciones gráficas duraderas.
+          </p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
         </div>
+
         <div>
-          <a href="index.html">Inicio</a> ·
-          <a href="index.html#contacto">Contacto</a>
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="grafica.html">Gráfica</a></li>
+            <li><a href="impresiones.html">Impresiones</a></li>
+            <li><a href="ambientaciones.html">Ambientaciones</a></li>
+            <li><a href="letras-corporeas.html">Letras corpóreas</a></li>
+            <li><a href="diseno-branding.html">Diseño y branding</a></li>
+            <li><a href="corte-laser.html">Corte y grabado láser</a></li>
+          </ul>
         </div>
+
+        <div>
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#portfolio">Trabajos recientes</a></li>
+            <li><a href="#resultados">Trayectoria</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <div>© 2026 ART1. Todos los derechos reservados.</div>
+        <div>Diseño, producción e instalación gráfica.</div>
       </div>
     </footer>
     <script src="assets/js/swiper-bundle.min.js"></script>
