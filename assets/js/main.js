@@ -209,27 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
       " © Copyright <strong><span>ART1</span></strong>. Todos los derechos reservados. Argentina, Buenos Aires.";
   }
 
-  const portfolioSwipers = document.querySelectorAll(".portfolio-swiper");
-
-  if (portfolioSwipers.length && window.Swiper) {
-    portfolioSwipers.forEach((swiperEl, index) => {
-      new Swiper(swiperEl, {
-        loop: true,
-        speed: 900,
-        allowTouchMove: false,
-        simulateTouch: false,
-        grabCursor: false,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        autoplay: {
-          delay: 2200 + index * 250,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: false,
-        },
-      });
-    });
-  }
+ 
   
 });

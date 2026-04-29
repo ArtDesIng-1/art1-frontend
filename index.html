@@ -1549,10 +1549,29 @@
                 <div class="swiper portfolio-swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="assets/img/gallery/vidrieras.jpg" />
+                      <img
+                        src="assets/img/gallery/grafica-vidrieras/grafica-vidriera-impacto-visual-retail.jpeg"
+                      />
                     </div>
                     <div class="swiper-slide">
-                      <img src="assets/img/gallery/vidrieras-2.jpg" />
+                      <img
+                        src="assets/img/gallery/grafica-vidrieras/grafica-vidriera-local-comercial-zona-norte.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/gallery/grafica-vidrieras/ploteo-vidriera-negocio-promociones-ofertas.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/gallery/grafica-vidrieras/rotulacion-vidriera-identidad-visual-local.jpeg"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="assets/img/gallery/grafica-vidrieras/vinilo-vidriera-decoracion-comercial-marca.jpeg"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1787,7 +1806,7 @@
         <div class="footer__brand">
           <a href="index.html" class="logo" aria-label="Home">
             <img
-              src="https://art1.com.ar/assets/img/logo_grey.png"
+              src="https://art1.com.ar/assets/img/logo_azul.png"
               alt="ART1"
               width="178"
               height="60"
@@ -1973,6 +1992,30 @@
         }
       })();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const portfolioSwipers = document.querySelectorAll(".portfolio-swiper");
+
+      if (portfolioSwipers.length && window.Swiper) {
+        portfolioSwipers.forEach((swiperEl, index) => {
+          new Swiper(swiperEl, {
+            loop: true,
+            speed: 900,
+            allowTouchMove: false,
+            simulateTouch: false,
+            grabCursor: false,
+            effect: "fade",
+            fadeEffect: {
+              crossFade: true,
+            },
+            autoplay: {
+              delay: 2200 + index * 250,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            },
+          });
+        });
+      }
+    </script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
   </body>
 </html>
