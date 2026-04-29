@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -442,25 +443,88 @@
         }
       }
 
-      .include-grid {
+      .include-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .include-section::before {
+        content: "";
+        position: absolute;
+        top: -180px;
+        right: -180px;
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(
+          circle,
+          rgba(18, 199, 222, 0.16),
+          transparent 62%
+        );
+        pointer-events: none;
+      }
+
+      .include-grid--premium {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 28px;
-        margin-top: 62px;
+        gap: 30px;
+        margin-top: 64px;
         text-align: left;
       }
 
-      .include-card {
+      .include-card--premium {
+        position: relative;
         overflow: hidden;
-        border-radius: 22px;
-        background: #fff;
-        border: 1px solid rgba(16, 24, 40, 0.04);
-        box-shadow: var(--shadow-card);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(16, 24, 40, 0.07);
+        box-shadow: 0 18px 45px rgba(16, 24, 40, 0.08);
+        transform: translateY(0);
+        transition:
+          transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.45s ease;
+      }
+
+      .include-card--premium::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at var(--mx, 50%) var(--my, 20%),
+            rgba(18, 199, 222, 0.18),
+            transparent 34%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.78),
+            rgba(255, 255, 255, 1)
+          );
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+      }
+
+      .include-card--premium:hover {
+        transform: translateY(-8px);
+        border-color: rgba(18, 199, 222, 0.28);
+        box-shadow: 0 28px 70px rgba(16, 24, 40, 0.16);
+      }
+
+      .include-card--premium:hover::before {
+        opacity: 1;
+      }
+
+      .include-card--premium a {
+        position: relative;
+        z-index: 2;
+        display: block;
+        height: 100%;
       }
 
       .include-card__media {
         position: relative;
-        height: 280px;
+        height: 300px;
         overflow: hidden;
         background: #d8dce3;
       }
@@ -469,11 +533,17 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(4, 17, 38, 0.12) 0%,
-          rgba(4, 17, 38, 0.36) 100%
-        );
+        background:
+          linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0.04) 0%,
+            rgba(4, 17, 38, 0.38) 100%
+          ),
+          radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.18),
+            transparent 40%
+          );
         pointer-events: none;
       }
 
@@ -481,6 +551,15 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transform: scale(1.02);
+        transition:
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .include-card--premium:hover .include-card__media img {
+        transform: scale(1.08);
+        filter: saturate(1.08) contrast(1.04);
       }
 
       .include-card__media span {
@@ -488,69 +567,80 @@
         top: 18px;
         left: 18px;
         z-index: 2;
-        padding: 9px 13px;
+        padding: 9px 14px;
         border-radius: 999px;
         color: #fff;
-        font-size: 0.8rem;
+        font-size: 0.78rem;
         font-weight: 900;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.045em;
         text-transform: uppercase;
-        background: rgba(4, 17, 38, 0.76);
-        backdrop-filter: blur(12px);
+        background: rgba(4, 17, 38, 0.78);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 10px 28px rgba(4, 17, 38, 0.18);
       }
 
       .include-card__content {
-        padding: 30px;
+        position: relative;
+        padding: 32px;
       }
 
       .include-card__content h3 {
-        margin: 0 0 20px;
+        margin: 0 0 14px;
         color: var(--navy-2);
-        font-size: 1.55rem;
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        text-align: center;
+        font-size: 1.65rem;
+        line-height: 1.08;
+        letter-spacing: -0.045em;
       }
 
-      .include-card .check-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 13px;
-      }
-
-      .include-card .check-list li {
-        position: relative;
-        padding-left: 30px;
-        color: var(--text);
+      .include-card__content p {
+        margin: 0 0 16px;
+        color: #344054;
         font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .include-card__content small {
+        display: block;
+        color: #667085;
+        font-size: 0.86rem;
         line-height: 1.55;
       }
 
-      .include-card .check-list li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--primary);
-        font-weight: 900;
+      /* .include-card__content::after {
+  content: "Ver más →";
+  display: inline-flex;
+  margin-top: 22px;
+  color: var(--primary);
+  font-size: 0.92rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+} */
+
+      .include-card--premium:hover .include-card__content::after {
+        transform: translateX(6px);
       }
 
       @media (max-width: 860px) {
-        .include-grid {
+        .include-grid--premium {
           grid-template-columns: 1fr;
-          margin-top: 42px;
+          margin-top: 44px;
         }
       }
 
       @media (max-width: 560px) {
-        .include-card {
-          border-radius: 20px;
+        .include-grid--premium {
+          gap: 22px;
+        }
+
+        .include-card--premium {
+          border-radius: 22px;
         }
 
         .include-card__media {
-          height: 220px;
+          height: 230px;
         }
 
         .include-card__content {
@@ -558,22 +648,8 @@
         }
 
         .include-card__content h3 {
-          text-align: left;
-          font-size: 1.35rem;
+          font-size: 1.38rem;
         }
-      }
-      .include-card__content p {
-        margin: 0 0 14px;
-        color: var(--text);
-        font-size: 1rem;
-        line-height: 1.65;
-      }
-
-      .include-card__content small {
-        display: block;
-        color: #6b7280;
-        font-size: 0.85rem;
-        line-height: 1.5;
       }
     </style>
     <script type="application/ld+json">
@@ -682,7 +758,7 @@
         </div>
       </section>
 
-      <section class="section section--white">
+      <section class="section section--white include-section">
         <div class="container center">
           <p class="section-label">Qué incluye</p>
           <h2 class="section-title">
@@ -693,86 +769,155 @@
             producimos e instalamos piezas pensadas para comunicar y durar.
           </p>
 
-          <div class="include-grid">
-            <!-- VEHICULOS -->
-            <article class="include-card">
-              <div class="include-card__media">
-                <img
-                  src="assets/img/gallery/grafica-vehiculos/grafica-vehicular-auto-ploteado.jpeg"
-                />
-                <span>Gráfica vehicular</span>
-              </div>
-              <div class="include-card__content">
-                <h3>Gráfica en vehículos</h3>
-                <p>
-                  Dale a tu vehículo la comunicación visual de tu empresa o
-                  simplemente tunéalo a tu gusto con diseño, ploteo e
-                  instalación profesional.
-                </p>
-                <small>
-                  Trabajos: Asic Seguridad · Yamaha FX · Avon · Smart · Aerowise
-                </small>
-              </div>
+          <div class="include-grid include-grid--premium">
+            <article class="include-card include-card--premium">
+              <a href="grafica.html">
+                <div class="include-card__media">
+                  <span>Gráfica vehicular</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vehiculos/grafica-vehicular-auto-ploteado.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vehiculos/grafica-vehicular-camion-empresa.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vehiculos/grafica-vehicular-flota-corporativa.jpeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="include-card__content">
+                  <h3>Gráfica en vehículos</h3>
+                  <p>
+                    Dale a tu vehículo la comunicación visual de tu empresa o
+                    simplemente tunéalo a tu gusto.
+                  </p>
+                  <small
+                    >Asic Seguridad · Yamaha FX · Avon · Smart · Aerowise</small
+                  >
+                </div>
+              </a>
             </article>
 
-            <!-- BARCOS -->
-            <article class="include-card">
-              <div class="include-card__media">
-                <img
-                  src="assets/img/gallery/grafica-nautica/grafica-nautica-velero-regata-identidad-visual.jpeg"
-                />
-                <span>Gráfica náutica</span>
-              </div>
-              <div class="include-card__content">
-                <h3>Gráfica en barcos</h3>
-                <p>
-                  Diseñamos e instalamos gráfica logrando darle a tu embarcación
-                  una identidad clara, presencia y personalidad.
-                </p>
-                <small>
-                  Trabajos: Mad Max · Taita · Cosette · Butterfly · Blue Monster
-                  · Suipacha
-                </small>
-              </div>
+            <article class="include-card include-card--premium">
+              <a href="grafica.html">
+                <div class="include-card__media">
+                  <span>Gráfica náutica</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-nautica/grafica-nautica-velero-regata-identidad-visual.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-nautica/grafica-velero-nombre-embarcacion-personalizado.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-nautica/ploteo-velero-diseno-nautico-profesional.jpeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="include-card__content">
+                  <h3>Gráfica en barcos</h3>
+                  <p>
+                    Diseñamos e instalamos gráfica logrando darle a tu
+                    embarcación su propia identidad.
+                  </p>
+                  <small
+                    >Mad Max · Taita · Cosette · Butterfly · Blue Monster ·
+                    Suipacha</small
+                  >
+                </div>
+              </a>
             </article>
 
-            <!-- VIDRIERAS -->
-            <article class="include-card">
-              <div class="include-card__media">
-                <img
-                  src="assets/img/gallery/grafica-vidrieras/grafica-vidriera-impacto-visual-retail.jpeg"
-                />
-                <span>Locales comerciales</span>
-              </div>
-              <div class="include-card__content">
-                <h3>Gráfica en vidrieras</h3>
-                <p>
-                  Si querés que tu local se comunique con tus clientes,
-                  diseñamos vidrieras con impacto y una impronta original.
-                </p>
-                <small>
-                  Trabajos: Photiers · Tryme · Flying Paw · Filippo
-                </small>
-              </div>
+            <article class="include-card include-card--premium">
+              <a href="grafica.html">
+                <div class="include-card__media">
+                  <span>Locales comerciales</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vidrieras/grafica-vidriera-impacto-visual-retail.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vidrieras/grafica-vidriera-local-comercial-zona-norte.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vidrieras/ploteo-vidriera-negocio-promociones-ofertas.jpeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="include-card__content">
+                  <h3>Gráfica en vidrieras</h3>
+                  <p>
+                    Diseñamos vidrieras con impacto para que tu local comunique
+                    mejor.
+                  </p>
+                  <small>Photiers · Tryme · Flying Paw · Filippo</small>
+                </div>
+              </a>
             </article>
 
-            <!-- ESMERILADOS -->
-            <article class="include-card">
-              <div class="include-card__media">
-                <img src="assets/img/services/ambientaciones.png" />
-                <span>Privacidad & diseño</span>
-              </div>
-              <div class="include-card__content">
-                <h3>Esmerilados</h3>
-                <p>
-                  Si necesitás privacidad o simplemente darle un toque original
-                  a los vidrios, el esmerilado es una solución estética y
-                  funcional.
-                </p>
-                <small>
-                  Trabajos: Photiers · Tryme · Flying Paw · Filippo
-                </small>
-              </div>
+            <article class="include-card include-card--premium">
+              <a href="grafica.html">
+                <div class="include-card__media">
+                  <span>Privacidad & diseño</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="assets/img/services/ambientaciones.png" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-vidrieras/rotulacion-vidriera-identidad-visual-local.jpeg"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/grafica-pvc/ploteo-pvc-espumado-senalizacion-comercial.jpeg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="include-card__content">
+                  <h3>Esmerilados</h3>
+                  <p>
+                    Privacidad, estética y un toque original para vidrios de
+                    oficinas, locales y espacios comerciales.
+                  </p>
+                  <small
+                    >Aplicación prolija · Material durable · Terminación
+                    profesional</small
+                  >
+                </div>
+              </a>
             </article>
           </div>
         </div>
@@ -884,5 +1029,37 @@
         </div>
       </div>
     </footer>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".include-card--premium").forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+          card.style.setProperty("--mx", `${x}%`);
+          card.style.setProperty("--my", `${y}%`);
+        });
+      });
+    </script>
+    <script>
+      const includeSwipers = document.querySelectorAll(".include-swiper");
+
+      includeSwipers.forEach((el, i) => {
+        new Swiper(el, {
+          loop: true,
+          speed: 900,
+          effect: "fade",
+          fadeEffect: { crossFade: true },
+
+          autoplay: {
+            delay: 2200 + i * 300,
+            disableOnInteraction: false,
+          },
+
+          allowTouchMove: false, // 🔥 estilo premium (no arrastrable)
+        });
+      });
+    </script>
   </body>
 </html>
