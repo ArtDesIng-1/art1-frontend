@@ -214,45 +214,42 @@
         box-shadow: 0 12px 28px rgba(27, 98, 255, 0.2);
       }
 
+      @keyframes heroZoom {
+        from {
+          background-size: 100%;
+        }
+        to {
+          background-size: 110%;
+        }
+      }
+
       .hero {
         position: relative;
         overflow: hidden;
-        min-height: calc(100vh - var(--header-h));
-        display: flex;
-        align-items: center;
-        color: #fff;
+
         background:
-          radial-gradient(
-            circle at 18% 14%,
-            rgba(97, 153, 255, 0.12),
-            transparent 24%
-          ),
-          radial-gradient(
-            circle at 80% 72%,
-            rgba(18, 199, 222, 0.16),
-            transparent 24%
-          ),
           linear-gradient(
             110deg,
-            var(--hero-start) 0%,
-            var(--hero-mid) 52%,
-            var(--hero-end) 100%
-          );
+            rgba(33, 66, 160, 0.55),
+            rgba(22, 85, 127, 0.55),
+            rgba(9, 102, 91, 0.55)
+          ),
+          url("assets/img/img/art1-local.png");
+        animation: heroZoom 18s ease-in-out infinite alternate;
+        background-size: cover;
+        background-position: center;
       }
 
-      .hero::after {
+      .hero::before {
         content: "";
         position: absolute;
-        right: 14%;
-        bottom: 20%;
-        width: 110px;
-        height: 110px;
-        border-radius: 30px;
-        background: linear-gradient(135deg, #13d6ff, #2d7eff);
-        opacity: 0.85;
-        transform: rotate(8deg);
-        box-shadow: 0 24px 45px rgba(7, 28, 70, 0.18);
-        animation: floatSquare 6s ease-in-out infinite;
+        inset: 0;
+        background: radial-gradient(
+          circle at 40% 50%,
+          rgba(0, 0, 0, 0.25) 0%,
+          rgba(0, 0, 0, 0.55) 60%
+        );
+        z-index: 0;
       }
 
       .hero__inner {
@@ -276,6 +273,8 @@
 
       .hero__title {
         margin: 0;
+          color: rgba(255, 255, 255, 0.95);
+          text-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
         font-size: clamp(3.2rem, 8vw, 7.2rem);
         font-weight: 900;
         line-height: 0.95;
@@ -285,15 +284,11 @@
       .hero__title span {
         display: block;
         margin-top: 8px;
-        background: linear-gradient(
-          90deg,
-          #00d2ff 0%,
-          #5ba8ff 44%,
-          #12d5d5 100%
-        );
+        background: linear-gradient(90deg, #13d6ff 0%, #5ba8ff 48%, #12d5d5 100%);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+        text-shadow: none;
       }
 
       .hero__text {
@@ -1431,7 +1426,10 @@
               </a>
             </article>
 
-            <article class="service-card service-card--ambientaciones" data-reveal>
+            <article
+              class="service-card service-card--ambientaciones"
+              data-reveal
+            >
               <a href="ambientaciones.html">
                 <div class="service-card__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
