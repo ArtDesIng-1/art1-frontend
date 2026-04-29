@@ -1,188 +1,585 @@
 <!doctype html>
 <html lang="es-AR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ART1 | Gráfica para vidrieras, vehículos y espacios comerciales</title>
-  <meta name="description" content="Diseño, corte e instalación de gráfica para marcas, locales, vidrieras, vehículos y espacios comerciales." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="theme-color" content="#134f84" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ART1 | Gráfica" />
-  <meta property="og:description" content="Diseño, corte e instalación de gráfica para marcas, locales, vidrieras, vehículos y espacios comerciales." />
-  <meta property="og:locale" content="es_AR" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link href="assets/img/logo_grey.png" rel="icon" />
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="assets/css/header.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-:root {
-  --bg-light: #f4f5f7;
-  --surface: #ffffff;
-  --text: #121b2f;
-  --muted: #5b6678;
-  --white: #ffffff;
-  --primary: #1b62ff;
-  --primary-2: #12c7de;
-  --primary-3: #00d6ff;
-  --navy: #041126;
-  --navy-2: #081530;
-  --hero-start: #2142a0;
-  --hero-mid: #16557f;
-  --hero-end: #09665b;
-  --shadow-soft: 0 12px 28px rgba(16, 24, 40, 0.08);
-  --shadow-card: 0 14px 34px rgba(20, 27, 43, 0.09);
-  --container: 1180px;
-  --header-h: 78px;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: var(--text);
-  background: var(--bg-light);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-.container { width: min(calc(100% - 40px), var(--container)); margin: 0 auto; }
-.logo img { height: 60px; width: auto; }
-.nav { display: flex; align-items: center; gap: 26px; }
-.nav a { color: rgba(255,255,255,.84); font-weight: 600; font-size: .96rem; }
-.nav a:hover { color: #fff; }
-.nav-cta {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 46px; padding: 0 22px; border-radius: 999px;
-  background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  color: #fff; font-weight: 800; box-shadow: 0 10px 24px rgba(27,98,255,.22);
-}
-.service-hero {
-  position: relative; overflow: hidden; color: #fff;
-  background:
-    radial-gradient(circle at 18% 14%, rgba(97,153,255,.14), transparent 24%),
-    linear-gradient(110deg, var(--hero-start) 0%, var(--hero-mid) 52%, var(--hero-end) 100%);
-}
-.service-hero::after {
-  content:""; position:absolute; right:12%; bottom:18%; width:110px; height:110px; border-radius:30px;
-  background: linear-gradient(135deg, #13d6ff, #2d7eff);
-  opacity:.85; transform: rotate(8deg); box-shadow: 0 24px 45px rgba(7,28,70,.18);
-}
-.service-hero__inner { position: relative; z-index: 1; padding: 112px 0 96px; max-width: 900px; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 10px; margin: 0 0 24px;
-  color: #10dcff; font-size: .92rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
-}
-.service-hero h1 {
-  margin: 0; font-size: clamp(3rem, 7vw, 6rem); line-height: .98; letter-spacing: -.06em;
-}
-.service-hero h1 span {
-  display:block; margin-top: 8px;
-  background: linear-gradient(90deg, #00d2ff 0%, #5ba8ff 44%, #12d5d5 100%);
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.service-hero p { max-width: 760px; margin: 28px 0 0; font-size: 1.14rem; line-height: 1.65; color: rgba(255,255,255,.84); }
-.hero-actions { display:flex; flex-wrap:wrap; gap:16px; margin-top:42px; }
-.btn {
-  display:inline-flex; align-items:center; justify-content:center; gap:10px;
-  min-height:56px; padding:0 28px; border-radius:999px; font-weight:800;
-  transition: transform .24s ease, filter .24s ease;
-}
-.btn:hover { transform: translateY(-2px); filter: brightness(1.04); }
-.btn--white { background:#fff; color:#2445a4; }
-.btn--outline { color:#fff; border:2px solid rgba(255,255,255,.78); }
-.section { padding: 92px 0; }
-.section-label {
-  margin:0 0 14px; color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: .05em;
-}
-.section-title {
-  margin:0; font-size: clamp(2.2rem, 4.8vw, 4rem); line-height: 1.06; letter-spacing: -.045em; color:#111a2e;
-}
-.section-subtitle { max-width: 740px; margin:18px 0 0; font-size:1.06rem; line-height:1.7; color:var(--muted); }
-.grid-2 { display:grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items:start; margin-top: 56px; }
-.card {
-  background:#fff; border-radius:22px; padding:32px; box-shadow:var(--shadow-card); border:1px solid rgba(16,24,40,.04);
-}
-.card h3 { margin:0 0 16px; font-size:1.7rem; letter-spacing:-.04em; color:#141d31; }
-.check-list { list-style:none; margin:0; padding:0; display:grid; gap:14px; }
-.check-list li {
-  position:relative; padding-left:32px; color:#526072; line-height:1.55; font-weight:600;
-}
-.check-list li::before {
-  content:""; position:absolute; left:0; top:.18em; width:20px; height:20px; border-radius:50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-  box-shadow: 0 6px 14px rgba(27,98,255,.16);
-}
-.process { counter-reset: step; display:grid; gap:16px; }
-.process__item {
-  counter-increment: step; display:flex; gap:18px; align-items:flex-start;
-  padding:20px; border-radius:18px; background:#fff; box-shadow:var(--shadow-soft);
-}
-.process__num {
-  flex: 0 0 42px; width:42px; height:42px; border-radius:14px;
-  display:grid; place-items:center; color:#fff; font-weight:900;
-  background: linear-gradient(135deg, var(--primary), var(--primary-2));
-}
-.process__num::before { content: counter(step); }
-.process__item p { margin: 8px 0 0; color:#526072; line-height:1.55; font-weight:600; }
-.cta-band {
-  position:relative; overflow:hidden; border-radius:28px; padding:54px;
-  color:#fff; background: linear-gradient(110deg, var(--hero-start), var(--hero-mid) 54%, var(--hero-end));
-  box-shadow: 0 20px 42px rgba(6,18,34,.16);
-}
-.cta-band h2 { margin:0; font-size: clamp(2rem, 4vw, 3.4rem); line-height:1.05; letter-spacing:-.05em; }
-.cta-band p { max-width:720px; margin:18px 0 0; color:rgba(255,255,255,.82); line-height:1.65; font-size:1.06rem; }
-.cta-band .btn { margin-top:30px; }
-.related-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:22px; margin-top:42px; }
-.related-card {
-  background:#fff; border-radius:18px; padding:24px; box-shadow:var(--shadow-soft); border:1px solid rgba(16,24,40,.04);
-}
-.related-card strong { display:block; font-size:1.18rem; margin-bottom:8px; letter-spacing:-.03em; color:#141d31; }
-.related-card span { color:#647084; line-height:1.55; }
-.footer {
-  background: linear-gradient(100deg, #041126 0%, #081530 52%, #061126 100%);
-  color: rgba(255,255,255,.74); border-top:2px solid rgba(10,215,255,.5);
-}
-.footer__inner { padding:42px 0; display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap; }
-.footer strong { color:#00d8ff; font-size:1.4rem; }
-.footer a { color:#fff; font-weight:700; }
-@media (max-width: 980px) {
-  .nav { display:none; }
-  .grid-2, .related-grid { grid-template-columns:1fr; }
-  .service-hero__inner { padding:86px 0 74px; }
-  .service-hero::after { width:78px; height:78px; right:7%; bottom:14%; }
-}
-@media (max-width: 560px) {
-  .container { width:min(calc(100% - 28px), var(--container)); }
-  .nav-cta { display:none; }
-  .service-hero h1 { font-size: clamp(2.75rem, 15vw, 4rem); }
-  .hero-actions, .hero-actions .btn, .cta-band .btn { width:100%; }
-  .btn { width:100%; }
-  .section { padding:74px 0; }
-  .card, .cta-band { padding:26px; }
-}
-</style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "ART1 - Gráfica",
-    "description": "Diseño, corte e instalación de gráfica para marcas, locales, vidrieras, vehículos y espacios comerciales.",
-    "provider": {
-      "@type": "Organization",
-      "name": "ART1",
-      "url": "https://www.art1.com.ar/"
-    },
-    "areaServed": "Argentina"
-  }
-  </script>
-</head>
-<body>
-  <header class="topbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      ART1 | Gráfica para vidrieras, vehículos y espacios comerciales
+    </title>
+    <meta
+      name="description"
+      content="Diseño, corte e instalación de gráfica para marcas, locales, vidrieras, vehículos y espacios comerciales."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#134f84" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ART1 | Gráfica" />
+    <meta
+      property="og:description"
+      content="Diseño, corte e instalación de gráfica para marcas, locales, vidrieras, vehículos y espacios comerciales."
+    />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link href="assets/img/logo_grey.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-light: #f4f5f7;
+        --surface: #ffffff;
+        --text: #121b2f;
+        --muted: #5b6678;
+        --white: #ffffff;
+        --primary: #1b62ff;
+        --primary-2: #12c7de;
+        --primary-3: #00d6ff;
+        --navy: #041126;
+        --navy-2: #081530;
+        --hero-start: #2142a0;
+        --hero-mid: #16557f;
+        --hero-end: #09665b;
+        --shadow-soft: 0 12px 28px rgba(16, 24, 40, 0.08);
+        --shadow-card: 0 14px 34px rgba(20, 27, 43, 0.09);
+        --container: 1180px;
+        --header-h: 78px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        color: var(--text);
+        background: var(--bg-light);
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        width: min(calc(100% - 40px), var(--container));
+        margin: 0 auto;
+      }
+      .logo img {
+        height: 60px;
+        width: auto;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+      .nav a {
+        color: rgba(255, 255, 255, 0.84);
+        font-weight: 600;
+        font-size: 0.96rem;
+      }
+      .nav a:hover {
+        color: #fff;
+      }
+      .nav-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 22px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--primary), var(--primary-2));
+        color: #fff;
+        font-weight: 800;
+        box-shadow: 0 10px 24px rgba(27, 98, 255, 0.22);
+      }
+      .service-hero {
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        background:
+          radial-gradient(
+            circle at 18% 14%,
+            rgba(97, 153, 255, 0.14),
+            transparent 24%
+          ),
+          linear-gradient(
+            110deg,
+            var(--hero-start) 0%,
+            var(--hero-mid) 52%,
+            var(--hero-end) 100%
+          );
+      }
+      .service-hero::after {
+        content: "";
+        position: absolute;
+        right: 12%;
+        bottom: 18%;
+        width: 110px;
+        height: 110px;
+        border-radius: 30px;
+        background: linear-gradient(135deg, #13d6ff, #2d7eff);
+        opacity: 0.85;
+        transform: rotate(8deg);
+        box-shadow: 0 24px 45px rgba(7, 28, 70, 0.18);
+      }
+      .service-hero__inner {
+        position: relative;
+        z-index: 1;
+        padding: 112px 0 96px;
+        max-width: 900px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 24px;
+        color: #10dcff;
+        font-size: 0.92rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .service-hero h1 {
+        margin: 0;
+        font-size: clamp(3rem, 7vw, 6rem);
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+      }
+      .service-hero h1 span {
+        display: block;
+        margin-top: 8px;
+        background: linear-gradient(
+          90deg,
+          #00d2ff 0%,
+          #5ba8ff 44%,
+          #12d5d5 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .service-hero p {
+        max-width: 760px;
+        margin: 28px 0 0;
+        font-size: 1.14rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.84);
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 42px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 56px;
+        padding: 0 28px;
+        border-radius: 999px;
+        font-weight: 800;
+        transition:
+          transform 0.24s ease,
+          filter 0.24s ease;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.04);
+      }
+      .btn--white {
+        background: #fff;
+        color: #2445a4;
+      }
+      .btn--outline {
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.78);
+      }
+      .section {
+        padding: 92px 0;
+      }
+      .section-label {
+        margin: 0 0 14px;
+        color: var(--primary);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .section-title {
+        margin: 0;
+        font-size: clamp(2.2rem, 4.8vw, 4rem);
+        line-height: 1.06;
+        letter-spacing: -0.045em;
+        color: #111a2e;
+      }
+      .section-subtitle {
+        max-width: 740px;
+        margin: 18px 0 0;
+        font-size: 1.06rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 34px;
+        align-items: start;
+        margin-top: 56px;
+      }
+      .card {
+        background: #fff;
+        border-radius: 22px;
+        padding: 32px;
+        box-shadow: var(--shadow-card);
+        border: 1px solid rgba(16, 24, 40, 0.04);
+      }
+      .card h3 {
+        margin: 0 0 16px;
+        font-size: 1.7rem;
+        letter-spacing: -0.04em;
+        color: #141d31;
+      }
+      .check-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 14px;
+      }
+      .check-list li {
+        position: relative;
+        padding-left: 32px;
+        color: #526072;
+        line-height: 1.55;
+        font-weight: 600;
+      }
+      .check-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.18em;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        box-shadow: 0 6px 14px rgba(27, 98, 255, 0.16);
+      }
+      .process {
+        counter-reset: step;
+        display: grid;
+        gap: 16px;
+      }
+      .process__item {
+        counter-increment: step;
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: var(--shadow-soft);
+      }
+      .process__num {
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      }
+      .process__num::before {
+        content: counter(step);
+      }
+      .process__item p {
+        margin: 8px 0 0;
+        color: #526072;
+        line-height: 1.55;
+        font-weight: 600;
+      }
+      .cta-band {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        padding: 54px;
+        color: #fff;
+        background: linear-gradient(
+          110deg,
+          var(--hero-start),
+          var(--hero-mid) 54%,
+          var(--hero-end)
+        );
+        box-shadow: 0 20px 42px rgba(6, 18, 34, 0.16);
+      }
+      .cta-band h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 1.05;
+        letter-spacing: -0.05em;
+      }
+      .cta-band p {
+        max-width: 720px;
+        margin: 18px 0 0;
+        color: rgba(255, 255, 255, 0.82);
+        line-height: 1.65;
+        font-size: 1.06rem;
+      }
+      .cta-band .btn {
+        margin-top: 30px;
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 42px;
+      }
+      .related-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: var(--shadow-soft);
+        border: 1px solid rgba(16, 24, 40, 0.04);
+      }
+      .related-card strong {
+        display: block;
+        font-size: 1.18rem;
+        margin-bottom: 8px;
+        letter-spacing: -0.03em;
+        color: #141d31;
+      }
+      .related-card span {
+        color: #647084;
+        line-height: 1.55;
+      }
+      .footer {
+        background: linear-gradient(
+          100deg,
+          #041126 0%,
+          #081530 52%,
+          #061126 100%
+        );
+        color: rgba(255, 255, 255, 0.74);
+        border-top: 2px solid rgba(10, 215, 255, 0.5);
+      }
+      .footer__inner {
+        padding: 42px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+      .footer strong {
+        color: #00d8ff;
+        font-size: 1.4rem;
+      }
+      .footer a {
+        color: #fff;
+        font-weight: 700;
+      }
+      @media (max-width: 980px) {
+        .nav {
+          display: none;
+        }
+        .grid-2,
+        .related-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-hero__inner {
+          padding: 86px 0 74px;
+        }
+        .service-hero::after {
+          width: 78px;
+          height: 78px;
+          right: 7%;
+          bottom: 14%;
+        }
+      }
+      @media (max-width: 560px) {
+        .container {
+          width: min(calc(100% - 28px), var(--container));
+        }
+        .nav-cta {
+          display: none;
+        }
+        .service-hero h1 {
+          font-size: clamp(2.75rem, 15vw, 4rem);
+        }
+        .hero-actions,
+        .hero-actions .btn,
+        .cta-band .btn {
+          width: 100%;
+        }
+        .btn {
+          width: 100%;
+        }
+        .section {
+          padding: 74px 0;
+        }
+        .card,
+        .cta-band {
+          padding: 26px;
+        }
+      }
+
+      .include-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        margin-top: 62px;
+        text-align: left;
+      }
+
+      .include-card {
+        overflow: hidden;
+        border-radius: 22px;
+        background: #fff;
+        border: 1px solid rgba(16, 24, 40, 0.04);
+        box-shadow: var(--shadow-card);
+      }
+
+      .include-card__media {
+        position: relative;
+        height: 280px;
+        overflow: hidden;
+        background: #d8dce3;
+      }
+
+      .include-card__media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(4, 17, 38, 0.12) 0%,
+          rgba(4, 17, 38, 0.36) 100%
+        );
+        pointer-events: none;
+      }
+
+      .include-card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .include-card__media span {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        z-index: 2;
+        padding: 9px 13px;
+        border-radius: 999px;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        background: rgba(4, 17, 38, 0.76);
+        backdrop-filter: blur(12px);
+      }
+
+      .include-card__content {
+        padding: 30px;
+      }
+
+      .include-card__content h3 {
+        margin: 0 0 20px;
+        color: var(--navy-2);
+        font-size: 1.55rem;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        text-align: center;
+      }
+
+      .include-card .check-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 13px;
+      }
+
+      .include-card .check-list li {
+        position: relative;
+        padding-left: 30px;
+        color: var(--text);
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .include-card .check-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--primary);
+        font-weight: 900;
+      }
+
+      @media (max-width: 860px) {
+        .include-grid {
+          grid-template-columns: 1fr;
+          margin-top: 42px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .include-card {
+          border-radius: 20px;
+        }
+
+        .include-card__media {
+          height: 220px;
+        }
+
+        .include-card__content {
+          padding: 24px;
+        }
+
+        .include-card__content h3 {
+          text-align: left;
+          font-size: 1.35rem;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "ART1 - Gráfica",
+        "description": "Diseño, corte e instalación de gráfica para marcas, locales, vidrieras, vehículos y espacios comerciales.",
+        "provider": {
+          "@type": "Organization",
+          "name": "ART1",
+          "url": "https://www.art1.com.ar/"
+        },
+        "areaServed": "Argentina"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
       <div class="container topbar__inner">
         <a
           href="index.html"
@@ -209,7 +606,7 @@ a { color: inherit; text-decoration: none; }
               <a href="corte-laser.html">Corte y grabado láser</a>
             </div>
           </div>
-        <a href="index.html">Inicio</a>
+          <a href="index.html">Inicio</a>
         </nav>
 
         <a href="#contacto" class="nav-cta">Contactar</a>
@@ -230,10 +627,18 @@ a { color: inherit; text-decoration: none; }
           <a href="#servicios">Servicios</a>
           <a class="mobile-nav__sub" href="grafica.html">Gráfica</a>
           <a class="mobile-nav__sub" href="impresiones.html">Impresiones</a>
-          <a class="mobile-nav__sub" href="ambientaciones.html">Ambientaciones</a>
-          <a class="mobile-nav__sub" href="letras-corporeas.html">Letras corpóreas</a>
-          <a class="mobile-nav__sub" href="diseno-branding.html">Diseño y branding</a>
-          <a class="mobile-nav__sub" href="corte-laser.html">Corte y grabado láser</a>
+          <a class="mobile-nav__sub" href="ambientaciones.html"
+            >Ambientaciones</a
+          >
+          <a class="mobile-nav__sub" href="letras-corporeas.html"
+            >Letras corpóreas</a
+          >
+          <a class="mobile-nav__sub" href="diseno-branding.html"
+            >Diseño y branding</a
+          >
+          <a class="mobile-nav__sub" href="corte-laser.html"
+            >Corte y grabado láser</a
+          >
           <span class="mobile-nav__label">Secciones</span>
           <a href="#portfolio">Portfolio</a>
           <a href="#reels">Reels</a>
@@ -243,122 +648,225 @@ a { color: inherit; text-decoration: none; }
       </div>
     </header>
 
-  <main>
-    <section class="service-hero">
-      <div class="container service-hero__inner">
-        <p class="eyebrow">Servicio integral</p>
-        <h1>Gráfica <span>que hace visible tu marca</span></h1>
-        <p>Diseñamos, producimos e instalamos soluciones gráficas para que tu marca se destaque en vidrieras, vehículos, locales, eventos y puntos de venta.</p>
-        <div class="hero-actions">
-          <a class="btn btn--white" href="index.html#contacto">Quiero gráfica para mi marca</a>
-          <a class="btn btn--outline" href="index.html#portfolio">Ver trabajos</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <p class="section-label">Qué incluye</p>
-        <h2 class="section-title">Una solución pensada para verse bien y funcionar mejor</h2>
-        <p class="section-subtitle">
-          Combinamos criterio visual, producción y terminación para que cada pieza respete la identidad de la marca y se adapte al uso real.
-        </p>
-
-        <div class="grid-2">
-          <article class="card">
-            <h3>Aplicaciones principales</h3>
-            <ul class="check-list">
-              <li>Vinilos para vidrieras</li>
-<li>Ploteo vehicular</li>
-<li>Señalética comercial</li>
-<li>Gráfica para locales</li>
-<li>Cartelería aplicada</li>
-<li>Instalación profesional</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Ideal para</h3>
-            <ul class="check-list">
-              <li>Marcas que necesitan presencia visual consistente.</li>
-              <li>Locales comerciales que quieren mejorar su imagen.</li>
-              <li>Empresas que buscan piezas gráficas profesionales.</li>
-              <li>Eventos, lanzamientos y activaciones de marca.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="background:#fff;">
-      <div class="container">
-        <p class="section-label">Proceso</p>
-        <h2 class="section-title">De la idea a la entrega final</h2>
-        <p class="section-subtitle">
-          Trabajamos con un proceso simple para ordenar tiempos, materiales y expectativas antes de producir.
-        </p>
-
-        <div class="grid-2">
-          <div class="process">
-            <div class="process__item"><div class="process__num" aria-hidden="true"></div><p>Relevamiento del espacio o superficie</p></div>
-<div class="process__item"><div class="process__num" aria-hidden="true"></div><p>Diseño adaptado a la marca</p></div>
-<div class="process__item"><div class="process__num" aria-hidden="true"></div><p>Producción en materiales adecuados</p></div>
-<div class="process__item"><div class="process__num" aria-hidden="true"></div><p>Instalación prolija y terminación final</p></div>
-          </div>
-          <article class="card">
-            <h3>Resultado</h3>
-            <p style="margin:0;color:#526072;line-height:1.7;font-size:1.06rem;">
-              Una pieza visual coherente con tu marca, lista para comunicar mejor, mejorar la presencia del espacio y elevar la percepción profesional de tu negocio.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="cta-band">
-          <h2>¿Querés avanzar con gráfica?</h2>
+    <main>
+      <section class="service-hero">
+        <div class="container service-hero__inner">
+          <p class="eyebrow">Servicio integral</p>
+          <h1>Gráfica <span>que hace visible tu marca</span></h1>
           <p>
-            Contanos qué necesitás, dónde se va a aplicar y qué objetivo tiene la pieza. Te ayudamos a definir la mejor solución visual y productiva.
+            Diseñamos, producimos e instalamos soluciones gráficas para que tu
+            marca se destaque en vidrieras, vehículos, locales, eventos y puntos
+            de venta.
           </p>
-          <a class="btn btn--white" href="index.html#contacto">Solicitar presupuesto</a>
+          <div class="hero-actions">
+            <a class="btn btn--white" href="index.html#contacto"
+              >Quiero gráfica para mi marca</a
+            >
+            <a class="btn btn--outline" href="index.html#portfolio"
+              >Ver trabajos</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" style="padding-top:0;">
-      <div class="container">
-        <p class="section-label">También hacemos</p>
-        <h2 class="section-title">Otros servicios ART1</h2>
-        <div class="related-grid">
-          <a class="related-card" href="impresiones.html">
+      <section class="section section--white">
+        <div class="container center">
+          <p class="section-label">Qué incluye</p>
+          <h2 class="section-title">
+            Soluciones gráficas aplicadas a distintos contextos
+          </h2>
+          <p class="section-subtitle">
+            Desde vehículos hasta vidrieras y embarcaciones, diseñamos,
+            producimos e instalamos piezas pensadas para comunicar y durar.
+          </p>
+
+          <div class="include-grid">
+            <!-- VEHICULOS -->
+            <article class="include-card">
+              <div class="include-card__media">
+                <img
+                  src="assets/img/gallery/grafica-vehiculos/grafica-vehicular-auto-ploteado.jpeg"
+                />
+                <span>Gráfica vehicular</span>
+              </div>
+              <div class="include-card__content">
+                <h3>Gráfica en vehículos</h3>
+                <p>
+                  Dale a tu vehículo la comunicación visual de tu empresa o
+                  simplemente tunéalo a tu gusto con diseño, ploteo e
+                  instalación profesional.
+                </p>
+                <small>
+                  Trabajos: Asic Seguridad · Yamaha FX · Avon · Smart · Aerowise
+                </small>
+              </div>
+            </article>
+
+            <!-- BARCOS -->
+            <article class="include-card">
+              <div class="include-card__media">
+                <img
+                  src="assets/img/gallery/grafica-nautica/grafica-nautica-velero-regata-identidad-visual.jpeg"
+                />
+                <span>Gráfica náutica</span>
+              </div>
+              <div class="include-card__content">
+                <h3>Gráfica en barcos</h3>
+                <p>
+                  Diseñamos e instalamos gráfica logrando darle a tu embarcación
+                  una identidad clara, presencia y personalidad.
+                </p>
+                <small>
+                  Trabajos: Mad Max · Taita · Cosette · Butterfly · Blue Monster
+                  · Suipacha
+                </small>
+              </div>
+            </article>
+
+            <!-- VIDRIERAS -->
+            <article class="include-card">
+              <div class="include-card__media">
+                <img
+                  src="assets/img/gallery/grafica-vidrieras/grafica-vidriera-impacto-visual-retail.jpeg"
+                />
+                <span>Locales comerciales</span>
+              </div>
+              <div class="include-card__content">
+                <h3>Gráfica en vidrieras</h3>
+                <p>
+                  Si querés que tu local se comunique con tus clientes,
+                  diseñamos vidrieras con impacto y una impronta original.
+                </p>
+                <small>
+                  Trabajos: Photiers · Tryme · Flying Paw · Filippo
+                </small>
+              </div>
+            </article>
+
+            <!-- ESMERILADOS -->
+            <article class="include-card">
+              <div class="include-card__media">
+                <img src="assets/img/services/ambientaciones.png" />
+                <span>Privacidad & diseño</span>
+              </div>
+              <div class="include-card__content">
+                <h3>Esmerilados</h3>
+                <p>
+                  Si necesitás privacidad o simplemente darle un toque original
+                  a los vidrios, el esmerilado es una solución estética y
+                  funcional.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="section" style="background: #fff">
+        <div class="container">
+          <p class="section-label">Proceso</p>
+          <h2 class="section-title">De la idea a la entrega final</h2>
+          <p class="section-subtitle">
+            Trabajamos con un proceso simple para ordenar tiempos, materiales y
+            expectativas antes de producir.
+          </p>
+
+          <div class="grid-2">
+            <div class="process">
+              <div class="process__item">
+                <div class="process__num" aria-hidden="true"></div>
+                <p>Relevamiento del espacio o superficie</p>
+              </div>
+              <div class="process__item">
+                <div class="process__num" aria-hidden="true"></div>
+                <p>Diseño adaptado a la marca</p>
+              </div>
+              <div class="process__item">
+                <div class="process__num" aria-hidden="true"></div>
+                <p>Producción en materiales adecuados</p>
+              </div>
+              <div class="process__item">
+                <div class="process__num" aria-hidden="true"></div>
+                <p>Instalación prolija y terminación final</p>
+              </div>
+            </div>
+            <article class="card">
+              <h3>Resultado</h3>
+              <p
+                style="
+                  margin: 0;
+                  color: #526072;
+                  line-height: 1.7;
+                  font-size: 1.06rem;
+                "
+              >
+                Una pieza visual coherente con tu marca, lista para comunicar
+                mejor, mejorar la presencia del espacio y elevar la percepción
+                profesional de tu negocio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-band">
+            <h2>¿Querés avanzar con gráfica?</h2>
+            <p>
+              Contanos qué necesitás, dónde se va a aplicar y qué objetivo tiene
+              la pieza. Te ayudamos a definir la mejor solución visual y
+              productiva.
+            </p>
+            <a class="btn btn--white" href="index.html#contacto"
+              >Solicitar presupuesto</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0">
+        <div class="container">
+          <p class="section-label">También hacemos</p>
+          <h2 class="section-title">Otros servicios ART1</h2>
+          <div class="related-grid">
+            <a class="related-card" href="impresiones.html">
               <strong>Impresiones</strong>
-              <span>Impresiones de alta calidad en eco solvente y UV para piezas gráficas durables de interior y exterior.</span>
+              <span
+                >Impresiones de alta calidad en eco solvente y UV para piezas
+                gráficas durables de interior y exterior.</span
+              >
             </a>
-<a class="related-card" href="ambientaciones.html">
+            <a class="related-card" href="ambientaciones.html">
               <strong>Ambientaciones</strong>
-              <span>Ambientaciones visuales para transformar espacios comerciales, eventos y experiencias de marca.</span>
+              <span
+                >Ambientaciones visuales para transformar espacios comerciales,
+                eventos y experiencias de marca.</span
+              >
             </a>
-<a class="related-card" href="letras-corporeas.html">
+            <a class="related-card" href="letras-corporeas.html">
               <strong>Letras corpóreas</strong>
-              <span>Letras corpóreas 3D con o sin iluminación para fachadas, interiores, locales y señalética.</span>
+              <span
+                >Letras corpóreas 3D con o sin iluminación para fachadas,
+                interiores, locales y señalética.</span
+              >
             </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <strong>ART1</strong>
+          <p>Branding, diseño gráfico, cartelería y producción visual.</p>
+        </div>
+        <div>
+          <a href="index.html">Inicio</a> ·
+          <a href="index.html#contacto">Contacto</a>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <strong>ART1</strong>
-        <p>Branding, diseño gráfico, cartelería y producción visual.</p>
-      </div>
-      <div>
-        <a href="index.html">Inicio</a> · <a href="index.html#contacto">Contacto</a>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
