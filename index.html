@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ART1 | 30 años comunicando marcas con gráfica, diseño e impresión</title>
+    <title>
+      ART1 | 30 años comunicando marcas con gráfica, diseño e impresión
+    </title>
     <meta
       name="description"
       content="ART1 acompaña necesidades gráficas con diseño, impresión, cartelería, ambientaciones, letras corpóreas, corte láser e instalaciones profesionales en Zona Norte."
@@ -27,7 +29,7 @@
     <link href="assets/img/logo_grey.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
     <link rel="stylesheet" href="assets/css/header.css" />
-
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -220,9 +222,22 @@
         align-items: center;
         color: #fff;
         background:
-          radial-gradient(circle at 18% 14%, rgba(97, 153, 255, 0.12), transparent 24%),
-          radial-gradient(circle at 80% 72%, rgba(18, 199, 222, 0.16), transparent 24%),
-          linear-gradient(110deg, var(--hero-start) 0%, var(--hero-mid) 52%, var(--hero-end) 100%);
+          radial-gradient(
+            circle at 18% 14%,
+            rgba(97, 153, 255, 0.12),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 80% 72%,
+            rgba(18, 199, 222, 0.16),
+            transparent 24%
+          ),
+          linear-gradient(
+            110deg,
+            var(--hero-start) 0%,
+            var(--hero-mid) 52%,
+            var(--hero-end) 100%
+          );
       }
 
       .hero::after {
@@ -270,7 +285,12 @@
       .hero__title span {
         display: block;
         margin-top: 8px;
-        background: linear-gradient(90deg, #00d2ff 0%, #5ba8ff 44%, #12d5d5 100%);
+        background: linear-gradient(
+          90deg,
+          #00d2ff 0%,
+          #5ba8ff 44%,
+          #12d5d5 100%
+        );
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -336,7 +356,12 @@
         padding: 36px;
         border-radius: 28px;
         color: #fff;
-        background: linear-gradient(135deg, var(--hero-start), var(--hero-mid) 56%, var(--hero-end));
+        background: linear-gradient(
+          135deg,
+          var(--hero-start),
+          var(--hero-mid) 56%,
+          var(--hero-end)
+        );
         box-shadow: 0 20px 42px rgba(6, 18, 34, 0.16);
       }
 
@@ -472,7 +497,11 @@
         min-height: 280px;
         overflow: hidden;
         background:
-          linear-gradient(135deg, rgba(27, 98, 255, 0.24), rgba(18, 199, 222, 0.18)),
+          linear-gradient(
+            135deg,
+            rgba(27, 98, 255, 0.24),
+            rgba(18, 199, 222, 0.18)
+          ),
           #d8dce3;
       }
 
@@ -528,7 +557,12 @@
         position: relative;
         overflow: hidden;
         color: #fff;
-        background: linear-gradient(125deg, #051023 0%, #091632 45%, #071731 100%);
+        background: linear-gradient(
+          125deg,
+          #051023 0%,
+          #091632 45%,
+          #071731 100%
+        );
       }
 
       .results .section-title,
@@ -569,7 +603,12 @@
 
       .contact {
         color: #fff;
-        background: linear-gradient(110deg, var(--hero-start) 0%, var(--hero-mid) 54%, var(--hero-end) 100%);
+        background: linear-gradient(
+          110deg,
+          var(--hero-start) 0%,
+          var(--hero-mid) 54%,
+          var(--hero-end) 100%
+        );
       }
 
       .contact__grid {
@@ -681,7 +720,9 @@
           calc(100% - 18px) calc(50% - 3px),
           calc(100% - 12px) calc(50% - 3px);
         background-repeat: no-repeat;
-        background-size: 6px 6px, 6px 6px;
+        background-size:
+          6px 6px,
+          6px 6px;
       }
 
       .field-select option {
@@ -719,7 +760,12 @@
       .footer {
         color: rgba(255, 255, 255, 0.74);
         border-top: 2px solid rgba(10, 215, 255, 0.5);
-        background: linear-gradient(100deg, #041126 0%, #081530 52%, #061126 100%);
+        background: linear-gradient(
+          100deg,
+          #041126 0%,
+          #081530 52%,
+          #061126 100%
+        );
       }
 
       .footer__main {
@@ -922,6 +968,144 @@
           min-height: 230px;
         }
       }
+      /* =========================
+   MOBILE POLISH
+========================= */
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      .hero__title,
+      .section-title {
+        overflow-wrap: anywhere;
+        text-wrap: balance;
+      }
+
+      @media (max-width: 560px) {
+        .section {
+          padding: 64px 0;
+        }
+
+        .hero__inner {
+          padding: 82px 0 58px;
+        }
+
+        .hero__eyebrow {
+          margin-bottom: 20px;
+          font-size: 0.78rem;
+          line-height: 1.3;
+        }
+
+        .hero__title {
+          font-size: clamp(2.85rem, 15vw, 3.9rem);
+          line-height: 0.96;
+          letter-spacing: -0.055em;
+          max-width: 100%;
+        }
+
+        .hero__title span {
+          margin-top: 4px;
+        }
+
+        .section-title {
+          font-size: clamp(2rem, 10.5vw, 3rem);
+          line-height: 1.08;
+          letter-spacing: -0.045em;
+        }
+
+        .hero__text {
+          margin-top: 22px;
+          line-height: 1.6;
+        }
+
+        .hero__stats {
+          margin-top: 38px;
+          gap: 12px;
+        }
+
+        .hero-stat {
+          padding: 18px;
+        }
+
+        .about-card {
+          padding: 26px;
+        }
+
+        .about-card strong {
+          font-size: clamp(2rem, 12vw, 3rem);
+        }
+
+        .services__grid,
+        .difference-grid,
+        .works-grid {
+          margin-top: 42px;
+        }
+
+        .work-card {
+          border-radius: 20px;
+        }
+
+        .work-card__content {
+          padding: 22px;
+        }
+      }
+
+      /* =========================
+   PORTFOLIO SWIPER
+========================= */
+
+      .work-card__media {
+        position: relative;
+        min-height: 280px;
+        height: 280px;
+        overflow: hidden;
+        background: #d8dce3;
+      }
+
+      .work-card__media .swiper,
+      .work-card__media .swiper-wrapper,
+      .work-card__media .swiper-slide {
+        width: 100%;
+        height: 100%;
+      }
+
+      .work-card__media .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+        transform: scale(1.01);
+      }
+
+      .work-card:hover .work-card__media img {
+        transform: scale(1.01);
+      }
+
+      .work-card__media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background: linear-gradient(
+          180deg,
+          rgba(4, 17, 38, 0.08) 0%,
+          rgba(4, 17, 38, 0.28) 100%
+        );
+      }
+
+      .work-card__badge {
+        z-index: 2;
+      }
+
+      @media (max-width: 560px) {
+        .work-card__media {
+          height: 230px;
+          min-height: 230px;
+        }
+      }
     </style>
 
     <script type="application/ld+json">
@@ -961,6 +1145,7 @@
         </a>
 
         <nav class="nav" aria-label="Principal">
+          <a href="#nosotros">Nosotros</a>
           <div class="nav__item">
             <a class="nav__trigger" href="#servicios">Servicios</a>
             <div class="nav__dropdown" aria-label="Servicios ART1">
@@ -972,7 +1157,6 @@
               <a href="corte-laser.html">Corte y grabado láser</a>
             </div>
           </div>
-          <a href="#nosotros">Nosotros</a>
           <a href="#portfolio">Trabajos</a>
           <a href="#resultados">Trayectoria</a>
           <a href="#contacto">Contacto</a>
@@ -996,10 +1180,18 @@
           <a href="#servicios">Servicios</a>
           <a class="mobile-nav__sub" href="grafica.html">Gráfica</a>
           <a class="mobile-nav__sub" href="impresiones.html">Impresiones</a>
-          <a class="mobile-nav__sub" href="ambientaciones.html">Ambientaciones</a>
-          <a class="mobile-nav__sub" href="letras-corporeas.html">Letras corpóreas</a>
-          <a class="mobile-nav__sub" href="diseno-branding.html">Diseño y branding</a>
-          <a class="mobile-nav__sub" href="corte-laser.html">Corte y grabado láser</a>
+          <a class="mobile-nav__sub" href="ambientaciones.html"
+            >Ambientaciones</a
+          >
+          <a class="mobile-nav__sub" href="letras-corporeas.html"
+            >Letras corpóreas</a
+          >
+          <a class="mobile-nav__sub" href="diseno-branding.html"
+            >Diseño y branding</a
+          >
+          <a class="mobile-nav__sub" href="corte-laser.html"
+            >Corte y grabado láser</a
+          >
           <span class="mobile-nav__label">Secciones</span>
           <a href="#nosotros">Nosotros</a>
           <a href="#portfolio">Trabajos</a>
@@ -1028,7 +1220,9 @@
           </p>
 
           <div class="hero__actions" data-reveal>
-            <a href="#portfolio" class="btn btn--white">Ver trabajos recientes</a>
+            <a href="#portfolio" class="btn btn--white"
+              >Ver trabajos recientes</a
+            >
             <a href="#contacto" class="btn btn--outline">Cotizar proyecto</a>
           </div>
 
@@ -1053,7 +1247,8 @@
         <div class="container">
           <p class="section-label" data-reveal>Nosotros</p>
           <h2 class="section-title" data-reveal>
-            No solo imprimimos o fabricamos: pensamos con vos cómo comunicar mejor.
+            No solo imprimimos o fabricamos: pensamos con vos cómo comunicar
+            mejor.
           </h2>
 
           <div class="about-grid">
@@ -1156,7 +1351,10 @@
                   </svg>
                 </div>
                 <h3>Gráfica</h3>
-                <p>Diseño, corte e instalación de gráfica para vidrieras, vehículos, embarcaciones y espacios comerciales.</p>
+                <p>
+                  Diseño, corte e instalación de gráfica para vidrieras,
+                  vehículos, embarcaciones y espacios comerciales.
+                </p>
               </a>
             </article>
 
@@ -1170,7 +1368,10 @@
                   </svg>
                 </div>
                 <h3>Impresiones</h3>
-                <p>Impresión en eco solvente y UVJET para piezas de interior y exterior con alta durabilidad.</p>
+                <p>
+                  Impresión en eco solvente y UVJET para piezas de interior y
+                  exterior con alta durabilidad.
+                </p>
               </a>
             </article>
 
@@ -1183,7 +1384,10 @@
                   </svg>
                 </div>
                 <h3>Ambientaciones</h3>
-                <p>Creamos atmósferas visuales para espacios comerciales, eventos, stands y experiencias de marca.</p>
+                <p>
+                  Creamos atmósferas visuales para espacios comerciales,
+                  eventos, stands y experiencias de marca.
+                </p>
               </a>
             </article>
 
@@ -1196,7 +1400,10 @@
                   </svg>
                 </div>
                 <h3>Letras corpóreas</h3>
-                <p>Letras 3D con o sin iluminación para fachadas, interiores, señalética y presencia de marca.</p>
+                <p>
+                  Letras 3D con o sin iluminación para fachadas, interiores,
+                  señalética y presencia de marca.
+                </p>
               </a>
             </article>
 
@@ -1208,7 +1415,10 @@
                   </svg>
                 </div>
                 <h3>Diseño y branding</h3>
-                <p>Desarrollamos tu marca, identidad visual y sistema gráfico para comunicar de forma coherente.</p>
+                <p>
+                  Desarrollamos tu marca, identidad visual y sistema gráfico
+                  para comunicar de forma coherente.
+                </p>
               </a>
             </article>
 
@@ -1221,7 +1431,10 @@
                   </svg>
                 </div>
                 <h3>Corte y grabado</h3>
-                <p>Corte y grabado láser CO2 en múltiples superficies con precisión y terminación profesional.</p>
+                <p>
+                  Corte y grabado láser CO2 en múltiples superficies con
+                  precisión y terminación profesional.
+                </p>
               </a>
             </article>
           </div>
@@ -1240,10 +1453,24 @@
           </p>
 
           <div class="works-grid">
+            <!-- VEHICULOS -->
             <article class="work-card" data-reveal>
               <div class="work-card__media">
                 <span class="work-card__badge">Vehículos</span>
-                <img src="assets/img/gallery/vehiculos.jpg" alt="Gráfica aplicada en vehículos comerciales" loading="lazy" decoding="async" />
+
+                <div class="swiper portfolio-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/vehiculos.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/vehiculos-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/vehiculos-3.jpg" />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="work-card__content">
                 <h3>Gráfica en vehículos</h3>
@@ -1251,20 +1478,24 @@
                   Dale a tu vehículo la comunicación visual de tu empresa o
                   tunealo a tu gusto con diseño, ploteo e instalación.
                 </p>
-                <div class="work-card__list">
-                  <span>ASIC Seguridad</span>
-                  <span>Yamaha FX</span>
-                  <span>Avon</span>
-                  <span>Smart</span>
-                  <span>Aerowise</span>
-                </div>
               </div>
             </article>
 
+            <!-- BARCOS -->
             <article class="work-card" data-reveal>
               <div class="work-card__media">
                 <span class="work-card__badge">Embarcaciones</span>
-                <img src="assets/img/gallery/barcos.jpg" alt="Gráfica instalada en barcos y embarcaciones" loading="lazy" decoding="async" />
+
+                <div class="swiper portfolio-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/barcos.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/barcos-2.jpg" />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="work-card__content">
                 <h3>Gráfica en barcos</h3>
@@ -1272,87 +1503,96 @@
                   Diseñamos e instalamos gráfica náutica para darle identidad,
                   presencia y personalidad a cada embarcación.
                 </p>
-                <div class="work-card__list">
-                  <span>Mad Max</span>
-                  <span>Taita</span>
-                  <span>Cosette</span>
-                  <span>Butterfly</span>
-                  <span>Blue Monster</span>
-                </div>
               </div>
             </article>
 
+            <!-- VIDRIERAS -->
             <article class="work-card" data-reveal>
               <div class="work-card__media">
                 <span class="work-card__badge">Vidrieras</span>
-                <img src="assets/img/gallery/vidrieras.jpg" alt="Gráfica en vidrieras de locales comerciales" loading="lazy" decoding="async" />
+
+                <div class="swiper portfolio-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/vidrieras.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/vidrieras-2.jpg" />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="work-card__content">
                 <h3>Gráfica en vidrieras</h3>
-                <p>
-                  Si querés que tu local se comunique con tus clientes,
-                  diseñamos vidrieras con impacto e impronta original.
-                </p>
-                <div class="work-card__list">
-                  <span>Photiers</span>
-                  <span>Tryme</span>
-                  <span>Flying Paw</span>
-                  <span>Filippo</span>
-                </div>
+                <p>Diseñamos vidrieras con impacto e impronta original.</p>
               </div>
             </article>
 
+            <!-- ESMERILADOS -->
             <article class="work-card" data-reveal>
               <div class="work-card__media">
                 <span class="work-card__badge">Privacidad</span>
-                <img src="assets/img/gallery/esmerilados.jpg" alt="Esmerilados para vidrios y oficinas" loading="lazy" decoding="async" />
+
+                <div class="swiper portfolio-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/esmerilados.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/esmerilados-2.jpg" />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="work-card__content">
                 <h3>Esmerilados</h3>
-                <p>
-                  Si necesitás privacidad o querés darle un toque original a
-                  los vidrios, el material esmerilado es una solución prolija y
-                  elegante.
-                </p>
+                <p>Solución prolija y elegante para privacidad en vidrios.</p>
               </div>
             </article>
 
+            <!-- PVC -->
             <article class="work-card" data-reveal>
               <div class="work-card__media">
                 <span class="work-card__badge">Señalética</span>
-                <img src="assets/img/gallery/pvc-espumado.jpg" alt="Cartelería y señalética sobre PVC espumado" loading="lazy" decoding="async" />
+
+                <div class="swiper portfolio-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/pvc-espumado.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/pvc-espumado-2.jpg" />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="work-card__content">
                 <h3>Ploteo sobre PVC espumado</h3>
                 <p>
-                  Para crear señalética de empresa, carteles informativos o
-                  piezas resistentes, recomendamos ploteo sobre PVC espumado.
+                  Ideal para señalética resistente y piezas institucionales.
                 </p>
-                <div class="work-card__list">
-                  <span>Cartel sin TACC</span>
-                  <span>Señalética</span>
-                  <span>Cartelería institucional</span>
-                </div>
               </div>
             </article>
 
+            <!-- LASER -->
             <article class="work-card" data-reveal>
               <div class="work-card__media">
                 <span class="work-card__badge">Láser CO2</span>
-                <img src="assets/img/gallery/corte-grabado.jpg" alt="Corte y grabado láser CO2 en señalética, llaveros y premios" loading="lazy" decoding="async" />
+
+                <div class="swiper portfolio-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/corte-grabado.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="assets/img/gallery/corte-grabado-2.jpg" />
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="work-card__content">
                 <h3>Corte y grabado</h3>
-                <p>
-                  Corte y grabado láser CO2 en múltiples superficies para
-                  señalética, llaveros, premios, piezas especiales y detalles
-                  personalizados.
-                </p>
-                <div class="work-card__list">
-                  <span>Señalética grabada</span>
-                  <span>Llaveros</span>
-                  <span>Premios</span>
-                </div>
+                <p>Láser CO2 para piezas personalizadas y señalética.</p>
               </div>
             </article>
           </div>
@@ -1361,8 +1601,12 @@
 
       <section class="section results" id="resultados">
         <div class="container center">
-          <p class="section-label" style="color: #12dcff" data-reveal>Trayectoria</p>
-          <h2 class="section-title" data-reveal>Una estructura preparada para resolver</h2>
+          <p class="section-label" style="color: #12dcff" data-reveal>
+            Trayectoria
+          </p>
+          <h2 class="section-title" data-reveal>
+            Una estructura preparada para resolver
+          </h2>
           <p class="section-subtitle" data-reveal>
             Tres décadas acompañando marcas, comercios y empresas con soluciones
             gráficas duraderas, funcionales y bien ejecutadas.
@@ -1393,7 +1637,9 @@
         <div class="container contact__grid">
           <div data-reveal>
             <p class="section-label" style="color: #12dcff">Contacto</p>
-            <h2 class="section-title">¿Necesitás resolver una pieza gráfica?</h2>
+            <h2 class="section-title">
+              ¿Necesitás resolver una pieza gráfica?
+            </h2>
             <p class="section-subtitle">
               Contanos qué necesitás comunicar, dónde se va a aplicar y en qué
               tiempos lo necesitás. Te ayudamos a definir la mejor solución.
@@ -1428,19 +1674,38 @@
             <form id="contact-form" novalidate>
               <div class="form-group">
                 <label for="name">Nombre</label>
-                <input class="field" id="name" name="name" type="text" placeholder="Tu nombre" required />
+                <input
+                  class="field"
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Tu nombre"
+                  required
+                />
                 <div class="form-error">Ingresá tu nombre.</div>
               </div>
 
               <div class="form-group">
                 <label for="email">Email</label>
-                <input class="field" id="email" name="email" type="email" placeholder="tu@email.com" required />
+                <input
+                  class="field"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="tu@email.com"
+                  required
+                />
                 <div class="form-error">Ingresá un email válido.</div>
               </div>
 
               <div class="form-group">
                 <label for="project">Servicio de interés</label>
-                <select class="field-select" id="project" name="project" required>
+                <select
+                  class="field-select"
+                  id="project"
+                  name="project"
+                  required
+                >
                   <option value="">Seleccioná una opción</option>
                   <option>Gráfica</option>
                   <option>Impresiones eco solvente / UVJET</option>
@@ -1462,14 +1727,20 @@
                   placeholder="Contanos qué necesitás, medidas aproximadas, ubicación y fecha estimada..."
                   required
                 ></textarea>
-                <div class="form-error">Contanos un poco sobre tu proyecto.</div>
+                <div class="form-error">
+                  Contanos un poco sobre tu proyecto.
+                </div>
               </div>
 
               <button class="btn btn--gradient" type="submit">
                 Enviar consulta
                 <span aria-hidden="true">→</span>
               </button>
-              <div class="form-status" id="form-status" aria-live="polite"></div>
+              <div
+                class="form-status"
+                id="form-status"
+                aria-live="polite"
+              ></div>
             </form>
           </div>
         </div>
@@ -1623,7 +1894,9 @@
         const formStatus = document.getElementById("form-status");
 
         if (form) {
-          const fields = Array.from(form.querySelectorAll("input, select, textarea"));
+          const fields = Array.from(
+            form.querySelectorAll("input, select, textarea"),
+          );
 
           const validators = {
             name: (value) => value.trim().length > 1,
@@ -1633,7 +1906,9 @@
           };
 
           const validateField = (field) => {
-            const valid = validators[field.name] ? validators[field.name](field.value) : true;
+            const valid = validators[field.name]
+              ? validators[field.name](field.value)
+              : true;
             field.classList.toggle("is-invalid", !valid);
             return valid;
           };
@@ -1649,7 +1924,8 @@
             const allValid = fields.every((field) => validateField(field));
 
             if (!allValid) {
-              formStatus.textContent = "Revisá los campos marcados antes de enviar.";
+              formStatus.textContent =
+                "Revisá los campos marcados antes de enviar.";
               return;
             }
 
@@ -1662,5 +1938,6 @@
         }
       })();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
