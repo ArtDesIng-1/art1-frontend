@@ -1162,6 +1162,112 @@
           min-height: 230px;
         }
       }
+
+      .about-carousel {
+        position: sticky;
+        top: calc(var(--header-h) + 28px);
+        min-height: 520px;
+        border-radius: 28px;
+        overflow: hidden;
+        color: #fff;
+        background: #061126;
+        box-shadow: 0 20px 42px rgba(6, 18, 34, 0.16);
+      }
+
+      .about-carousel__track,
+      .about-carousel__slide {
+        position: absolute;
+        inset: 0;
+      }
+
+      .about-carousel__slide {
+        margin: 0;
+        opacity: 0;
+        transform: scale(1.04);
+        transition:
+          opacity 0.9s ease,
+          transform 3.8s ease;
+      }
+
+      .about-carousel__slide.is-active {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .about-carousel__slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .about-carousel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0.08) 0%,
+            rgba(4, 17, 38, 0.42) 45%,
+            rgba(4, 17, 38, 0.88) 100%
+          ),
+          radial-gradient(
+            circle at 30% 35%,
+            rgba(18, 199, 222, 0.22),
+            transparent 42%
+          );
+        z-index: 1;
+      }
+
+      .about-carousel__content {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        z-index: 2;
+      }
+
+      .about-carousel__content span {
+        display: block;
+        margin-bottom: 14px;
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 900;
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+      }
+
+      .about-carousel__content p {
+        max-width: 520px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.84);
+        font-size: 1.03rem;
+        line-height: 1.65;
+      }
+
+      @media (max-width: 1180px) {
+        .about-carousel {
+          position: relative;
+          top: auto;
+          min-height: 460px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .about-carousel {
+          min-height: 390px;
+          border-radius: 22px;
+        }
+
+        .about-carousel__content {
+          left: 22px;
+          right: 22px;
+          bottom: 24px;
+        }
+
+        .about-carousel__content span {
+          font-size: clamp(2rem, 11vw, 3rem);
+        }
+      }
     </style>
 
     <script type="application/ld+json">
@@ -1308,13 +1414,49 @@
           </h2>
 
           <div class="about-grid">
-            <aside class="about-card" data-reveal>
-              <strong>Calidad que permanece</strong>
-              <p>
-                Cada área de producción y cada canal especializado están
-                pensados para lograr piezas impecables, resistentes y alineadas
-                a la identidad de cada marca.
-              </p>
+            <aside
+              class="about-carousel"
+              data-reveal
+              aria-label="Imágenes de ART1"
+            >
+              <div class="about-carousel__track">
+                <figure class="about-carousel__slide is-active">
+                  <img
+                    src="assets/img/about/about-area-produccion.png"
+                    alt="Fachada del local ART1"
+                  />
+                </figure>
+
+                <figure class="about-carousel__slide">
+                  <img
+                    src="assets/img/about/about-equipo-art1.png"
+                    alt="Producción gráfica en ART1"
+                  />
+                </figure>
+
+                <figure class="about-carousel__slide">
+                  <img
+                    src="assets/img/about/about-equipo-trabajando.png"
+                    alt="Impresión y materiales gráficos"
+                  />
+                </figure>
+
+                 <figure class="about-carousel__slide">
+                  <img
+                    src="assets/img/about/about-proceso-impresion.png"
+                    alt="Impresión y materiales gráficos"
+                  />
+                </figure>
+              </div>
+
+              <div class="about-carousel__content">
+                <span>Calidad que permanece</span>
+                <p>
+                  Producción cuidada, materiales correctos e instalación
+                  profesional para lograr piezas gráficas resistentes, prolijas
+                  y alineadas a cada marca.
+                </p>
+              </div>
             </aside>
 
             <div class="about-copy" data-reveal>
@@ -2117,6 +2259,20 @@
           });
         });
       }
+    </script>
+    <script>
+      (() => {
+        const slides = document.querySelectorAll(".about-carousel__slide");
+        if (!slides.length) return;
+
+        let current = 0;
+
+        setInterval(() => {
+          slides[current].classList.remove("is-active");
+          current = (current + 1) % slides.length;
+          slides[current].classList.add("is-active");
+        }, 3600);
+      })();
     </script>
   </body>
 </html>
