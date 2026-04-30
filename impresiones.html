@@ -18,10 +18,11 @@
     />
     <meta property="og:locale" content="es_AR" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link href="assets/img/logo_azul.png" rel="icon" />
-    <link href="assets/img/img/logo_azul.png" rel="apple-touch-icon" />
+    <link href="assets/img/img/logo_azul.png" rel="icon" />
+    <link href="assets/img/img/img/logo_azul.png" rel="apple-touch-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
@@ -414,6 +415,203 @@
           padding: 26px;
         }
       }
+
+      .include-section {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .include-section::before {
+        content: "";
+        position: absolute;
+        top: -180px;
+        right: -180px;
+        width: 420px;
+        height: 420px;
+        background: radial-gradient(
+          circle,
+          rgba(18, 199, 222, 0.16),
+          transparent 62%
+        );
+        pointer-events: none;
+      }
+
+      .include-grid--premium {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+        margin-top: 64px;
+        text-align: left;
+      }
+
+      .include-card--premium {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(16, 24, 40, 0.07);
+        box-shadow: 0 18px 45px rgba(16, 24, 40, 0.08);
+        transform: translateY(0);
+        transition:
+          transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+          box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+          border-color 0.45s ease;
+      }
+
+      .include-card--premium::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at var(--mx, 50%) var(--my, 20%),
+            rgba(18, 199, 222, 0.18),
+            transparent 34%
+          ),
+          linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.78),
+            rgba(255, 255, 255, 1)
+          );
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+      }
+
+      .include-card--premium:hover {
+        transform: translateY(-8px);
+        border-color: rgba(18, 199, 222, 0.28);
+        box-shadow: 0 28px 70px rgba(16, 24, 40, 0.16);
+      }
+
+      .include-card--premium:hover::before {
+        opacity: 1;
+      }
+
+      .include-card--premium a {
+        position: relative;
+        z-index: 2;
+        display: block;
+        height: 100%;
+      }
+
+      .include-card__media {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        background: #d8dce3;
+      }
+
+      .include-card__media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(4, 17, 38, 0.04) 0%,
+            rgba(4, 17, 38, 0.38) 100%
+          ),
+          radial-gradient(
+            circle at 50% 20%,
+            rgba(255, 255, 255, 0.18),
+            transparent 40%
+          );
+        pointer-events: none;
+      }
+
+      .include-card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.02);
+        transition:
+          transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+          filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .include-card--premium:hover .include-card__media img {
+        transform: scale(1.08);
+        filter: saturate(1.08) contrast(1.04);
+      }
+
+      .include-card__media span {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        z-index: 2;
+        padding: 9px 14px;
+        border-radius: 999px;
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 900;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+        background: rgba(4, 17, 38, 0.78);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 10px 28px rgba(4, 17, 38, 0.18);
+      }
+
+      .include-card__content {
+        position: relative;
+        padding: 32px;
+      }
+
+      .include-card__content h3 {
+        margin: 0 0 14px;
+        color: var(--navy-2);
+        font-size: 1.65rem;
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      .include-card__content p {
+        margin: 0 0 16px;
+        color: #344054;
+        font-size: 1rem;
+        line-height: 1.68;
+      }
+
+      .include-card__content small {
+        display: block;
+        color: #667085;
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+
+      .include-card--premium:hover .include-card__content::after {
+        transform: translateX(6px);
+      }
+
+      @media (max-width: 860px) {
+        .include-grid--premium {
+          grid-template-columns: 1fr;
+          margin-top: 44px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .include-grid--premium {
+          gap: 22px;
+        }
+
+        .include-card--premium {
+          border-radius: 22px;
+        }
+
+        .include-card__media {
+          height: 230px;
+        }
+
+        .include-card__content {
+          padding: 24px;
+        }
+
+        .include-card__content h3 {
+          font-size: 1.38rem;
+        }
+      }
     </style>
     <script type="application/ld+json">
       {
@@ -521,38 +719,146 @@
         </div>
       </section>
 
-      <section class="section">
-        <div class="container">
-          <p class="section-label">Qué incluye</p>
+      <section class="section section--white include-section" id="impresiones">
+        <div class="container center">
+          <p class="section-label">Impresiones</p>
           <h2 class="section-title">
-            Una solución pensada para verse bien y funcionar mejor
+            Impresiones pensadas para comunicar con impacto
           </h2>
           <p class="section-subtitle">
-            Combinamos criterio visual, producción y terminación para que cada
-            pieza respete la identidad de la marca y se adapte al uso real.
+            Producimos piezas gráficas en distintos formatos, materiales y
+            escalas para que tu marca se vea profesional, clara y consistente.
           </p>
 
-          <div class="grid-2">
-            <article class="card">
-              <h3>Aplicaciones principales</h3>
-              <ul class="check-list">
-                <li>Impresión eco solvente</li>
-                <li>Impresión UV</li>
-                <li>Lonas y banners</li>
-                <li>Vinilos impresos</li>
-                <li>Material para punto de venta</li>
-                <li>Piezas para interior y exterior</li>
-              </ul>
+          <div class="include-grid include-grid--premium">
+            <article class="include-card include-card--premium">
+              <a href="impresiones.html">
+                <div class="include-card__media">
+                  <span>Stickers</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/services/impresiones/stickers/1.jpeg"
+                          alt="Stickers personalizados para marca"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/services/impresiones/stickers/1.jpeg"
+                          alt="Stickers para packaging y productos"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/services/impresiones/stickers/1.jpeg"
+                          alt="Stickers en vinilo impreso"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="include-card__content">
+                  <h3>Stickers personalizados</h3>
+                  <p>
+                    Stickers para productos, packaging, promociones,
+                    señalización y aplicaciones comerciales con terminación
+                    prolija y resistente.
+                  </p>
+                  <small>
+                    Corte personalizado · Vinilo impreso · Packaging ·
+                    Promociones
+                  </small>
+                </div>
+              </a>
             </article>
 
-            <article class="card">
-              <h3>Ideal para</h3>
-              <ul class="check-list">
-                <li>Marcas que necesitan presencia visual consistente.</li>
-                <li>Locales comerciales que quieren mejorar su imagen.</li>
-                <li>Empresas que buscan piezas gráficas profesionales.</li>
-                <li>Eventos, lanzamientos y activaciones de marca.</li>
-              </ul>
+            <article class="include-card include-card--premium">
+              <a href="impresiones.html">
+                <div class="include-card__media">
+                  <span>Lona</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/services/impresiones/lonas/2.jpeg"
+                          alt="Lona publicitaria para exterior"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/services/impresiones/lonas/2.jpeg"
+                          alt="Lona impresa para eventos"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/services/impresiones/lonas/2.jpeg"
+                          alt="Banner de lona comercial"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="include-card__content">
+                  <h3>Lonas y banners</h3>
+                  <p>
+                    Impresiones de alto impacto para exterior, eventos, locales,
+                    promociones y comunicación visual de gran visibilidad.
+                  </p>
+                  <small>
+                    Exterior · Ojales · Refuerzos · Eventos · Locales
+                    comerciales
+                  </small>
+                </div>
+              </a>
+            </article>
+
+            <article class="include-card include-card--premium">
+              <a href="impresiones.html">
+                <div class="include-card__media">
+                  <span>Gran formato</span>
+
+                  <div class="swiper include-swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/impresiones/gigantografias/gigantografia-local-comercial.jpeg"
+                          alt="Gigantografía para local comercial"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/impresiones/gigantografias/gigantografia-publicitaria-gran-formato.jpeg"
+                          alt="Gigantografía publicitaria de gran formato"
+                        />
+                      </div>
+                      <div class="swiper-slide">
+                        <img
+                          src="assets/img/gallery/impresiones/gigantografias/impresion-gran-formato-interior.jpeg"
+                          alt="Impresión gran formato para interior"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="include-card__content">
+                  <h3>Gigantografías</h3>
+                  <p>
+                    Piezas gráficas de gran escala para captar atención, vestir
+                    espacios y potenciar la presencia visual de una marca.
+                  </p>
+                  <small>
+                    Gran formato · Fachadas · Interior · Publicidad · Alto
+                    impacto
+                  </small>
+                </div>
+              </a>
             </article>
           </div>
         </div>
@@ -669,5 +975,37 @@
         <div>Diseño, producción e instalación gráfica.</div>
       </div>
     </footer>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".include-card--premium").forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+          card.style.setProperty("--mx", `${x}%`);
+          card.style.setProperty("--my", `${y}%`);
+        });
+      });
+    </script>
+    <script>
+      const includeSwipers = document.querySelectorAll(".include-swiper");
+
+      includeSwipers.forEach((el, i) => {
+        new Swiper(el, {
+          loop: true,
+          speed: 900,
+          effect: "fade",
+          fadeEffect: { crossFade: true },
+
+          autoplay: {
+            delay: 2200 + i * 300,
+            disableOnInteraction: false,
+          },
+
+          allowTouchMove: false, // 🔥 estilo premium (no arrastrable)
+        });
+      });
+    </script>
   </body>
 </html>
