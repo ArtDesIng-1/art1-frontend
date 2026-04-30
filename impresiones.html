@@ -930,6 +930,35 @@
         <div>Diseño, producción e instalación gráfica.</div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const navToggle = document.querySelector(".nav-toggle");
+        const mobileNav = document.getElementById("mobile-nav");
+
+        if (!navToggle || !mobileNav) return;
+
+        navToggle.addEventListener("click", () => {
+          const isOpen = mobileNav.classList.toggle("is-open");
+
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Cerrar menú" : "Abrir menú",
+          );
+
+          navToggle.textContent = isOpen ? "×" : "☰";
+        });
+
+        mobileNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileNav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Abrir menú");
+            navToggle.textContent = "☰";
+          });
+        });
+      });
+    </script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script>
       document.querySelectorAll(".include-card--premium").forEach((card) => {
