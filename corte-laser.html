@@ -901,5 +901,38 @@
         <div>Diseño, producción e instalación gráfica.</div>
       </div>
     </footer>
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".include-card--premium").forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+
+          card.style.setProperty("--mx", `${x}%`);
+          card.style.setProperty("--my", `${y}%`);
+        });
+      });
+    </script>
+    <script>
+      const includeSwipers = document.querySelectorAll(".include-swiper");
+
+      includeSwipers.forEach((el, i) => {
+        new Swiper(el, {
+          loop: true,
+          speed: 900,
+          effect: "fade",
+          fadeEffect: { crossFade: true },
+
+          autoplay: {
+            delay: 2200 + i * 300,
+            disableOnInteraction: false,
+          },
+
+          allowTouchMove: false, // 🔥 estilo premium (no arrastrable)
+        });
+      });
+    </script>
   </body>
 </html>
