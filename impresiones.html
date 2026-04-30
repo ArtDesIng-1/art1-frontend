@@ -863,8 +863,7 @@
           </div>
         </div>
       </section>
-
-  </main>
+    </main>
 
     <footer class="footer">
       <div class="container footer__main">
@@ -948,6 +947,15 @@
 
           allowTouchMove: false, // 🔥 estilo premium (no arrastrable)
         });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+          currentYear.textContent = new Date().getFullYear();
+        }
       });
     </script>
   </body>
