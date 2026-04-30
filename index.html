@@ -2077,7 +2077,7 @@
         <div>
           © <span id="currentYear"></span> ART1. Todos los derechos reservados.
           <span>
-            Desarrollo web by
+            by
             <a
               href="https://raven3.com.ar/"
               target="_blank"
@@ -2268,6 +2268,15 @@
           slides[current].classList.add("is-active");
         }, 3600);
       })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+          currentYear.textContent = new Date().getFullYear();
+        }
+      });
     </script>
   </body>
 </html>
