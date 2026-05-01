@@ -36,7 +36,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <style>
       :root {
         --bg-light: #f4f5f7;
@@ -1281,6 +1284,390 @@
           font-size: clamp(2rem, 11vw, 3rem);
         }
       }
+      /* ============================= */
+      /* REELS SECTION */
+      /* ============================= */
+
+      .reels-section {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(72px, 8vw, 120px) 0;
+        background:
+          radial-gradient(
+            circle at 50% 0%,
+            rgba(19, 79, 132, 0.08),
+            transparent 36%
+          ),
+          linear-gradient(180deg, #f7faff 0%, #eef4fb 100%);
+      }
+
+      .reels-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 18% 42%,
+            rgba(51, 102, 255, 0.08),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 82% 50%,
+            rgba(255, 68, 93, 0.08),
+            transparent 24%
+          );
+        pointer-events: none;
+      }
+
+      .reels-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .section-heading--center {
+        max-width: 780px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .reels-section .section-label {
+        margin-bottom: 16px;
+        color: #286cff;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .reels-section .section-title {
+        margin: 0;
+        color: #091122;
+        font-size: clamp(2.4rem, 5vw, 4.4rem);
+        line-height: 0.95;
+        font-weight: 900;
+        letter-spacing: -0.055em;
+      }
+
+      .reels-section .section-subtitle {
+        max-width: 620px;
+        margin: 24px auto 0;
+        color: #667085;
+        font-size: clamp(1rem, 1.35vw, 1.25rem);
+        line-height: 1.55;
+        font-weight: 500;
+      }
+
+      .instagram-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        margin-top: 34px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #fff;
+        font-size: 0.98rem;
+        font-weight: 800;
+        text-decoration: none;
+        background: linear-gradient(
+          135deg,
+          #833ab4 0%,
+          #fd1d1d 55%,
+          #fcb045 100%
+        );
+        box-shadow: 0 18px 44px rgba(253, 29, 29, 0.22);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          filter 0.25s ease;
+      }
+
+      .instagram-btn:hover {
+        transform: translateY(-3px);
+        filter: saturate(1.05);
+        box-shadow: 0 22px 54px rgba(253, 29, 29, 0.3);
+      }
+
+      .instagram-btn__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.12rem;
+      }
+
+      .reels-slider-wrapper {
+        position: relative;
+        max-width: 1280px;
+        margin: clamp(52px, 6vw, 82px) auto 0;
+        padding: 0 54px;
+      }
+
+      .reels-swiper {
+        overflow: hidden;
+        padding: 4px 4px 48px;
+      }
+
+      .reel-card {
+        position: relative;
+        overflow: hidden;
+        height: clamp(360px, 34vw, 520px);
+        border-radius: 22px;
+        background: #111827;
+        box-shadow:
+          0 22px 48px rgba(15, 23, 42, 0.14),
+          0 2px 0 rgba(255, 255, 255, 0.55) inset;
+        transform: translateZ(0);
+      }
+
+      .reel-card a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .reel-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition:
+          transform 0.55s ease,
+          filter 0.55s ease;
+      }
+
+      .reel-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(5, 8, 16, 0.02) 20%,
+            rgba(5, 8, 16, 0.78) 100%
+          ),
+          linear-gradient(0deg, rgba(5, 8, 16, 0.24), rgba(5, 8, 16, 0.04));
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .reel-card:hover img {
+        transform: scale(1.06);
+        filter: saturate(1.08) contrast(1.04);
+      }
+
+      .reel-card__badge {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        color: #fff;
+        font-size: 1.25rem;
+        background: linear-gradient(
+          135deg,
+          #833ab4 0%,
+          #fd1d1d 55%,
+          #fcb045 100%
+        );
+        box-shadow: 0 12px 26px rgba(253, 29, 29, 0.3);
+      }
+
+      .reel-card__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 74px;
+        height: 74px;
+        border-radius: 999px;
+        color: #2563eb;
+        font-size: 1.6rem;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 22px 48px rgba(15, 23, 42, 0.22);
+        transform: translate(-50%, -50%);
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          color 0.25s ease;
+      }
+
+      .reel-card__play i {
+        margin-left: 4px;
+      }
+
+      .reel-card:hover .reel-card__play {
+        transform: translate(-50%, -50%) scale(1.08);
+        color: #fff;
+        background: #2563eb;
+      }
+
+      .reel-card__content {
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 20px;
+        z-index: 3;
+        color: #fff;
+      }
+
+      .reel-card__content h3 {
+        margin: 0 0 12px;
+        color: #fff;
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
+        line-height: 1.15;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        text-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      .reel-card__meta {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      .reel-card__meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .reel-card__meta i {
+        font-size: 0.95rem;
+      }
+
+      .reels-arrow {
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border: 0;
+        border-radius: 999px;
+        color: #2563eb;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 14px 34px rgba(15, 23, 42, 0.15);
+        cursor: pointer;
+        transform: translateY(-50%);
+        transition:
+          transform 0.25s ease,
+          background 0.25s ease,
+          color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .reels-arrow:hover {
+        color: #fff;
+        background: #2563eb;
+        box-shadow: 0 18px 44px rgba(37, 99, 235, 0.28);
+      }
+
+      .reels-arrow--prev {
+        left: 18px;
+      }
+
+      .reels-arrow--next {
+        right: 18px;
+      }
+
+      .reels-pagination {
+        position: relative;
+        margin-top: 26px;
+        text-align: center;
+      }
+
+      .reels-pagination .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        margin: 0 6px !important;
+        opacity: 1;
+        background: rgba(37, 99, 235, 0.18);
+      }
+
+      .reels-pagination .swiper-pagination-bullet-active {
+        width: 24px;
+        border-radius: 999px;
+        background: #2563eb;
+      }
+
+      /* ============================= */
+      /* RESPONSIVE */
+      /* ============================= */
+
+      @media (max-width: 991px) {
+        .reels-slider-wrapper {
+          padding: 0 18px;
+        }
+
+        .reels-arrow {
+          display: none;
+        }
+
+        .reel-card {
+          height: 440px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .reels-section {
+          padding: 72px 0;
+        }
+
+        .instagram-btn {
+          width: 100%;
+          max-width: 280px;
+        }
+
+        .reels-slider-wrapper {
+          margin-top: 48px;
+          padding: 0;
+        }
+
+        .reels-swiper {
+          padding-inline: 18px;
+        }
+
+        .reel-card {
+          height: 430px;
+          border-radius: 20px;
+        }
+
+        .reel-card__play {
+          width: 66px;
+          height: 66px;
+          font-size: 1.4rem;
+        }
+
+        .reel-card__badge {
+          width: 42px;
+          height: 42px;
+          border-radius: 13px;
+        }
+
+        .reel-card__content {
+          left: 18px;
+          right: 18px;
+          bottom: 18px;
+        }
+      }
     </style>
 
     <script type="application/ld+json">
@@ -1875,6 +2262,233 @@
                 <p>Láser CO2 para piezas personalizadas y señalética.</p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="reels-section" id="reels">
+        <div class="container reels-container">
+          <div class="section-heading section-heading--center">
+            <p class="section-label">Síguenos en Instagram</p>
+
+            <h2 class="section-title">Nuestros Reels</h2>
+
+            <p class="section-subtitle">
+              Descubrí el proceso creativo detrás de nuestros proyectos y las
+              últimas tendencias en diseño.
+            </p>
+
+            <a
+              href="https://www.instagram.com/art1.com.ar/"
+              class="instagram-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Seguir a ART1 en Instagram"
+            >
+              <span class="instagram-btn__icon" aria-hidden="true">
+                <i class="fa-brands fa-instagram"></i>
+              </span>
+              Seguir en Instagram
+            </a>
+          </div>
+
+          <div class="reels-slider-wrapper">
+            <button
+              class="reels-arrow reels-arrow--prev"
+              type="button"
+              aria-label="Reel anterior"
+            >
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="swiper reels-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <article class="reel-card">
+                    <a
+                      href="https://www.instagram.com/art1.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ver reel Proceso de Branding en Instagram"
+                    >
+                      <img
+                        src="assets/img/reels/reel-branding.jpg"
+                        alt="Proceso de branding"
+                        loading="lazy"
+                        decoding="async"
+                      />
+
+                      <span class="reel-card__badge">
+                        <i class="fa-brands fa-instagram"></i>
+                      </span>
+
+                      <span class="reel-card__play">
+                        <i class="fa-solid fa-play"></i>
+                      </span>
+
+                      <div class="reel-card__content">
+                        <h3>Proceso de Branding</h3>
+
+                        <div class="reel-card__meta">
+                          <span><i class="fa-regular fa-heart"></i> 2.5k</span>
+                          <span><i class="fa-regular fa-comment"></i> 156</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="reel-card">
+                    <a
+                      href="https://www.instagram.com/art1.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ver reel Diseño en Acción en Instagram"
+                    >
+                      <img
+                        src="assets/img/reels/reel-diseno.jpg"
+                        alt="Diseño en acción"
+                        loading="lazy"
+                        decoding="async"
+                      />
+
+                      <span class="reel-card__badge">
+                        <i class="fa-brands fa-instagram"></i>
+                      </span>
+
+                      <span class="reel-card__play">
+                        <i class="fa-solid fa-play"></i>
+                      </span>
+
+                      <div class="reel-card__content">
+                        <h3>Diseño en Acción</h3>
+
+                        <div class="reel-card__meta">
+                          <span><i class="fa-regular fa-heart"></i> 3.2k</span>
+                          <span><i class="fa-regular fa-comment"></i> 203</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="reel-card">
+                    <a
+                      href="https://www.instagram.com/art1.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ver reel Cartelería Premium en Instagram"
+                    >
+                      <img
+                        src="assets/img/reels/reel-carteleria.jpg"
+                        alt="Cartelería premium"
+                        loading="lazy"
+                        decoding="async"
+                      />
+
+                      <span class="reel-card__badge">
+                        <i class="fa-brands fa-instagram"></i>
+                      </span>
+
+                      <span class="reel-card__play">
+                        <i class="fa-solid fa-play"></i>
+                      </span>
+
+                      <div class="reel-card__content">
+                        <h3>Cartelería Premium</h3>
+
+                        <div class="reel-card__meta">
+                          <span><i class="fa-regular fa-heart"></i> 1.8k</span>
+                          <span><i class="fa-regular fa-comment"></i> 98</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="reel-card">
+                    <a
+                      href="https://www.instagram.com/art1.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ver reel Behind the Scenes en Instagram"
+                    >
+                      <img
+                        src="assets/img/reels/reel-behind-scenes.jpg"
+                        alt="Behind the scenes"
+                        loading="lazy"
+                        decoding="async"
+                      />
+
+                      <span class="reel-card__badge">
+                        <i class="fa-brands fa-instagram"></i>
+                      </span>
+
+                      <span class="reel-card__play">
+                        <i class="fa-solid fa-play"></i>
+                      </span>
+
+                      <div class="reel-card__content">
+                        <h3>Behind the Scenes</h3>
+
+                        <div class="reel-card__meta">
+                          <span><i class="fa-regular fa-heart"></i> 4.1k</span>
+                          <span><i class="fa-regular fa-comment"></i> 287</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+
+                <div class="swiper-slide">
+                  <article class="reel-card">
+                    <a
+                      href="https://www.instagram.com/art1.com.ar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Ver reel Instalaciones ART1 en Instagram"
+                    >
+                      <img
+                        src="assets/img/reels/reel-instalaciones.jpg"
+                        alt="Instalaciones gráficas"
+                        loading="lazy"
+                        decoding="async"
+                      />
+
+                      <span class="reel-card__badge">
+                        <i class="fa-brands fa-instagram"></i>
+                      </span>
+
+                      <span class="reel-card__play">
+                        <i class="fa-solid fa-play"></i>
+                      </span>
+
+                      <div class="reel-card__content">
+                        <h3>Instalaciones ART1</h3>
+
+                        <div class="reel-card__meta">
+                          <span><i class="fa-regular fa-heart"></i> 2.9k</span>
+                          <span><i class="fa-regular fa-comment"></i> 174</span>
+                        </div>
+                      </div>
+                    </a>
+                  </article>
+                </div>
+              </div>
+
+              <div class="reels-pagination"></div>
+            </div>
+
+            <button
+              class="reels-arrow reels-arrow--next"
+              type="button"
+              aria-label="Siguiente reel"
+            >
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
       </section>
